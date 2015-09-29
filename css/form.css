@@ -1,0 +1,216 @@
+/* -- FORM -- */
+form {
+  /*margin: 0 4%;*/
+}
+form *, textarea {
+  font-family: inherit;
+}
+.form-row {
+  display: table;
+  margin-bottom: 10px;
+}
+.form-row.hide {
+  display: none;
+}
+fieldset {  
+  /*border: 1px solid hsl(213,12%,20%);*/
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+legend {
+  display: none;
+}
+label {
+  width: 150px;
+  display: block;
+  float: left;
+  text-align: center;
+  padding: 9px 0;
+}
+input {
+  width: 150px;
+}
+textarea {
+  width: 150px;
+  height: 100px;
+}
+input, textarea {
+  vertical-align: top;
+  margin-left: 10px;
+  padding: 5px 7px;
+  background: none repeat scroll 0 0 hsl(0, 0%, 94%);
+  border: 1px solid hsl(0, 0%, 70%);
+  /*border-radius: 4px;*/
+
+  transition: all 0.3s ease 0s ; 
+  -moz-transition: all 0.3s ease 0s ;  /* Firefox 4 */
+  -webkit-transition: all 0.3s ease 0s ;  /* Safari and Chrome */
+  -o-transition: all 0.3s ease 0s ;  /* Opera */
+}
+select {
+  margin-left: 20px;
+  padding: 5px 5px 5px 14px;
+  background: none repeat scroll 0 0 hsl(0, 0%, 94%);
+  border: 1px solid hsl(0, 0%, 70%);
+  /*border-radius: 4px;*/
+  width: 170px;
+  vertical-align: top;
+
+  transition: all 0.3s ease 0s ; 
+  -moz-transition: all 0.3s ease 0s ;  /* Firefox 4 */
+  -webkit-transition: all 0.3s ease 0s ;  /* Safari and Chrome */
+  -o-transition: all 0.3s ease 0s ;  /* Opera */
+}
+option {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 14px;
+}
+input[readonly], textarea[readonly],
+input[readonly]:hover, textarea[readonly]:hover,
+input[readonly]:focus, textarea[readonly]:focus {
+  background: none repeat scroll 0 0 hsl(0, 0%, 98%);
+  border: none;
+  cursor: default;
+}
+input[readonly]:before, textarea[readonly]:before {
+
+}
+input:hover, textarea:hover, select:hover {
+  background: none repeat scroll 0 0 hsl(0, 0%, 94%);
+}
+input:focus, textarea:focus, select:focus {
+  background: none repeat scroll 0 0 hsl(0, 0%, 100%);
+}
+.checkbox {
+  text-align: left;
+  margin-top: 12px;
+  width: auto;
+}
+input[type=checkbox] {
+  margin: 9px 20px;
+  width: 10px;
+}
+span.required {
+  content: "*";
+  color: #F00;
+}
+.long {
+  width: 320px;
+  min-width: 320px;
+  max-width: 450px;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.shrink {
+  width: 90px;
+}
+.btn {
+  padding: 5px 7px;
+  width: auto;
+
+  transition: all 0.3s ease 0s ; 
+  -moz-transition: all 0.3s ease 0s ;  /* Firefox 4 */
+  -webkit-transition: all 0.3s ease 0s ;  /* Safari and Chrome */
+  -o-transition: all 0.3s ease 0s ;  /* Opera */
+}
+.btn.red {  
+  background: none repeat scroll 0 0 hsl(354, 100%, 40%);
+  border: 1px solid hsl(0, 0%, 70%);
+  color: #FFF;
+}
+.btn.green {  
+  background: none repeat scroll #000000;
+  border: 1px solid hsl(0, 0%, 70%);
+  color: #FFF;
+}
+.btn.green:hover, .btn.green:focus {  
+  background: none repeat scroll 0 0 hsl(0, 68%, 45%);
+}
+.btn.green:active { 
+  background: none repeat scroll 0 0 hsl(0, 68%, 33%);
+  padding: 11px 13px 9px 15px;
+}
+.btn.yellow { 
+  background: none repeat scroll 0 0 hsl(354, 100%, 40%);
+  border: 1px solid hsl(0, 0%, 70%);
+}
+.btn.blue { 
+  background: none repeat scroll 0 0 hsl(354, 100%, 40%);
+  border: 1px solid hsl(0, 0%, 70%);
+  color: #FFF;
+}
+.add-btn {
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+.login-btn {
+  margin-left: 20px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  padding: 14px 44px;
+  background: hsl(0, 100%, 40%);
+}
+.std-btn:hover, .add-btn:hover, .add-btn:focus {
+  background: hsl(354, 100%, 50%);
+}
+.std-btn:active, .add-btn:active {
+  background: hsl(354, 100%, 35%);
+}
+.no-margin {
+  margin: 0;
+}
+.push170 {
+  margin-left: 170px;
+}
+input[type=file] {
+  margin-top: 10px;
+}
+.login-form input {
+  margin-left: 0;
+}
+.login-form {
+  width: 200px;
+  margin: auto;
+}
+/* -- FORM END -- */
+
+/* -- FORM SPLIT -- */
+.split label, .split select, .split textarea, .split input {
+  margin-left: 0;
+  display: block;
+  text-align: left;
+}
+
+.errorMessage {
+  color: #F00;
+  margin-left: 170px;
+}
+.errorMsgStd {
+  color: #F00;
+}
+.msg-info {
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid;
+}
+
+.msg-info.red {
+  background-color: #FFDDDD;
+  border-color: #CC9999;
+}
+
+.msg-info.yellow {
+  background-color: #FFFFDD;
+  border-color: #FFCC44;
+}
+
+.msg-info.green {
+  background-color: #DDFFDD;
+  border-color: #99CC99;
+}

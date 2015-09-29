@@ -1,0 +1,263 @@
+/* -- BODY -- */
+.table {
+	margin: 10px 0;
+	/*width: 100%;*/
+	/*border-right: 1px solid #DDD;*/
+	border-spacing: 0;
+	background: none repeat scroll 0 0 #FFF;
+	/*border-radius: 4px;*/
+	/*box-shadow: 0 0 5px 2px #CCC;*/
+	text-align: right;
+}
+.tableheading {
+	font-size: 1.1em;
+	margin-top: 30px;
+	padding: 10px 20px;
+	background: none repeat scroll 0 0 0;
+	color: #FFF;
+	text-transform: capitalize;
+}
+.table thead {
+	/*background: #FFF;*/
+	text-align: center;
+}
+.table tr {
+	height: 34px;
+}
+.table tr.odd {
+	background-color: #FFE9DA;
+}
+.table tbody tr:hover {
+	/*background: #DDD;*/
+	background: none repeat scroll #FFC8A3;
+	transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+}
+.table th {
+	/*height: 54px;*/
+}
+.th-odd, .th-odd.sorting {
+	/*background: none repeat scroll 0 0 rgba(0,255,0,0.15);*/
+}
+.th-even, .th-even.sorting {
+
+}	
+tr.sup-row {
+	height: 10px;
+	font-size: 10px;
+}
+.table tbody tr.sup-row:hover {
+	background: transparent;
+}
+tr.sup-row td {
+	padding: 0;
+}
+.td-1 {
+	width: 20px;
+}
+.td-2 {
+	width: 40px;
+}
+.td-3 {
+	width: 80px;
+}
+.td-4 {
+	width: 100px;
+}
+.td-5 {
+	width: 120px;
+}
+.table tfoot tr {
+	height: 4px;
+}
+.table tfoot td {
+	padding: 10px 20px;
+	text-align: right;
+}
+.table td {
+	/*border-left: 1px solid #DDD;
+	border-bottom: 1px solid transparent;*/
+	border-bottom: 1px dashed #DDD;
+}
+.table th {
+	/*border-top: 1px solid transparent;*/
+	padding: 8px 12px 8px;
+	border-top: solid 1px #CDC;
+	border-bottom: solid 1px #CDC;
+}
+.table td {
+	padding: 8px 12px 8px;
+}
+.table td, .table th {
+	border-right: solid 1px #CDC;
+}
+.table tr {
+	border-left: solid 1px #CDC;
+}
+tr.even, .table tfoot tr {
+	/*background: #F6F6F6;*/
+}
+.red {
+	/*background: none repeat scroll 0 0 #FDD;*/
+}
+.yellow {
+	/*background: none repeat scroll 0 0 #FFC;*/
+}
+.green {
+	/*background: none repeat scroll 0 0 #DFD;*/
+}
+.table tr.red td {
+	/*border-left: 1px solid #FCC;*/
+}
+.table tr.yellow td {
+	/*border-left: 1px solid #FCC;*/
+}
+.table tr.green td {
+	/*border-left: 1px solid #FCC;*/
+}
+tbody tr.red:hover {
+	background: none repeat scroll 0 0 #FBB;
+}
+tbody tr.yellow:hover {
+	background: none repeat scroll 0 0 #FEB;
+}
+tbody tr.green:hover {
+	background: none repeat scroll 0 0 #AFA;
+}
+col.even {
+	background: #FFF;
+}
+col.odd {
+}
+.dashboard-item {
+	padding: 10px;
+	display: inline-block;
+}
+.w1 {
+	width: 30%;
+}
+.w2 {
+	width: 60%;
+}
+.w3 {
+	width: 90%;
+}
+.text-right {
+	text-align: right;
+}
+.text-left {
+	text-align: left;
+}
+.text-center {
+	text-align: center;
+}
+.hide {
+	display: none;
+}
+.btn {
+	padding: 5px 10px;
+	border: 1px solid #CCC;
+	background: none repeat scroll 0 0 #1EA061;
+	color: #FFF;
+}
+.preview-btn {
+	float: right;
+	position: relative;
+	bottom: 50px;
+	right: 50%;
+}
+/* -- BODY END -- */
+/* -- FOOTER -- */
+.status {
+	opacity: 0.5;
+	text-align: center;
+}
+.status:hover {
+	opacity: 1;
+}
+.status.green, table.dataTable tr.odd td.sorting_1.status.green, table.dataTable tr.even td.sorting_1.status.green {
+	background: none repeat scroll 0 0 #44CC44;
+	color: #FFF;
+}
+.status.red, table.dataTable tr.odd td.sorting_1.status.red, table.dataTable tr.even td.sorting_1.status.red {
+	background: none repeat scroll 0 0 #FF6666;
+	color: #FFF;
+}
+.menu-group {
+	
+}
+.menu-group:hover .submenu {
+	display: block;
+}
+.submenu {
+	position: absolute;
+	top: 43px;	
+	padding:0;
+	display: none;
+	background: none repeat scroll 0 0 hsl(151, 68%, 45%);
+	z-index: -1;
+}
+.nav-right .submenu {
+	right: 80px;
+}
+.submenu li {
+	padding: 0;
+	display: block;
+}
+.submenu li a {
+	display: block;
+}
+.submenu2 {
+	background: none repeat scroll 0 0 hsl(151, 68%, 45%);
+}
+.keterangan tr td {
+	text-align: left;
+}
+.doc-info {
+	display: inline-block;
+	margin-top: 0;
+}
+.stick-right {
+	position: absolute;
+	right: 1.25%;
+}
+.table-container {
+	overflow: hidden;
+}
+.table-container:hover {
+	overflow-x: scroll;
+}
+tbody {
+	/*height: 100px;*/
+}
+.tbody-container {
+	overflow: hidden;
+}
+.tbody-container:hover {
+	overflow-y: scroll;
+}
+tbody input {
+	width: auto;
+	margin: 0;
+}
+.pilih {
+	text-align: center;
+}
+.overflow {
+	overflow-x: scroll;
+}
+/* -- FOOTER END -- */
+
+
+
+/*detail view*/
+.detail-view th {
+	text-align: left;
+	
+}
+.no-wrap {
+	white-space: nowrap;
+}

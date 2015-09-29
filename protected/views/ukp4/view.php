@@ -1,0 +1,1 @@
+<?php echo $this->renderPartial('_view', array('dataProvider'=>$dataProvider,'hasAction'=>true, 'type' => $type)); ?>
