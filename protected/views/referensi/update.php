@@ -1,9 +1,9 @@
 <?php
-/* @var $this AkunController */
-/* @var $model Akun */
+/* @var $this ReferensiController */
+/* @var $model Referensi */
 
 $this->breadcrumbs=array(
-	'Akuns'=>array('index'),
+	'Referensis'=>array('index'),
 	$model->id=>array('view','id'=>$model->id),
 	'Update',
 );
@@ -11,7 +11,7 @@ $this->breadcrumbs=array(
 ?>
 
 <div class="box">
-<h1>Update Akun <?php echo $model->id; ?></h1>
+<h1>Update Referensi <?php echo $model->nama; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
 </div>

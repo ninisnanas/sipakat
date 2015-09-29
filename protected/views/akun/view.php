@@ -2,87 +2,30 @@
 /* @var $this AkunController */
 /* @var $model Akun */
 
-/*$this->breadcrumbs=array(
+$this->breadcrumbs=array(
 	'Akuns'=>array('index'),
-	$model->username,
-);*/
+	$model->id,
+);
+
+$this->menu=array(
+	array('label'=>'List Akun', 'url'=>array('index')),
+	array('label'=>'Create Akun', 'url'=>array('create')),
+	array('label'=>'Update Akun', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Delete Akun', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Manage Akun', 'url'=>array('admin')),
+);
 ?>
 
-<?php if(Yii::app()->user->hasFlash('success')):?>
-    <div class="msg-info green">
-        <?php echo Yii::app()->user->getFlash('success'); ?>
-    </div>
-<?php elseif (Yii::app()->user->hasFlash('successUpdate')) :?>
-		<div class="msg-info green">
-        <?php echo Yii::app()->user->getFlash('successUpdate'); ?>
-    </div>
-<?php elseif (Yii::app()->user->hasFlash('successPass')) :?>
-		<div class="msg-info green">
-        <?php echo Yii::app()->user->getFlash('successPass'); ?>
-    </div>
-<?php endif; ?>
+<h1>View Akun #<?php echo $model->id; ?></h1>
 
-<h1 class="tableheading">Detail Akun</h1>
-
-<div class="view">
-	<table>
-	<tr>
-		<td><b>Username</b></td>
-		<td><b>:</b></td>
-		<td><?php echo $model[0]['username']; ?></td>
-	</tr>
-
-	<tr>
-		<td><b>Nama</b></td>
-		<td><b>:</b></td>
-		<td><?php echo $model[0]['nama']; ?></td>
-	</tr>
-
-	<tr>
-		<td><b>NIP</b></td>
-		<td><b>:</b></td>
-		<td><?php echo $model[0]['nip']; ?></td>
-	</tr>
-	
-	<tr>
-		<td><b>E-Mail</b></td>
-		<td><b>:</b></td>
-		<td><?php echo $model[0]['email']; ?></td>
-	</tr>
-	
-	<tr>
-		<td><b>Nomor Telepon</b></td>
-		<td><b>:</b></td>
-		<td><?php echo $model[0]['telp']; ?></td>
-	</tr>
-	
-	<tr>
-		<td><b>Role</b></td>
-		<td><b>:</b></td>
-		<td><?php echo Akun::model()->getRole($model[0]['kode_role']); ?></td>
-	</tr>
-	
-	<?php if ($model[0]['prop'] != null)
-	{
-		echo "<tr>
-				<td><b>Provinsi</b></td>
-				<td><b>:</b></td>
-				<td>";
-				echo $model[0]['prop'];
-				echo "</td>
-			</tr>";
-	} ?>
-		
-	<?php if (($model[0]['kode_role'] == 5))
-	{
-		echo "<tr>
-				<td><b>Kabupaten</b></td>
-				<td><b>:</b></td>
-				<td>";
-				echo $model[0]['kab'];
-				echo "</td>
-			</tr>";
-	} ?>
-</table>
-
-</div>
+<?php $this->widget('zii.widgets.CDetailView', array(
+	'data'=>$model,
+	'attributes'=>array(
+		'id',
+		'id_personil',
+		'username',
+		'password',
+		'kode_role',
+		'email',
+	),
+)); ?>

@@ -1937,3 +1937,1651 @@ Stack trace:
 REQUEST_URI=/sipakat/index.php?r=Referensi/index
 HTTP_REFERER=http://localhost/sipakat/index.php?r=KegiatanPersonil/index
 ---
+2015/09/30 03:04:31 [error] [php] Undefined variable: role (C:\wamp\www\sipakat\protected\views\referensi\index.php:42)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): ReferensiController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): ReferensiController->renderPartial()
+#2 C:\wamp\www\sipakat\protected\controllers\ReferensiController.php(128): ReferensiController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ReferensiController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ReferensiController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ReferensiController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): ReferensiController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ReferensiController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Referensi/index
+in C:\wamp\www\sipakat\protected\views\referensi\index.php (42)
+in C:\wamp\www\sipakat\protected\controllers\ReferensiController.php (128)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 03:04:55 [error] [php] Undefined variable: role (C:\wamp\www\sipakat\protected\views\referensi\index.php:42)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): ReferensiController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): ReferensiController->renderPartial()
+#2 C:\wamp\www\sipakat\protected\controllers\ReferensiController.php(128): ReferensiController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ReferensiController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ReferensiController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ReferensiController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): ReferensiController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ReferensiController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Referensi/index
+in C:\wamp\www\sipakat\protected\views\referensi\index.php (42)
+in C:\wamp\www\sipakat\protected\controllers\ReferensiController.php (128)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 03:05:11 [error] [php] Undefined variable: role (C:\wamp\www\sipakat\protected\views\referensi\index.php:42)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): ReferensiController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): ReferensiController->renderPartial()
+#2 C:\wamp\www\sipakat\protected\controllers\ReferensiController.php(128): ReferensiController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ReferensiController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ReferensiController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ReferensiController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): ReferensiController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ReferensiController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Referensi/index
+in C:\wamp\www\sipakat\protected\views\referensi\index.php (42)
+in C:\wamp\www\sipakat\protected\controllers\ReferensiController.php (128)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 03:06:03 [error] [php] Undefined variable: role (C:\wamp\www\sipakat\protected\views\referensi\index.php:42)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): ReferensiController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): ReferensiController->renderPartial()
+#2 C:\wamp\www\sipakat\protected\controllers\ReferensiController.php(128): ReferensiController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ReferensiController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ReferensiController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ReferensiController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): ReferensiController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ReferensiController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Referensi/index
+in C:\wamp\www\sipakat\protected\views\referensi\index.php (42)
+in C:\wamp\www\sipakat\protected\controllers\ReferensiController.php (128)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 03:06:18 [error] [php] Undefined variable: role (C:\wamp\www\sipakat\protected\views\referensi\index.php:42)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): ReferensiController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): ReferensiController->renderPartial()
+#2 C:\wamp\www\sipakat\protected\controllers\ReferensiController.php(128): ReferensiController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ReferensiController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ReferensiController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ReferensiController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): ReferensiController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ReferensiController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Referensi/index
+in C:\wamp\www\sipakat\protected\views\referensi\index.php (42)
+in C:\wamp\www\sipakat\protected\controllers\ReferensiController.php (128)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 03:06:53 [error] [exception.CException] exception 'CException' with message 'Property "Referensi.nip" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('nip')
+#1 C:\wamp\www\sipakat\protected\views\referensi\index.php(42): CActiveRecord->__get('nip')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 C:\wamp\www\sipakat\protected\controllers\ReferensiController.php(128): CController->render('index', Array)
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ReferensiController->actionIndex()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Referensi/index')
+#18 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/sipakat/index.php?r=Referensi/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=site/index
+---
+2015/09/30 03:07:02 [error] [php] Undefined variable: role (C:\wamp\www\sipakat\protected\views\referensi\index.php:42)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): ReferensiController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): ReferensiController->renderPartial()
+#2 C:\wamp\www\sipakat\protected\controllers\ReferensiController.php(128): ReferensiController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ReferensiController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ReferensiController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ReferensiController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): ReferensiController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ReferensiController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Referensi/index
+in C:\wamp\www\sipakat\protected\views\referensi\index.php (42)
+in C:\wamp\www\sipakat\protected\controllers\ReferensiController.php (128)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 03:08:30 [error] [php] Undefined variable: role (C:\wamp\www\sipakat\protected\controllers\ReferensiController.php:125)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ReferensiController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ReferensiController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): ReferensiController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ReferensiController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Referensi/index
+in C:\wamp\www\sipakat\protected\controllers\ReferensiController.php (125)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 03:08:32 [error] [php] Undefined variable: role (C:\wamp\www\sipakat\protected\controllers\ReferensiController.php:125)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ReferensiController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ReferensiController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): ReferensiController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ReferensiController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Referensi/index
+in C:\wamp\www\sipakat\protected\controllers\ReferensiController.php (125)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 03:09:09 [error] [php] Undefined variable: role (C:\wamp\www\sipakat\protected\controllers\PersonilController.php:127)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): PersonilController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): PersonilController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): PersonilController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): PersonilController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Personil/index
+in C:\wamp\www\sipakat\protected\controllers\PersonilController.php (127)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 03:10:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "KegiatanPersonil/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('KegiatanPersoni...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=DetailKegiatan/index&id=1
+---
+2015/09/30 03:12:44 [error] [php] Undefined variable: role (C:\wamp\www\sipakat\protected\views\referensi\index.php:42)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): ReferensiController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): ReferensiController->renderPartial()
+#2 C:\wamp\www\sipakat\protected\controllers\ReferensiController.php(128): ReferensiController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ReferensiController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ReferensiController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ReferensiController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): ReferensiController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ReferensiController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Referensi/index
+in C:\wamp\www\sipakat\protected\views\referensi\index.php (42)
+in C:\wamp\www\sipakat\protected\controllers\ReferensiController.php (128)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 03:13:41 [error] [php] Undefined variable: role (C:\wamp\www\sipakat\protected\views\referensi\index.php:42)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): ReferensiController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): ReferensiController->renderPartial()
+#2 C:\wamp\www\sipakat\protected\controllers\ReferensiController.php(128): ReferensiController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ReferensiController->actionIndex()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ReferensiController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ReferensiController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): ReferensiController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ReferensiController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Referensi/index
+in C:\wamp\www\sipakat\protected\views\referensi\index.php (42)
+in C:\wamp\www\sipakat\protected\controllers\ReferensiController.php (128)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 03:19:24 [error] [php] file_get_contents(protected/file/Manual Penggunaan Dinkes Provinsi.pdf): failed to open stream: No such file or directory (C:\wamp\www\sipakat\protected\controllers\SiteController.php:450)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Site/download&id=1
+in C:\wamp\www\sipakat\protected\controllers\SiteController.php (450)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 03:19:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "KegiatanPersonil/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('KegiatanPersoni...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Personil/index
+---
+2015/09/30 03:22:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Rangkuman/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Rangkuman/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sipakat/index.php?r=Rangkuman/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Referensi/update&id=1
+---
+2015/09/30 03:33:49 [error] [exception.CException] exception 'CException' with message 'Property "Referensi.Timestamp" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(159): CComponent->__set('Timestamp', Object(CDbExpression))
+#1 C:\wamp\www\sipakat\protected\controllers\SiteController.php(447): CActiveRecord->__set('Timestamp', Object(CDbExpression))
+#2 [internal function]: SiteController->actionDownload('1')
+#3 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('download')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Site/download')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/sipakat/index.php?r=Site/download&id=1
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Referensi/index
+---
+2015/09/30 03:34:26 [error] [php] file_get_contents(protected/file): failed to open stream: Permission denied (C:\wamp\www\sipakat\protected\controllers\SiteController.php:452)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Site/download&id=1
+in C:\wamp\www\sipakat\protected\controllers\SiteController.php (452)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 03:34:33 [error] [php] file_get_contents(protected/file): failed to open stream: Permission denied (C:\wamp\www\sipakat\protected\controllers\SiteController.php:452)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Site/download&id=1
+in C:\wamp\www\sipakat\protected\controllers\SiteController.php (452)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 03:40:13 [error] [php] file_get_contents(protected/file): failed to open stream: Permission denied (C:\wamp\www\sipakat\protected\controllers\SiteController.php:452)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Site/download&id=1
+in C:\wamp\www\sipakat\protected\controllers\SiteController.php (452)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 03:54:18 [error] [php] file_get_contents(protected/file): failed to open stream: Permission denied (C:\wamp\www\sipakat\protected\controllers\SiteController.php:452)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Site/download&id=1
+in C:\wamp\www\sipakat\protected\controllers\SiteController.php (452)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 03:57:05 [error] [php] file_get_contents(protected/file/): failed to open stream: No such file or directory (C:\wamp\www\sipakat\protected\controllers\SiteController.php:452)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Site/download&id=1
+in C:\wamp\www\sipakat\protected\controllers\SiteController.php (452)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 03:59:44 [error] [php] file_get_contents(protected/file/github-cheat-sheet.pdf): failed to open stream: No such file or directory (C:\wamp\www\sipakat\protected\controllers\SiteController.php:452)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Site/download&id=1
+in C:\wamp\www\sipakat\protected\controllers\SiteController.php (452)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 04:06:37 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sipakat.propinsi' doesn't exist. The SQL statement executed was: SELECT
+			akun.nama,
+			akun.nip,
+			akun.username,
+			akun.email,
+			akun.telp,
+			akun.kode_role,
+			propinsi.nama as prop,
+			kabupaten.nama as kab
+			FROM
+			(akun left outer join propinsi on akun.kode_provinsi=propinsi.kode_prop) left outer join kabupaten on akun.kode_kabkot=kabupaten.kode_kab;.
+in C:\wamp\www\sipakat\protected\models\Akun.php (196)
+in C:\wamp\www\sipakat\protected\models\Akun.php (172)
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (212)
+2015/09/30 04:06:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sipakat.propinsi' doesn't exist. The SQL statement executed was: SELECT
+			akun.nama,
+			akun.nip,
+			akun.username,
+			akun.email,
+			akun.telp,
+			akun.kode_role,
+			propinsi.nama as prop,
+			kabupaten.nama as kab
+			FROM
+			(akun left outer join propinsi on akun.kode_provinsi=propinsi.kode_prop) left outer join kabupaten on akun.kode_kabkot=kabupaten.kode_kab;' in C:\wamp\www\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\sipakat\protected\models\Akun.php(196): CDbCommand->queryAll()
+#2 C:\wamp\www\sipakat\protected\models\Akun.php(172): Akun->doStandardQuery('SELECT\n\t\t\takun....')
+#3 C:\wamp\www\sipakat\protected\controllers\AkunController.php(212): Akun->getListProvKab()
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): AkunController->actionIndex()
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/index')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Referensi/create
+---
+2015/09/30 04:32:56 [error] [php] move_uploaded_file(protected/upload/mysql(1).sql): failed to open stream: No such file or directory (C:\wamp\www\yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): ReferensiController->actionCreate()
+#1 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): ReferensiController->runAction()
+#3 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): ReferensiController->filterAccessControl()
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\CController.php(265): ReferensiController->runActionWithFilters()
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(282): ReferensiController->run()
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Referensi/create
+in C:\wamp\www\sipakat\protected\controllers\ReferensiController.php (75)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 04:34:07 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sipakat.propinsi' doesn't exist. The SQL statement executed was: SELECT
+			akun.nama,
+			akun.nip,
+			akun.username,
+			akun.email,
+			akun.telp,
+			akun.kode_role,
+			propinsi.nama as prop,
+			kabupaten.nama as kab
+			FROM
+			(akun left outer join propinsi on akun.kode_provinsi=propinsi.kode_prop) left outer join kabupaten on akun.kode_kabkot=kabupaten.kode_kab;.
+in C:\wamp\www\sipakat\protected\models\Akun.php (196)
+in C:\wamp\www\sipakat\protected\models\Akun.php (172)
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (212)
+2015/09/30 04:34:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sipakat.propinsi' doesn't exist. The SQL statement executed was: SELECT
+			akun.nama,
+			akun.nip,
+			akun.username,
+			akun.email,
+			akun.telp,
+			akun.kode_role,
+			propinsi.nama as prop,
+			kabupaten.nama as kab
+			FROM
+			(akun left outer join propinsi on akun.kode_provinsi=propinsi.kode_prop) left outer join kabupaten on akun.kode_kabkot=kabupaten.kode_kab;' in C:\wamp\www\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\sipakat\protected\models\Akun.php(196): CDbCommand->queryAll()
+#2 C:\wamp\www\sipakat\protected\models\Akun.php(172): Akun->doStandardQuery('SELECT\n\t\t\takun....')
+#3 C:\wamp\www\sipakat\protected\controllers\AkunController.php(212): Akun->getListProvKab()
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): AkunController->actionIndex()
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/index')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Referensi/index
+---
+2015/09/30 04:37:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Rangkuman/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Rangkuman/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sipakat/index.php?r=Rangkuman/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Referensi/index
+---
+2015/09/30 04:37:07 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sipakat.propinsi' doesn't exist. The SQL statement executed was: SELECT
+			akun.nama,
+			akun.nip,
+			akun.username,
+			akun.email,
+			akun.telp,
+			akun.kode_role,
+			propinsi.nama as prop,
+			kabupaten.nama as kab
+			FROM
+			(akun left outer join propinsi on akun.kode_provinsi=propinsi.kode_prop) left outer join kabupaten on akun.kode_kabkot=kabupaten.kode_kab;.
+in C:\wamp\www\sipakat\protected\models\Akun.php (196)
+in C:\wamp\www\sipakat\protected\models\Akun.php (172)
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (212)
+2015/09/30 04:37:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sipakat.propinsi' doesn't exist. The SQL statement executed was: SELECT
+			akun.nama,
+			akun.nip,
+			akun.username,
+			akun.email,
+			akun.telp,
+			akun.kode_role,
+			propinsi.nama as prop,
+			kabupaten.nama as kab
+			FROM
+			(akun left outer join propinsi on akun.kode_provinsi=propinsi.kode_prop) left outer join kabupaten on akun.kode_kabkot=kabupaten.kode_kab;' in C:\wamp\www\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\sipakat\protected\models\Akun.php(196): CDbCommand->queryAll()
+#2 C:\wamp\www\sipakat\protected\models\Akun.php(172): Akun->doStandardQuery('SELECT\n\t\t\takun....')
+#3 C:\wamp\www\sipakat\protected\controllers\AkunController.php(212): Akun->getListProvKab()
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): AkunController->actionIndex()
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/index')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Rangkuman/index
+---
+2015/09/30 04:37:43 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sipakat.propinsi' doesn't exist. The SQL statement executed was: SELECT
+			akun.nama,
+			akun.nip,
+			akun.username,
+			akun.email,
+			akun.telp,
+			akun.kode_role,
+			propinsi.nama as prop,
+			kabupaten.nama as kab
+			FROM
+			(akun left outer join propinsi on akun.kode_provinsi=propinsi.kode_prop) left outer join kabupaten on akun.kode_kabkot=kabupaten.kode_kab;.
+in C:\wamp\www\sipakat\protected\models\Akun.php (196)
+in C:\wamp\www\sipakat\protected\models\Akun.php (172)
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (212)
+2015/09/30 04:37:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sipakat.propinsi' doesn't exist. The SQL statement executed was: SELECT
+			akun.nama,
+			akun.nip,
+			akun.username,
+			akun.email,
+			akun.telp,
+			akun.kode_role,
+			propinsi.nama as prop,
+			kabupaten.nama as kab
+			FROM
+			(akun left outer join propinsi on akun.kode_provinsi=propinsi.kode_prop) left outer join kabupaten on akun.kode_kabkot=kabupaten.kode_kab;' in C:\wamp\www\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\sipakat\protected\models\Akun.php(196): CDbCommand->queryAll()
+#2 C:\wamp\www\sipakat\protected\models\Akun.php(172): Akun->doStandardQuery('SELECT\n\t\t\takun....')
+#3 C:\wamp\www\sipakat\protected\controllers\AkunController.php(212): Akun->getListProvKab()
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): AkunController->actionIndex()
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/index')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Rangkuman/index
+---
+2015/09/30 04:39:24 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sipakat.propinsi' doesn't exist. The SQL statement executed was: SELECT
+			akun.nama,
+			akun.nip,
+			akun.username,
+			akun.email,
+			akun.telp,
+			akun.kode_role,
+			propinsi.nama as prop,
+			kabupaten.nama as kab
+			FROM
+			(akun left outer join propinsi on akun.kode_provinsi=propinsi.kode_prop) left outer join kabupaten on akun.kode_kabkot=kabupaten.kode_kab;.
+in C:\wamp\www\sipakat\protected\models\Akun.php (196)
+in C:\wamp\www\sipakat\protected\models\Akun.php (172)
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (212)
+2015/09/30 04:39:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sipakat.propinsi' doesn't exist. The SQL statement executed was: SELECT
+			akun.nama,
+			akun.nip,
+			akun.username,
+			akun.email,
+			akun.telp,
+			akun.kode_role,
+			propinsi.nama as prop,
+			kabupaten.nama as kab
+			FROM
+			(akun left outer join propinsi on akun.kode_provinsi=propinsi.kode_prop) left outer join kabupaten on akun.kode_kabkot=kabupaten.kode_kab;' in C:\wamp\www\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\sipakat\protected\models\Akun.php(196): CDbCommand->queryAll()
+#2 C:\wamp\www\sipakat\protected\models\Akun.php(172): Akun->doStandardQuery('SELECT\n\t\t\takun....')
+#3 C:\wamp\www\sipakat\protected\controllers\AkunController.php(212): Akun->getListProvKab()
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): AkunController->actionIndex()
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/index')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Rangkuman/index
+---
+2015/09/30 04:40:07 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('akun/updatepass...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/sipakat/index.php?r=akun/updatepassword
+---
+2015/09/30 04:40:19 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/updatepass...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword
+---
+2015/09/30 04:40:24 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/updatepass...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/updatepassword
+---
+2015/09/30 04:40:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/updatepass...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/updatepassword
+---
+2015/09/30 04:40:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Rangkuman/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Rangkuman/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sipakat/index.php?r=Rangkuman/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/updatepassword
+---
+2015/09/30 04:40:28 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/updatepass...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Rangkuman/index
+---
+2015/09/30 04:40:29 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/updatepass...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/updatepassword
+---
+2015/09/30 04:42:32 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/updatepass...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/updatepassword
+---
+2015/09/30 04:42:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:241
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(146): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionUpdatepassword('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/updatepass...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/updatepassword
+---
+2015/09/30 04:42:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:241
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(146): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionUpdatepassword('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/updatepass...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/updatepassword&id=admin
+---
+2015/09/30 04:42:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:241
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(146): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionUpdatepassword('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/updatepass...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/updatepassword&id=admin
+---
+2015/09/30 04:42:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:241
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(146): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionUpdatepassword('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/updatepass...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/updatepassword&id=admin
+---
+2015/09/30 04:45:08 [error] [exception.CException] exception 'CException' with message 'AkunController and its behaviors do not have a method or closure named "findByAttributes".' in C:\wamp\www\yii\framework\base\CComponent.php:265
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(146): CComponent->__call('findByAttribute...', Array)
+#1 C:\wamp\www\sipakat\protected\controllers\AkunController.php(146): AkunController->findByAttributes(Array)
+#2 [internal function]: AkunController->actionUpdatepassword('admin')
+#3 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/updatepass...')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/updatepassword&id=admin
+---
+2015/09/30 04:46:27 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/updatepass...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/updatepassword
+---
+2015/09/30 04:46:28 [error] [php] include(Model.php): failed to open stream: No such file or directory (C:\wamp\www\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(146): spl_autoload_call()
+#1 unknown(0): AkunController->actionUpdatepassword()
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): AkunController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): AkunController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): AkunController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): AkunController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword&id=admin
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (146)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 04:46:59 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/updatepass...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/updatepassword
+---
+2015/09/30 04:47:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:241
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(147): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionUpdatepassword('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/updatepass...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/updatepassword
+---
+2015/09/30 04:47:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:241
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(147): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionUpdatepassword('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/updatepass...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/updatepassword&id=admin
+---
+2015/09/30 04:51:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Rangkuman/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Rangkuman/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sipakat/index.php?r=Rangkuman/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/updatepassword&id=admin
+---
+2015/09/30 04:51:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:242
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(147): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionUpdatepassword('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/updatepass...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Rangkuman/index
+---
+2015/09/30 04:51:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:242
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(147): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionUpdatepassword('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/updatepass...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/updatepassword&id=admin
+---
+2015/09/30 04:51:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:242
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(147): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionUpdatepassword('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/updatepass...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/updatepassword&id=admin
+---
+2015/09/30 04:51:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:242
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(147): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionUpdatepassword('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/updatepass...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/updatepassword&id=admin
+---
+2015/09/30 04:52:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:242
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(147): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionUpdatepassword('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updatepassword')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/updatepass...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/updatepassword&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/updatepassword&id=admin
+---
+2015/09/30 04:52:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:242
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(99): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionUpdate('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/update')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/update&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/updatepassword&id=admin
+---
+2015/09/30 04:52:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:242
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(99): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionUpdate('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/update')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/update&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/update&id=admin
+---
+2015/09/30 04:54:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:242
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(99): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionUpdate('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/update')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/update&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/update&id=admin
+---
+2015/09/30 04:54:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:157
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(89): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionUpdate('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/update')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/update&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/update&id=admin
+---
+2015/09/30 04:54:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Rangkuman/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Rangkuman/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sipakat/index.php?r=Rangkuman/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/update&id=admin
+---
+2015/09/30 04:54:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:157
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(89): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionUpdate('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/update')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/update&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Rangkuman/index
+---
+2015/09/30 04:56:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:184
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(89): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionUpdate('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/update')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/update&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/update&id=admin
+---
+2015/09/30 04:56:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:184
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(89): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionUpdate('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/update')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/update&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/update&id=admin
+---
+2015/09/30 04:57:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Rangkuman/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Rangkuman/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sipakat/index.php?r=Rangkuman/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/update&id=admin
+---
+2015/09/30 04:58:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Rangkuman/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Rangkuman/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sipakat/index.php?r=Rangkuman/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/update&id=admin
+---
+2015/09/30 05:02:30 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (106)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:02:30 [error] [php] Undefined variable: compare (C:\wamp\www\sipakat\protected\controllers\AkunController.php:109)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): AkunController->runAction()
+#3 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): AkunController->filterAccessControl()
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\CController.php(265): AkunController->runActionWithFilters()
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(282): AkunController->run()
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Akun/update&id=admin
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (109)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:04:03 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:04:03 [error] [exception.CException] exception 'CException' with message 'Property "Akun.nama" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('nama')
+#1 C:\wamp\www\yii\framework\validators\CRequiredValidator.php(51): CActiveRecord->__get('nama')
+#2 C:\wamp\www\yii\framework\validators\CValidator.php(213): CRequiredValidator->validateAttribute(Object(Akun), 'nama')
+#3 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(Akun), NULL)
+#4 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(794): CModel->validate(NULL)
+#5 C:\wamp\www\sipakat\protected\controllers\AkunController.php(118): CActiveRecord->save()
+#6 [internal function]: AkunController->actionUpdate('admin')
+#7 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/update')
+#19 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#20 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/update&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/update&id=admin
+---
+2015/09/30 05:06:59 [error] [exception.CException] exception 'CException' with message 'Property "Akun.new_password" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('new_password')
+#1 C:\wamp\www\sipakat\protected\controllers\AkunController.php(98): CActiveRecord->__get('new_password')
+#2 [internal function]: AkunController->actionUpdate('admin')
+#3 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Akun/update')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/sipakat/index.php?r=Akun/update&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Rangkuman/index
+---
+2015/09/30 05:07:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Rangkuman/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Rangkuman/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sipakat/index.php?r=Rangkuman/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/update&id=admin
+---
+2015/09/30 05:07:33 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:07:33 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:08:17 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:08:17 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:08:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:185
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(55): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionView('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('akun/view')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=akun/view&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/update&id=admin
+---
+2015/09/30 05:15:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:189
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(55): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionView('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('akun/view')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=akun/view&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/update&id=admin
+---
+2015/09/30 05:15:13 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:15:13 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:15:21 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:15:21 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:16:36 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:16:36 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:16:49 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:16:49 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:17:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:185
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(55): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionView('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('akun/view')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=akun/view&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/update&id=admin
+---
+2015/09/30 05:19:09 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:19:09 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:19:31 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:19:31 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:20:30 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:20:30 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:21:01 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:21:01 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:21:33 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:21:33 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:22:22 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:22:22 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:22:49 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:22:49 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:22:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\sipakat\protected\controllers\AkunController.php:189
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\controllers\AkunController.php(55): AkunController->loadModel('admin')
+#1 [internal function]: AkunController->actionView('admin')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AkunController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AkunController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('akun/view')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/sipakat/index.php?r=akun/view&id=admin
+HTTP_REFERER=http://localhost/sipakat/index.php?r=akun/update&id=admin
+---
+2015/09/30 05:23:10 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:23:10 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:24:47 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:24:47 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:25:02 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:25:02 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:26:02 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:26:02 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:26:15 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:26:15 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:27:37 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (106)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:27:37 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (106)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:27:41 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (106)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:27:41 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (106)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:29:19 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:29:19 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (107)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:29:37 [warning] [application] Failed to set unsafe attribute "new_password" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (105)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:29:37 [warning] [application] Failed to set unsafe attribute "password_repeat" of "Akun".
+in C:\wamp\www\sipakat\protected\controllers\AkunController.php (105)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 05:29:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "KegiatanPersonil/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('KegiatanPersoni...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Personil/index
+---
+2015/09/30 05:30:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "KegiatanPersonil/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('KegiatanPersoni...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=DetailKegiatan/index&id=1
+---
+2015/09/30 05:30:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Rangkuman/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Rangkuman/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sipakat/index.php?r=Rangkuman/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Referensi/index
+---
+2015/09/30 05:30:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Rangkuman/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Rangkuman/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sipakat/index.php?r=Rangkuman/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Akun/update&id=admin
+---
+2015/09/30 05:30:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "KegiatanPersonil/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('KegiatanPersoni...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Kegiatan/index
+---

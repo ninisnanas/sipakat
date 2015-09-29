@@ -443,18 +443,15 @@ class SiteController extends Controller
 
 	public function actionDownload($id)
   	{
-  		header('Content-Type: application/vnd.ms-excel');
+  		$model=Referensi::model()->findByPk($id);
+  		$model->timestamp = new CDbExpression('NOW()');
+  		$filename = "protected/file/".$model->file;
+  		$content = "Content-Disposition: attachment;filename=\"".$model->file."\"";
+  		header('Content-Type: application/force-download');
 	    header('Cache-Control: max-age=0');
-  		if($id == 1)
-  		{
-  			$filecontent=file_get_contents('protected/file/Manual Penggunaan Dinkes Provinsi.pdf');
-  			header('Content-Disposition: attachment;filename="Manual Penggunaan Dinkes Provinsi.pdf"');	
-  		}else if($id == 2)
-  		{
-  			$filecontent=file_get_contents('protected/file/Manual Penggunaan Dinkes Kabupaten Kota.pdf');
-  			header('Content-Disposition: attachment;filename="Manual Penggunaan Dinkes Kabupaten Kota.pdf"');
-  		}
-	    echo $filecontent;
+ 		$filecontent=file_get_contents($filename);
+  		header($content);	
+  		echo $filecontent;
 	    exit;
   	}
 }

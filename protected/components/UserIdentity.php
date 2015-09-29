@@ -26,9 +26,9 @@ class UserIdentity extends CUserIdentity
 		else if($user->password!==$this->password)
 		{	
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
-		}else {
+		} else {
 			$this->errorCode=self::ERROR_NONE;
-			$this->setState('role',$user->kode_role);
+			$this->setState('role', $user->kode_role);
 			//$this->setState('provinsi',$user->kode_provinsi);
 			//$this->setState('kabupaten',$user->kode_kabkot);
 			//$this->setState('password',$user->password);

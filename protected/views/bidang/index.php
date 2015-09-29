@@ -1,18 +1,18 @@
 <?php
-/* @var $this AkunController */
+/* @var $this BidangController */
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Akuns',
+	'Bidangs',
 );
 
 $this->menu=array(
-	array('label'=>'Create Akun', 'url'=>array('create')),
-	array('label'=>'Manage Akun', 'url'=>array('admin')),
+	array('label'=>'Create Bidang', 'url'=>array('create')),
+	array('label'=>'Manage Bidang', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Akuns</h1>
+<h1>Bidangs</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

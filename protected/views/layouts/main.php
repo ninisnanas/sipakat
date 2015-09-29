@@ -75,7 +75,12 @@
                         <?php echo CHtml::link('Rangkuman', array('Rangkuman/index'));?>
                     </li>
                     <li>
-                        <?php echo CHtml::link('Manajemen Akun', array('Akun/index'));?>
+                        <?php 
+                        $id=Yii::app()->user->getId();
+                        echo CHtml::link('Edit Password', array('Akun/update', 'id'=>$id));?>
+                    </li>
+                    <li>
+                        <?php echo CHtml::link('Logout', array('Site/logout'));?>
                     </li>
                 </ul>
             </div>

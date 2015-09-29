@@ -1,24 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "akun".
+ * This is the model class for table "referensi".
  *
- * The followings are the available columns in table 'akun':
+ * The followings are the available columns in table 'referensi':
  * @property integer $id
- * @property integer $id_personil
- * @property string $username
- * @property string $password
- * @property integer $kode_role
- * @property string $email
+ * @property string $nama
+ * @property string $file
+ * @property string $tahun
+ * @property string $timestamp
  */
-class Akun extends CActiveRecord
+class Referensi extends CActiveRecord
 {
-	public $new_password;
-	public $password_repeat;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Akun the static model class
+	 * @return Referensi the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -30,7 +27,7 @@ class Akun extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'akun';
+		return 'referensi';
 	}
 
 	/**
@@ -41,13 +38,13 @@ class Akun extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_personil, username, password, kode_role, email', 'required'),
-			array('id_personil, kode_role', 'numerical', 'integerOnly'=>true),
-			array('username', 'length', 'max'=>25),
-			array('password, email', 'length', 'max'=>50),
+			array('nama, file, tahun, timestamp', 'required'),
+			array('nama', 'length', 'max'=>100),
+			array('file', 'length', 'max'=>250),
+			array('tahun', 'length', 'max'=>4),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, id_personil, username, password, kode_role, email', 'safe', 'on'=>'search'),
+			array('id, nama, file, tahun, timestamp', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -69,11 +66,10 @@ class Akun extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'id_personil' => 'Id Personil',
-			'username' => 'Username',
-			'password' => 'Password',
-			'kode_role' => 'Kode Role',
-			'email' => 'Email',
+			'nama' => 'Nama',
+			'file' => 'File',
+			'tahun' => 'Tahun',
+			'timestamp' => 'Timestamp',
 		);
 	}
 
@@ -89,11 +85,10 @@ class Akun extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('id_personil',$this->id_personil);
-		$criteria->compare('username',$this->username,true);
-		$criteria->compare('password',$this->password,true);
-		$criteria->compare('kode_role',$this->kode_role);
-		$criteria->compare('email',$this->email,true);
+		$criteria->compare('nama',$this->nama,true);
+		$criteria->compare('file',$this->file,true);
+		$criteria->compare('tahun',$this->tahun,true);
+		$criteria->compare('timestamp',$this->timestamp,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

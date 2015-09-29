@@ -1,6 +1,6 @@
 <?php
 
-class AkunController extends Controller
+class ReferensiController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -15,7 +15,7 @@ class AkunController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
+			//'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
 
@@ -62,16 +62,20 @@ class AkunController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Akun;
+		$model=new Referensi;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Akun']))
+		if(isset($_POST['Referensi']))
 		{
-			$model->attributes=$_POST['Akun'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			$model->attributes=$_POST['Referensi'];
+
+			$model->file=CUploadedFile::getInstance($model,'file');
+			if($model->save()) {
+				$model->file->saveAs('protected/file/'.$model->file);
+				$this->redirect(array('index','id'=>$model->id));
+			}
 		}
 
 		$this->render('create',array(
@@ -86,47 +90,16 @@ class AkunController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$model=Akun::model()->findByAttributes(array("username" => $id));
-		$compare=Akun::model()->findByAttributes(array("username" => $id));
+		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		$model->password='';
-		if ($model->new_password != null) {
-			$model->new_password='';
-		}
-		if ($model->password_repeat != null) {
-			$model->password_repeat='';
-		}
-
-		if(isset($_POST['Akun']))
+		if(isset($_POST['Referensi']))
 		{
-			$model->attributes=$_POST['Akun'];
-
-			//$model->password = (crypt($model->password, $compare->password));
-			if ($compare->password==$model->password) {
-				if($model->new_password==$model->password_repeat) {
-					$model->password=$model->new_password;
-					//$model->password = crypt($model->new_password, self::blowfishSalt());
-					$valid=true;
-				} else {
-					$valid=false;
-				}
-			} else {
-				$valid=false;
-			}
-
-
-			if($model->save()) {
-				if ($valid==true) {
-					Yii::app()->user->setFlash('successPass', "Password berhasil diubah!");
-					$this->redirect(array('view','id'=>$compare->id));
-				} else {
-					Yii::app()->user->setFlash('notice', "Gagal mengubah password!");
-					$this->redirect(array('update', 'id'=>$compare->username));
-				}
-			}
+			$model->attributes=$_POST['Referensi'];
+			if($model->save())
+				$this->redirect(array('index'));
 		}
 
 		$this->render('update',array(
@@ -143,9 +116,10 @@ class AkunController extends Controller
 	{
 		$this->loadModel($id)->delete();
 
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+		if(!isset($_GET['ajax'])) {
+			Yii::app()->user->setFlash('successDelete', "Berhasil menghapus referensi!");
+			$this->render('index',array('dataProvider'=>Referensi::model()->findAll()));
+		}
 	}
 
 	/**
@@ -153,7 +127,7 @@ class AkunController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Akun');
+		$dataProvider = Referensi::model()->findAll();
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -164,10 +138,10 @@ class AkunController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Akun('search');
+		$model=new Referensi('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Akun']))
-			$model->attributes=$_GET['Akun'];
+		if(isset($_GET['Referensi']))
+			$model->attributes=$_GET['Referensi'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -178,12 +152,12 @@ class AkunController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Akun the loaded model
+	 * @return Referensi the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Akun::model()->findByPk($id);
+		$model=Referensi::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -191,11 +165,11 @@ class AkunController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Akun $model the model to be validated
+	 * @param Referensi $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='akun-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='referensi-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

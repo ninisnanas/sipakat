@@ -41,7 +41,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'bidang'); ?>
-		<?php echo $form->textField($model,'bidang'); ?>
+		<?php echo $form->dropDownList($model, 'bidang', Bidang::model()->getProvinsiList(),
+			array('empty' => 'Pilih Bidang',
+				'ajax' => array(
+					'type' => 'POST',
+					'url' => CController::createUrl('kabupaten/dinamis'),
+					'data' => array('kode_provinsi' => 'js:this.value'),
+					))); ?>
 		<?php echo $form->error($model,'bidang'); ?>
 	</div>
 

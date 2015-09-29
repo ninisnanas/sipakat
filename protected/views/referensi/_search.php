@@ -1,6 +1,6 @@
 <?php
-/* @var $this AkunController */
-/* @var $model Akun */
+/* @var $this ReferensiController */
+/* @var $model Referensi */
 /* @var $form CActiveForm */
 ?>
 
@@ -17,23 +17,23 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'id_personil'); ?>
-		<?php echo $form->textField($model,'id_personil'); ?>
+		<?php echo $form->label($model,'nama'); ?>
+		<?php echo $form->textField($model,'nama',array('size'=>60,'maxlength'=>100)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'username'); ?>
-		<?php echo $form->textField($model,'username',array('size'=>25,'maxlength'=>25)); ?>
+		<?php echo $form->label($model,'file'); ?>
+		<?php echo $form->textField($model,'file',array('size'=>60,'maxlength'=>250)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'kode_role'); ?>
-		<?php echo $form->textField($model,'kode_role'); ?>
+		<?php echo $form->label($model,'tahun'); ?>
+		<?php echo $form->textField($model,'tahun',array('size'=>4,'maxlength'=>4)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->label($model,'timestamp'); ?>
+		<?php echo $form->textField($model,'timestamp'); ?>
 	</div>
 
 	<div class="row buttons">

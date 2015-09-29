@@ -5,28 +5,28 @@
 
 <div class="view">
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
+	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('id_personil')); ?>:</b>
+	<?php echo CHtml::encode($data->id_personil); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('username')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->username), array('view', 'id'=>$data->username)); ?>
+	<?php echo CHtml::encode($data->username); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
+	<?php echo CHtml::encode($data->password); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('kode_role')); ?>:</b>
+	<?php echo CHtml::encode($data->kode_role); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
 	<?php echo CHtml::encode($data->email); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('telp')); ?>:</b>
-	<?php echo CHtml::encode($data->telp); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('kode_role')); ?>:</b>
-	<?php echo Akun::model()->getRole($data['kode_role']); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('kode_provinsi')); ?>:</b>
-	<?php echo CHtml::encode($data->kode_provinsi); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('kode_kabkot')); ?>:</b>
-	<?php echo CHtml::encode($data->kode_kabkot); ?>
 	<br />
 
 

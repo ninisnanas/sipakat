@@ -7,13 +7,13 @@
 <div class="row">
   <div class="box">
   <div class="col-lg-12 text-center">
-      <h2 class="section-heading">Daftar Kegiatan</h2>
-      <h3 class="section-subheading text-muted">Bidang XYZ</h3>
+      <h2 class="section-heading">Daftar Referensi</h2>
       <?php
-        echo CHtml::link('Tambah Kegiatan',array('Kegiatan/create'));
+        echo CHtml::link('Tambah Referensi',array('Referensi/create'));
       ?>
   </div>
-  <table id="<?php echo $tableid;?>" class="table testgrid">
+   <div class="col-xs-6 col-xs-offset-3">
+  <table id="<?php echo $tableid;?>" class="display compact cell-border nowrap">
     <colgroup>
     <col class="odd"></col>
     <col class="even"></col>
@@ -26,13 +26,8 @@
     </colgroup>
     <thead>
       <th>No.</th>
-      <th>Nama Kegiatan</th>
-      <?php 
-        $role=Yii::app()->user->getState('role');
-        if ($role==1) {
-          echo "<th>Aksi</th>";
-        }
-      ?>
+      <th>Nama File</th>
+      <th>Aksi</th>
     </thead>
     <tfoot>
       <tr>
@@ -45,18 +40,19 @@
         echo "<tr id=\"\">";
         echo   "<td>".$ii++."</td>";
         echo   "<td>".$data->nama."</td>";
+        $role=Yii::app()->user->getState('role');
         if ($role==1) {
-          echo "<td class=\"text-left\">".CHtml::link('Lihat',array('DetailKegiatan/index','id'=>$data->id))." |"
-          .CHtml::link('Ubah',array('Kegiatan/update','id'=>$data->id))." |"
-          .CHtml::link('Hapus',array('Kegiatan/delete','id'=>$data->id),array(
-          'submit'=>array('Kegiatan/delete', 'id'=>$data->id),
-          'class' => 'delete','confirm'=>'Anda yakin untuk menghapus kegiatan?'
+          echo "<td class=\"text-left\">".CHtml::link('Unduh',array('Site/download','id'=>$data->id))." |"
+          .CHtml::link('Hapus',array('Referensi/delete','id'=>$data->id),array(
+          'submit'=>array('Referensi/delete', 'id'=>$data->id),
+          'class' => 'delete','confirm'=>'Anda yakin untuk menghapus referensi?'
           ))."</td>";
         }
         echo "</tr>";
       } ?>
     </tbody>
   </table>
+</div>
 </div>
 </div>
 
