@@ -41,13 +41,8 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'bidang'); ?>
-		<?php echo $form->dropDownList($model, 'bidang', Bidang::model()->getProvinsiList(),
-			array('empty' => 'Pilih Bidang',
-				'ajax' => array(
-					'type' => 'POST',
-					'url' => CController::createUrl('kabupaten/dinamis'),
-					'data' => array('kode_provinsi' => 'js:this.value'),
-					))); ?>
+		<?php echo $form->dropDownList($model, 'bidang', Bidang::model()->getBidangList(),
+			array('empty' => 'Pilih Bidang')); ?>
 		<?php echo $form->error($model,'bidang'); ?>
 	</div>
 
@@ -65,7 +60,9 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status'); ?>
+		<?php 
+			$options=array(0=>'Tidak Aktif', 1=>'Aktif');
+		echo $form->dropDownList($model, 'bidang', array('empty' => 'Pilih Status', 0=>'Tidak Aktif',1=>'Aktif')); ?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
 

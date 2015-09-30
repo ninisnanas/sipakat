@@ -7,10 +7,10 @@
 <div class="row">
   <div class="box">
   <div class="col-lg-12 text-center">
-      <h2 class="section-heading">Data Personil</h2>
+      <h2 class="section-heading">Detail Kegiatan Personil</h2>
       <h3 class="section-subheading text-muted">Bidang XYZ</h3>
       <?php
-        echo CHtml::link('Tambah Personil',array('Personil/create'));
+        echo CHtml::link('Tambah Kegiatan Personil',array('KegiatanPersonil/create'));
       ?>
   </div>
   <table id="<?php echo $tableid;?>" class="display compact cell-border nowrap">
@@ -25,19 +25,81 @@
     <col class="even"></col>
     </colgroup>
     <thead>
-      <th>No.</th>
-      <th>Nama</th>
-      <th>NIP</th>
-      <th>Jabatan</th>
-      <th>Bidang</th>
-      <th>Background<br>Pendidikan</th>
-      <th>Training<br>yang Diikuti</th>
+      <tr>
+        <th class="dt-head-center" rowspan="3">No.</th>
+        <th class="dt-head-center" rowspan="3">Nama Personil</th>
       <?php 
         $role=Yii::app()->user->getState('role');
         if ($role==1) {
-          echo "<th>Aksi</th>";
+          echo "<th class=/"dt-head-center/" rowspan=/"3/">Aksi</th>";
         }
       ?>
+      	<th class="dt-head-center" colspan="144">Periode</th>
+	  </tr>
+	  <tr>
+	  	<th class="dt-head-center" colspan="4">Januari</th>
+            <th class="dt-head-center" colspan="4">Februari</th>
+            <th class="dt-head-center" colspan="4">Maret</th>
+            <th class="dt-head-center" colspan="4">April</th>
+            <th class="dt-head-center" colspan="4">Mei</th>
+            <th class="dt-head-center" colspan="4">Juni</th>
+            <th class="dt-head-center" colspan="4">Juli</th>
+            <th class="dt-head-center" colspan="4">Agustus</th>
+            <th class="dt-head-center" colspan="4">September</th>
+            <th class="dt-head-center" colspan="4">Oktober</th>
+            <th class="dt-head-center" colspan="4">November</th>
+            <th class="dt-head-center" colspan="4">Desember</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+        </tr>
     </thead>
     <tfoot>
       <tr>

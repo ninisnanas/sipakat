@@ -7,6 +7,7 @@
  * @property integer $id
  * @property string $nama
  * @property integer $id_bidang
+ * @property string $tahun
  * @property integer $anggaran
  * @property integer $persen_anggaran
  * @property string $waktu
@@ -40,13 +41,14 @@ class Kegiatan extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nama, id_bidang, anggaran, waktu', 'required'),
+			array('nama, id_bidang, tahun, anggaran, waktu', 'required'),
 			array('id_bidang, anggaran, persen_anggaran, persen_waktu', 'numerical', 'integerOnly'=>true),
 			array('nama', 'length', 'max'=>100),
+			array('tahun', 'length', 'max'=>4),
 			array('waktu', 'length', 'max'=>25),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, nama, id_bidang, anggaran, persen_anggaran, waktu, persen_waktu', 'safe', 'on'=>'search'),
+			array('id, nama, id_bidang, tahun, anggaran, persen_anggaran, waktu, persen_waktu', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,6 +72,7 @@ class Kegiatan extends CActiveRecord
 			'id' => 'ID',
 			'nama' => 'Nama',
 			'id_bidang' => 'Id Bidang',
+			'tahun' => 'Tahun',
 			'anggaran' => 'Anggaran',
 			'persen_anggaran' => 'Persen Anggaran',
 			'waktu' => 'Waktu',
@@ -91,6 +94,7 @@ class Kegiatan extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('nama',$this->nama,true);
 		$criteria->compare('id_bidang',$this->id_bidang);
+		$criteria->compare('tahun',$this->tahun,true);
 		$criteria->compare('anggaran',$this->anggaran);
 		$criteria->compare('persen_anggaran',$this->persen_anggaran);
 		$criteria->compare('waktu',$this->waktu,true);

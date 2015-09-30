@@ -23,8 +23,15 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_bidang'); ?>
-		<?php echo $form->textField($model,'id_bidang'); ?>
+		<?php echo $form->dropDownList($model, 'id_bidang', Bidang::model()->getBidangList(),
+			array('empty' => 'Pilih Bidang')); ?>
 		<?php echo $form->error($model,'id_bidang'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'tahun'); ?>
+		<?php echo $form->textField($model,'tahun',array('size'=>4,'maxlength'=>4)); ?>
+		<?php echo $form->error($model,'tahun'); ?>
 	</div>
 
 	<div class="row">

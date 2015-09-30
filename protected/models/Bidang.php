@@ -83,4 +83,16 @@ class Bidang extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	public function getBidangList() {  
+	    $bidang = self::model()->findAll();  
+	  
+	    $bidangArray = CHtml::listData($bidang, 'id', 'nama');  
+	    return $bidangArray;  
+	}
+
+	public function getNamaBidang($id) {  
+	    $namaBidang = self::model()->findByPk($id);  
+	    return $namaBidang;  
+	}
 }

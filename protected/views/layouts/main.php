@@ -63,7 +63,7 @@
                         <?php echo CHtml::link('Personil', array('Personil/index'));?>
                     </li>
                     <li>
-                        <?php echo CHtml::link('Kegiatan Personil', array('KegiatanPersonil/index'));?>
+                        <?php echo CHtml::link('Kegiatan Personil', array('DetailKegiatanPersonil/index'));?>
                     </li>
                     <li>
                         <?php echo CHtml::link('Daftar Kegiatan', array('Kegiatan/index'));?>

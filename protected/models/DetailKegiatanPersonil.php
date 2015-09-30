@@ -1,17 +1,12 @@
 <?php
 
 /**
- * This is the model class for table "detail_kegiatan".
+ * This is the model class for table "detail_kegiatan_personil".
  *
- * The followings are the available columns in table 'detail_kegiatan':
+ * The followings are the available columns in table 'detail_kegiatan_personil':
  * @property integer $id
- * @property integer $id_kegiatan
- * @property string $nama
- * @property string $kode
- * @property string $anggaran
- * @property integer $persen_anggaran
- * @property string $waktu
- * @property integer $persen_waktu
+ * @property integer $id_personil
+ * @property string $tahun
  * @property integer $w11
  * @property integer $w12
  * @property integer $w13
@@ -61,12 +56,12 @@
  * @property integer $w123
  * @property integer $w124
  */
-class DetailKegiatan extends CActiveRecord
+class DetailKegiatanPersonil extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return DetailKegiatan the static model class
+	 * @return DetailKegiatanPersonil the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -78,7 +73,7 @@ class DetailKegiatan extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'detail_kegiatan';
+		return 'detail_kegiatan_personil';
 	}
 
 	/**
@@ -89,14 +84,12 @@ class DetailKegiatan extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_kegiatan, nama, kode, anggaran, waktu', 'required'),
-			array('id_kegiatan, persen_anggaran, persen_waktu, w11, w12, w13, w14, w21, w22, w23, w24, w31, w32, w33, w34, w41, w42, w43, w44, w51, w52, w53, w54, w61, w62, w63, w64, w71, w72, w73, w74, w81, w82, w83, w84, w91, w92, w93, w94, w101, w102, w103, w104, w111, w112, w113, w114, w121, w122, w123, w124', 'numerical', 'integerOnly'=>true),
-			array('nama, waktu', 'length', 'max'=>50),
-			array('kode', 'length', 'max'=>2),
-			array('anggaran', 'length', 'max'=>20),
+			array('id_personil, tahun', 'required'),
+			array('id_personil, w11, w12, w13, w14, w21, w22, w23, w24, w31, w32, w33, w34, w41, w42, w43, w44, w51, w52, w53, w54, w61, w62, w63, w64, w71, w72, w73, w74, w81, w82, w83, w84, w91, w92, w93, w94, w101, w102, w103, w104, w111, w112, w113, w114, w121, w122, w123, w124', 'numerical', 'integerOnly'=>true),
+			array('tahun', 'length', 'max'=>4),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, id_kegiatan, nama, kode, anggaran, persen_anggaran, waktu, persen_waktu, w11, w12, w13, w14, w21, w22, w23, w24, w31, w32, w33, w34, w41, w42, w43, w44, w51, w52, w53, w54, w61, w62, w63, w64, w71, w72, w73, w74, w81, w82, w83, w84, w91, w92, w93, w94, w101, w102, w103, w104, w111, w112, w113, w114, w121, w122, w123, w124', 'safe', 'on'=>'search'),
+			array('id, id_personil, tahun, w11, w12, w13, w14, w21, w22, w23, w24, w31, w32, w33, w34, w41, w42, w43, w44, w51, w52, w53, w54, w61, w62, w63, w64, w71, w72, w73, w74, w81, w82, w83, w84, w91, w92, w93, w94, w101, w102, w103, w104, w111, w112, w113, w114, w121, w122, w123, w124', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -118,13 +111,8 @@ class DetailKegiatan extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'id_kegiatan' => 'Id Kegiatan',
-			'nama' => 'Nama',
-			'kode' => 'Kode',
-			'anggaran' => 'Anggaran',
-			'persen_anggaran' => 'Persen Anggaran',
-			'waktu' => 'Waktu',
-			'persen_waktu' => 'Persen Waktu',
+			'id_personil' => 'Id Personil',
+			'tahun' => 'Tahun',
 			'w11' => 'W11',
 			'w12' => 'W12',
 			'w13' => 'W13',
@@ -188,13 +176,8 @@ class DetailKegiatan extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('id_kegiatan',$this->id_kegiatan);
-		$criteria->compare('nama',$this->nama,true);
-		$criteria->compare('kode',$this->kode,true);
-		$criteria->compare('anggaran',$this->anggaran,true);
-		$criteria->compare('persen_anggaran',$this->persen_anggaran);
-		$criteria->compare('waktu',$this->waktu,true);
-		$criteria->compare('persen_waktu',$this->persen_waktu);
+		$criteria->compare('id_personil',$this->id_personil);
+		$criteria->compare('tahun',$this->tahun,true);
 		$criteria->compare('w11',$this->w11);
 		$criteria->compare('w12',$this->w12);
 		$criteria->compare('w13',$this->w13);
@@ -247,10 +230,5 @@ class DetailKegiatan extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
-	}
-
-	public function getKodeKegiatan($id) {  
-	    $kodeKegiatan = self::model()->findByPk($id);  
-	    return $kodeKegiatan;  
 	}
 }

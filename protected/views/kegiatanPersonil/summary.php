@@ -7,13 +7,13 @@
 <div class="row">
   <div class="box">
   <div class="col-lg-12 text-center">
-      <h2 class="section-heading">Data Personil</h2>
+      <h2 class="section-heading">Daftar Kegiatan Personil</h2>
       <h3 class="section-subheading text-muted">Bidang XYZ</h3>
       <?php
-        echo CHtml::link('Tambah Personil',array('Personil/create'));
+        echo CHtml::link('Tambah Kegiatan Personil',array('KegiatanPersonil/create'));
       ?>
   </div>
-  <table id="<?php echo $tableid;?>" class="display compact cell-border nowrap">
+  <table id="<?php echo $tableid;?>" class="table testgrid">
     <colgroup>
     <col class="odd"></col>
     <col class="even"></col>
@@ -26,18 +26,8 @@
     </colgroup>
     <thead>
       <th>No.</th>
-      <th>Nama</th>
-      <th>NIP</th>
-      <th>Jabatan</th>
-      <th>Bidang</th>
-      <th>Background<br>Pendidikan</th>
-      <th>Training<br>yang Diikuti</th>
-      <?php 
-        $role=Yii::app()->user->getState('role');
-        if ($role==1) {
-          echo "<th>Aksi</th>";
-        }
-      ?>
+      <th>Nama Personil</th>
+      <th>Aksi</th>
     </thead>
     <tfoot>
       <tr>
@@ -50,16 +40,12 @@
         echo "<tr id=\"\">";
         echo   "<td>".$ii++."</td>";
         echo   "<td>".$data->nama."</td>";
-        echo   "<td class=\"text-left\">".$data->nip."</td>";
-        echo   "<td class=\"text-left\">".$data->jabatan."</td>";
-        $bidang=Bidang::model()->getNamaBidang($data->bidang);
-        echo   "<td class=\"text-left\">".$bidang->nama."</td>";
-        echo   "<td class=\"text-left\">".$data->background."</td>";
-        echo   "<td class=\"text-left\">".$data->training."</td>";
+        echo "<td class=\"text-left\">".CHtml::link('Lihat',array('KegiatanPersonil/detail','id'=>$data->id));
+        $role=Yii::app()->user->getState('role');
         if ($role==1) {
-          echo "<td class=\"text-left\">".CHtml::link('Ubah',array('Personil/update','id'=>$data->id))." |"
-          .CHtml::link('Hapus',array('Personil/delete','id'=>$data->id),array(
-          'submit'=>array('Personil/delete', 'id'=>$data->id),
+          echo " |".CHtml::link('Ubah',array('KegiatanPersonil/update','id'=>$data->id))." |"
+          .CHtml::link('Hapus',array('KegiatanPersonil/delete','id'=>$data->id),array(
+          'submit'=>array('KegiatanPersonil/delete', 'id'=>$data->id),
           'class' => 'delete','confirm'=>'Anda yakin untuk menghapus personil?'
           ))."</td>";
         }

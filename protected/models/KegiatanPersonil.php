@@ -1,25 +1,20 @@
 <?php
 
 /**
- * This is the model class for table "personil".
+ * This is the model class for table "kegiatan_personil".
  *
- * The followings are the available columns in table 'personil':
+ * The followings are the available columns in table 'kegiatan_personil':
  * @property integer $id
- * @property string $nama
- * @property string $jabatan
- * @property string $nip
- * @property string $pangkat
- * @property integer $bidang
- * @property string $background
- * @property string $training
- * @property integer $status
+ * @property integer $id_personil
+ * @property integer $id_detail_kegiatan
+ * @property string $tahun
  */
-class Personil extends CActiveRecord
+class KegiatanPersonil extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Personil the static model class
+	 * @return KegiatanPersonil the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -31,7 +26,7 @@ class Personil extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'personil';
+		return 'kegiatan_personil';
 	}
 
 	/**
@@ -42,12 +37,12 @@ class Personil extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('bidang, status', 'numerical', 'integerOnly'=>true),
-			array('nama, jabatan, nip, pangkat, background', 'length', 'max'=>250),
-			array('training', 'length', 'max'=>500),
+			array('id_personil, id_detail_kegiatan, tahun', 'required'),
+			array('id_personil, id_detail_kegiatan', 'numerical', 'integerOnly'=>true),
+			array('tahun', 'length', 'max'=>4),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, nama, jabatan, nip, pangkat, bidang, background, training, status', 'safe', 'on'=>'search'),
+			array('id, id_personil, id_detail_kegiatan, tahun', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -69,14 +64,9 @@ class Personil extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'nama' => 'Nama',
-			'jabatan' => 'Jabatan',
-			'nip' => 'Nip',
-			'pangkat' => 'Pangkat',
-			'bidang' => 'Bidang',
-			'background' => 'Background',
-			'training' => 'Training',
-			'status' => 'Status',
+			'id_personil' => 'Id Personil',
+			'id_detail_kegiatan' => 'Id Detail Kegiatan',
+			'tahun' => 'Tahun',
 		);
 	}
 
@@ -92,22 +82,12 @@ class Personil extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('nama',$this->nama,true);
-		$criteria->compare('jabatan',$this->jabatan,true);
-		$criteria->compare('nip',$this->nip,true);
-		$criteria->compare('pangkat',$this->pangkat,true);
-		$criteria->compare('bidang',$this->bidang);
-		$criteria->compare('background',$this->background,true);
-		$criteria->compare('training',$this->training,true);
-		$criteria->compare('status',$this->status);
+		$criteria->compare('id_personil',$this->id_personil);
+		$criteria->compare('id_detail_kegiatan',$this->id_detail_kegiatan);
+		$criteria->compare('tahun',$this->tahun,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
-	}
-
-	public function getNamaPersonil($id) {  
-	    $namaPersonil = self::model()->findByPk($id);  
-	    return $namaPersonil;  
 	}
 }
