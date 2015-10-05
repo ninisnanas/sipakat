@@ -47,10 +47,10 @@ class SiteController extends Controller
 		}
 	}
 
-	public function actionSummary()
+	public function actionSummary($id)
 	{
 		// cek role
-		$this->render('summary');
+		$this->render('summary', array('isNew'=> $id));
 	}
 
 	/**
@@ -464,14 +464,9 @@ class SiteController extends Controller
   	public function actionGetChart() 
   	{
   		$bidang = $_POST['bidang'];
-  		$values = array(
-  			array('name' => 'Jane', 'data' => array(5)),
-            array('name' => 'John', 'data' => array(5))
-            );
-		$data = array();
-		$data['values'] = $values;	
-		var_dump($data);
-		die();		
-  		$this->renderPartial('_graph', $data, false, true);
+
+  		$dataProvider=DetailKegiatan::model()->findAllByPk($bidang);
+		
+  		$this->render('summary', array('dataProvider'=>$dataProvider));
   	}
 }

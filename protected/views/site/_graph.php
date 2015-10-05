@@ -1,5 +1,11 @@
 <?php
-$this->Widget('ext.highcharts.HighchartsWidget', array(
+$label=array();
+$nilai=array();
+
+if ($dataProvider != '') {
+  foreach($dataProvider as $data){
+  }
+  $this->Widget('ext.highcharts.HighchartsWidget', array(
        'options'=>array(
           'chart' => array('type' => 'column'),
           'title' => array('text' => 'Fruit Consumption'),
@@ -9,7 +15,8 @@ $this->Widget('ext.highcharts.HighchartsWidget', array(
           'yAxis' => array(
              'title' => array('text' => 'Fruit eaten')
           ),
-          'series' => $values
+          'series' => $dataProvider
        )
     ));
+}
 ?>
