@@ -110,4 +110,20 @@ class Personil extends CActiveRecord
 	    $namaPersonil = self::model()->findByPk($id);  
 	    return $namaPersonil;  
 	}
+
+	private function doStandardQuery($queryString)
+	{
+		return Yii::app()->db->createCommand($queryString)->queryAll();
+	}
+
+	public function getNamaPersonilByBidang($id)
+	{
+		return $this->doStandardQuery(
+			"SELECT
+			*
+			FROM
+			personil
+			WHERE bidang=".$id
+		);
+	}
 }

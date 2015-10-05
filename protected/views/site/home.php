@@ -28,7 +28,7 @@ $this->pageTitle=Yii::app()->name;
 		<div class="col-md-3 product">
 			<h4>Deputi III</h4>
 			<ul>
-				<a href="#"><li>Bidang Menejemen Kunci Sandi</li></a>
+				<li>Bidang Menejemen Kunci Sandi</li>
 				<li>Bidang Algoritma</li>
 				<li>Bidang Perangkat Lunak</li>
 				<li>Bidang Perangkat Keras</li>

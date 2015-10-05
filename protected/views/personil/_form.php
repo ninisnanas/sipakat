@@ -41,8 +41,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'bidang'); ?>
-		<?php echo $form->dropDownList($model, 'bidang', Bidang::model()->getBidangList(),
-			array('empty' => 'Pilih Bidang')); ?>
+		<?php echo $form->dropDownList($model, 'bidang', Bidang::model()->getBidangList(), array('empty' => 'Pilih Bidang')); ?>
 		<?php echo $form->error($model,'bidang'); ?>
 	</div>
 
@@ -62,7 +61,7 @@
 		<?php echo $form->labelEx($model,'status'); ?>
 		<?php 
 			$options=array(0=>'Tidak Aktif', 1=>'Aktif');
-		echo $form->dropDownList($model, 'bidang', array('empty' => 'Pilih Status', 0=>'Tidak Aktif',1=>'Aktif')); ?>
+		echo $form->dropDownList($model, 'status', $options, array('empty' => 'Pilih Status')); ?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
 

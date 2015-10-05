@@ -4511,3 +4511,2184 @@ Stack trace:
 REQUEST_URI=/sipakat/index.php?r=DetailKegiatanPersonil/index
 HTTP_REFERER=http://localhost/sipakat/index.php?r=Personil/index
 ---
+2015/09/30 14:10:15 [error] [exception.CException] exception 'CException' with message 'Property "KegiatanPersonil.Bidang" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('Bidang')
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('Bidang')
+#2 C:\wamp\www\yii\framework\web\helpers\CHtml.php(1565): CHtml::resolveValue(Object(KegiatanPersonil), 'Bidang')
+#3 C:\wamp\www\yii\framework\web\widgets\CActiveForm.php(763): CHtml::activeDropDownList(Object(KegiatanPersonil), 'Bidang', Array, Array)
+#4 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php(27): CActiveForm->dropDownList(Object(KegiatanPersonil), 'Bidang', Array, Array)
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#8 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): CController->renderPartial('_form', Array)
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#12 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#13 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): CController->render('create', Array)
+#14 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#15 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#24 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('KegiatanPersoni...')
+#25 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#26 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+HTTP_REFERER=http://localhost/sipakat/index.php?r=DetailKegiatanPersonil/index
+---
+2015/09/30 14:12:06 [error] [php] Missing argument 2 for CActiveForm::labelEx(), called in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php on line 19 and defined (C:\wamp\www\yii\framework\web\widgets\CActiveForm.php:560)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#1 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#2 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#5 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#6 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#7 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#11 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#13 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#15 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#20 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (19)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 14:12:12 [error] [exception.CException] exception 'CException' with message 'Property "KegiatanPersonil.Bidang" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('Bidang')
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('Bidang')
+#2 C:\wamp\www\yii\framework\web\helpers\CHtml.php(1565): CHtml::resolveValue(Object(KegiatanPersonil), 'Bidang')
+#3 C:\wamp\www\yii\framework\web\widgets\CActiveForm.php(763): CHtml::activeDropDownList(Object(KegiatanPersonil), 'Bidang', Array, Array)
+#4 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php(27): CActiveForm->dropDownList(Object(KegiatanPersonil), 'Bidang', Array, Array)
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#8 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): CController->renderPartial('_form', Array)
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#12 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#13 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): CController->render('create', Array)
+#14 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#15 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#24 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('KegiatanPersoni...')
+#25 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#26 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+HTTP_REFERER=http://localhost/sipakat/index.php?r=DetailKegiatanPersonil/index
+---
+2015/09/30 14:14:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sipakat.propinsi' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `propinsi`.
+in C:\wamp\www\sipakat\protected\models\Propinsi.php (26)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (21)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+2015/09/30 14:14:47 [error] [exception.CDbException] exception 'CDbException' with message 'The table "propinsi" for active record class "Propinsi" cannot be found in the database.' in C:\wamp\www\yii\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Propinsi))
+#1 C:\wamp\www\sipakat\protected\models\Propinsi.php(26): CActiveRecord::model('Propinsi')
+#2 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php(21): Propinsi::model()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#6 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): CController->renderPartial('_form', Array)
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#9 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#10 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#11 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): CController->render('create', Array)
+#12 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#13 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('KegiatanPersoni...')
+#23 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#24 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+HTTP_REFERER=http://localhost/sipakat/index.php?r=DetailKegiatanPersonil/index
+---
+2015/09/30 14:15:06 [error] [php] Missing argument 1 for Bidang::getNamaBidang(), called in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php on line 21 and defined (C:\wamp\www\sipakat\protected\models\Bidang.php:94)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#1 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#2 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#5 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#6 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#7 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#11 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#13 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#15 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#20 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\models\Bidang.php (94)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (21)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+2015/09/30 14:15:23 [error] [exception.CException] exception 'CException' with message 'Property "KegiatanPersonil.kode_prov" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('kode_prov')
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('kode_prov')
+#2 C:\wamp\www\yii\framework\web\helpers\CHtml.php(1565): CHtml::resolveValue(Object(KegiatanPersonil), 'kode_prov')
+#3 C:\wamp\www\yii\framework\web\widgets\CActiveForm.php(763): CHtml::activeDropDownList(Object(KegiatanPersonil), 'kode_prov', Array, Array)
+#4 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php(28): CActiveForm->dropDownList(Object(KegiatanPersonil), 'kode_prov', Array, Array)
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#8 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): CController->renderPartial('_form', Array)
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#12 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#13 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): CController->render('create', Array)
+#14 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#15 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#24 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('KegiatanPersoni...')
+#25 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#26 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+HTTP_REFERER=http://localhost/sipakat/index.php?r=DetailKegiatanPersonil/index
+---
+2015/09/30 14:15:32 [error] [exception.CException] exception 'CException' with message 'Property "KegiatanPersonil.bidang" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('bidang')
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('bidang')
+#2 C:\wamp\www\yii\framework\web\helpers\CHtml.php(1565): CHtml::resolveValue(Object(KegiatanPersonil), 'bidang')
+#3 C:\wamp\www\yii\framework\web\widgets\CActiveForm.php(763): CHtml::activeDropDownList(Object(KegiatanPersonil), 'bidang', Array, Array)
+#4 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php(28): CActiveForm->dropDownList(Object(KegiatanPersonil), 'bidang', Array, Array)
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#8 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): CController->renderPartial('_form', Array)
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#12 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#13 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): CController->render('create', Array)
+#14 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#15 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#24 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('KegiatanPersoni...')
+#25 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#26 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+HTTP_REFERER=http://localhost/sipakat/index.php?r=DetailKegiatanPersonil/index
+---
+2015/09/30 14:15:55 [error] [php] Undefined variable: bidang (C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php:22)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#1 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#6 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (22)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 14:16:04 [error] [php] Undefined variable: bidang (C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php:22)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#1 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#6 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (22)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 14:17:23 [error] [php] Undefined variable: bidang (C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php:22)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#1 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#6 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (22)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 14:18:22 [error] [php] Undefined variable: bidang (C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php:21)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#1 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#6 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (21)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 14:18:26 [error] [php] Undefined variable: bidang (C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php:21)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#1 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#6 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (21)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 14:18:53 [error] [php] Undefined variable: bidang (C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php:20)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#1 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#6 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (20)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 14:19:08 [error] [php] get_class() expects parameter 1 to be object, string given (C:\wamp\www\yii\framework\web\helpers\CHtml.php:2220)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\helpers\CHtml.php(1564): resolveNameID()
+#1 C:\wamp\www\yii\framework\web\widgets\CActiveForm.php(763): activeDropDownList()
+#2 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php(27): CActiveForm->dropDownList()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#5 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#6 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#9 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#10 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#11 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#12 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#13 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#15 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#17 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#19 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#21 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#24 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (27)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 14:21:22 [error] [php] Undefined variable: bidang (C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php:20)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#1 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#6 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (20)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 14:23:18 [error] [php] Undefined variable: bidang (C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php:20)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#1 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#6 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (20)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 14:23:20 [error] [php] Undefined variable: bidang (C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php:20)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#1 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#6 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (20)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 14:25:00 [error] [php] Undefined index: kode_prop (C:\wamp\www\sipakat\protected\controllers\PersonilController.php:181)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): PersonilController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): PersonilController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): PersonilController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): PersonilController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=personil/dinamis
+in C:\wamp\www\sipakat\protected\controllers\PersonilController.php (181)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 14:27:03 [error] [exception.CException] exception 'CException' with message 'Property "KegiatanPersonil.kode" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('kode')
+#1 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php(34): CActiveRecord->__get('kode')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#5 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): CController->renderPartial('_form', Array)
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#8 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#9 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#10 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): CController->render('create', Array)
+#11 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#12 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#21 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('KegiatanPersoni...')
+#22 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+HTTP_REFERER=http://localhost/sipakat/index.php?r=DetailKegiatanPersonil/index
+---
+2015/09/30 14:29:39 [error] [php] Non-static method Personil::getNamaPersonilByBidang() should not be called statically, assuming $this from incompatible context (C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php:35)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#1 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#6 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (35)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 14:30:17 [error] [php] Invalid argument supplied for foreach() (C:\wamp\www\yii\framework\db\schema\CDbCommandBuilder.php:567)
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php(35): getNamaPersonilByBidang()
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#3 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#4 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#7 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#8 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#9 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#10 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#11 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#13 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#20 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\models\Personil.php (115)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (35)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+2015/09/30 14:31:03 [error] [php] Object of class Personil could not be converted to string (C:\wamp\www\yii\framework\web\helpers\CHtml.php:2071)
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php(35): CActiveForm->dropDownList()
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#3 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#4 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#7 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#8 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#9 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#10 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#11 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#13 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#20 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (35)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 14:31:11 [error] [php] Object of class Personil could not be converted to string (C:\wamp\www\yii\framework\web\helpers\CHtml.php:2071)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\widgets\CActiveForm.php(763): activeDropDownList()
+#1 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php(35): CActiveForm->dropDownList()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#5 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#8 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#9 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#10 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#11 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#12 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#14 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#16 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#17 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#18 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#20 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#21 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (35)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 14:43:29 [error] [php] Undefined index: kode_prop (C:\wamp\www\sipakat\protected\controllers\PersonilController.php:181)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): PersonilController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): PersonilController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): PersonilController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): PersonilController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=personil/dinamis
+in C:\wamp\www\sipakat\protected\controllers\PersonilController.php (181)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 14:43:45 [error] [php] Undefined index: kode_prop (C:\wamp\www\sipakat\protected\controllers\PersonilController.php:181)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): PersonilController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): PersonilController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): PersonilController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): PersonilController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=personil/dinamis
+in C:\wamp\www\sipakat\protected\controllers\PersonilController.php (181)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 15:14:32 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sipakat.propinsi' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `propinsi`.
+in C:\wamp\www\sipakat\protected\models\Propinsi.php (26)
+in C:\wamp\www\sipakat\protected\views\personil\_form.php (44)
+in C:\wamp\www\sipakat\protected\views\personil\update.php (16)
+2015/09/30 15:14:32 [error] [exception.CDbException] exception 'CDbException' with message 'The table "propinsi" for active record class "Propinsi" cannot be found in the database.' in C:\wamp\www\yii\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Propinsi))
+#1 C:\wamp\www\sipakat\protected\models\Propinsi.php(26): CActiveRecord::model('Propinsi')
+#2 C:\wamp\www\sipakat\protected\views\personil\_form.php(44): Propinsi::model()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#6 C:\wamp\www\sipakat\protected\views\personil\update.php(16): CController->renderPartial('_form', Array)
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#9 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#10 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#11 C:\wamp\www\sipakat\protected\controllers\PersonilController.php(103): CController->render('update', Array)
+#12 [internal function]: PersonilController->actionUpdate('21')
+#13 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PersonilController), Array)
+#14 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PersonilController), Object(ReflectionMethod), Array)
+#15 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#24 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Personil/update')
+#25 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#26 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/sipakat/index.php?r=Personil/update&id=21
+HTTP_REFERER=http://localhost/sipakat/index.php?r=personil/index&id=22
+---
+2015/09/30 15:16:59 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sipakat.propinsi' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `propinsi`.
+in C:\wamp\www\sipakat\protected\models\Propinsi.php (26)
+in C:\wamp\www\sipakat\protected\views\personil\_form.php (44)
+in C:\wamp\www\sipakat\protected\views\personil\update.php (16)
+2015/09/30 15:16:59 [error] [exception.CDbException] exception 'CDbException' with message 'The table "propinsi" for active record class "Propinsi" cannot be found in the database.' in C:\wamp\www\yii\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Propinsi))
+#1 C:\wamp\www\sipakat\protected\models\Propinsi.php(26): CActiveRecord::model('Propinsi')
+#2 C:\wamp\www\sipakat\protected\views\personil\_form.php(44): Propinsi::model()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#6 C:\wamp\www\sipakat\protected\views\personil\update.php(16): CController->renderPartial('_form', Array)
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#9 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#10 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#11 C:\wamp\www\sipakat\protected\controllers\PersonilController.php(103): CController->render('update', Array)
+#12 [internal function]: PersonilController->actionUpdate('21')
+#13 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PersonilController), Array)
+#14 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PersonilController), Object(ReflectionMethod), Array)
+#15 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#24 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Personil/update')
+#25 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#26 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/sipakat/index.php?r=Personil/update&id=21
+HTTP_REFERER=http://localhost/sipakat/index.php?r=personil/index&id=22
+---
+2015/09/30 15:17:08 [error] [exception.CException] exception 'CException' with message 'Bidang and its behaviors do not have a method or closure named "getListBidang".' in C:\wamp\www\yii\framework\base\CComponent.php:265
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(225): CComponent->__call('getListBidang', Array)
+#1 C:\wamp\www\sipakat\protected\views\personil\_form.php(44): CActiveRecord->__call('getListBidang', Array)
+#2 C:\wamp\www\sipakat\protected\views\personil\_form.php(44): Bidang->getListBidang()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#6 C:\wamp\www\sipakat\protected\views\personil\update.php(16): CController->renderPartial('_form', Array)
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#9 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#10 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#11 C:\wamp\www\sipakat\protected\controllers\PersonilController.php(103): CController->render('update', Array)
+#12 [internal function]: PersonilController->actionUpdate('21')
+#13 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(PersonilController), Array)
+#14 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PersonilController), Object(ReflectionMethod), Array)
+#15 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#24 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Personil/update')
+#25 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#26 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/sipakat/index.php?r=Personil/update&id=21
+HTTP_REFERER=http://localhost/sipakat/index.php?r=personil/index&id=22
+---
+2015/09/30 15:17:29 [error] [php] Undefined index: kode_prop (C:\wamp\www\sipakat\protected\controllers\PersonilController.php:180)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): PersonilController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): PersonilController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): PersonilController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): PersonilController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=personil/dinamis
+in C:\wamp\www\sipakat\protected\controllers\PersonilController.php (180)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 15:20:40 [error] [php] Creating default object from empty value (C:\wamp\www\sipakat\protected\controllers\PersonilController.php:178)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): PersonilController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): PersonilController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): PersonilController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): PersonilController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=personil/dinamis
+in C:\wamp\www\sipakat\protected\controllers\PersonilController.php (178)
+in C:\wamp\www\sipakat\index.php (13)
+2015/09/30 15:50:44 [error] [php] Undefined variable: bidang (C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php:20)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#1 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#6 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (20)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 15:50:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dinamis".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('dinamis')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('dinamis')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('personil/dinami...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sipakat/index.php?r=personil/dinamis
+HTTP_REFERER=http://localhost/sipakat/index.php?r=KegiatanPersonil/create
+---
+2015/09/30 15:54:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dinamis".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('dinamis')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('dinamis')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kegiatanPersoni...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sipakat/index.php?r=kegiatanPersonil/dinamis
+HTTP_REFERER=http://localhost/sipakat/index.php?r=KegiatanPersonil/create
+---
+2015/09/30 15:55:32 [error] [php] Invalid argument supplied for foreach() (C:\wamp\www\yii\framework\web\helpers\CHtml.php:2053)
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php(32): CActiveForm->dropDownList()
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#3 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#4 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#7 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#8 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#9 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#10 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#11 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#13 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#20 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (32)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 16:05:49 [error] [php] Invalid argument supplied for foreach() (C:\wamp\www\yii\framework\web\helpers\CHtml.php:2053)
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php(32): CActiveForm->dropDownList()
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#3 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#4 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#7 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#8 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#9 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#10 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#11 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#13 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#20 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (32)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 16:06:17 [error] [php] Invalid argument supplied for foreach() (C:\wamp\www\yii\framework\web\helpers\CHtml.php:2053)
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php(32): CActiveForm->dropDownList()
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#3 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#4 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#7 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#8 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#9 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#10 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#11 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#13 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#20 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (32)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 16:06:24 [error] [php] Invalid argument supplied for foreach() (C:\wamp\www\yii\framework\web\helpers\CHtml.php:2053)
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php(32): CActiveForm->dropDownList()
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#3 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#4 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#7 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#8 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#9 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#10 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#11 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#13 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#20 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (32)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 16:07:56 [error] [php] Invalid argument supplied for foreach() (C:\wamp\www\yii\framework\web\helpers\CHtml.php:2053)
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php(32): CActiveForm->dropDownList()
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#3 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#4 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#7 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#8 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#9 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#10 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#11 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#13 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#20 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (32)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 16:09:05 [error] [php] Invalid argument supplied for foreach() (C:\wamp\www\yii\framework\web\helpers\CHtml.php:2053)
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php(32): CActiveForm->dropDownList()
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#3 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#4 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#7 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#8 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#9 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#10 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#11 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#13 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#20 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (32)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/09/30 16:11:30 [error] [exception.CException] exception 'CException' with message 'Property "KegiatanPersonil.bidang" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('bidang')
+#1 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php(33): CActiveRecord->__get('bidang')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#5 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): CController->renderPartial('_form', Array)
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#8 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#9 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#10 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): CController->render('create', Array)
+#11 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#12 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#21 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('KegiatanPersoni...')
+#22 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+HTTP_REFERER=http://localhost/sipakat/index.php?r=DetailKegiatanPersonil/index
+---
+2015/09/30 16:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dinamis".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('dinamis')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('dinamis')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kegiatanPersoni...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sipakat/index.php?r=kegiatanPersonil/dinamis
+HTTP_REFERER=http://localhost/sipakat/index.php?r=KegiatanPersonil/create
+---
+2015/09/30 16:22:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dinamis".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('dinamis')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('dinamis')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kegiatanPersoni...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sipakat/index.php?r=kegiatanPersonil/dinamis
+HTTP_REFERER=http://localhost/sipakat/index.php?r=KegiatanPersonil/create
+---
+2015/10/01 11:48:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dinamis".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('dinamis')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('dinamis')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kegiatanPersoni...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sipakat/index.php?r=kegiatanPersonil/dinamis
+HTTP_REFERER=http://localhost/sipakat/index.php?r=KegiatanPersonil/create
+---
+2015/10/01 11:48:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Rangkuman/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Rangkuman/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sipakat/index.php?r=Rangkuman/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=DetailKegiatanPersonil/index
+---
+2015/10/01 19:29:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Rangkuman/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Rangkuman/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sipakat/index.php?r=Rangkuman/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=detailKegiatan/index&id=2
+---
+2015/10/04 10:46:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dinamis".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('dinamis')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('dinamis')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kegiatanPersoni...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sipakat/index.php?r=kegiatanPersonil/dinamis
+HTTP_REFERER=http://localhost/sipakat/index.php?r=KegiatanPersonil/create
+---
+2015/10/04 10:53:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dinamis".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('dinamis')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('dinamis')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kegiatanPersoni...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sipakat/index.php?r=kegiatanPersonil/dinamis
+HTTP_REFERER=http://localhost/sipakat/index.php?r=KegiatanPersonil/create
+---
+2015/10/04 10:53:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dinamis".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('dinamis')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('dinamis')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kegiatanPersoni...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sipakat/index.php?r=kegiatanPersonil/dinamis
+HTTP_REFERER=http://localhost/sipakat/index.php?r=KegiatanPersonil/create
+---
+2015/10/04 10:53:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dinamis".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('dinamis')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('dinamis')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kegiatanPersoni...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sipakat/index.php?r=kegiatanPersonil/dinamis
+HTTP_REFERER=http://localhost/sipakat/index.php?r=KegiatanPersonil/create
+---
+2015/10/04 10:53:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dinamis".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('dinamis')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('dinamis')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kegiatanPersoni...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sipakat/index.php?r=kegiatanPersonil/dinamis
+HTTP_REFERER=http://localhost/sipakat/index.php?r=KegiatanPersonil/create
+---
+2015/10/04 10:53:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dinamis".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('dinamis')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('dinamis')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kegiatanPersoni...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sipakat/index.php?r=kegiatanPersonil/dinamis
+HTTP_REFERER=http://localhost/sipakat/index.php?r=KegiatanPersonil/create
+---
+2015/10/04 10:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dinamis".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('dinamis')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('dinamis')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kegiatanPersoni...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sipakat/index.php?r=kegiatanPersonil/dinamis
+HTTP_REFERER=http://localhost/sipakat/index.php?r=KegiatanPersonil/create
+---
+2015/10/04 11:07:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dinamis".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('dinamis')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('dinamis')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kegiatanPersoni...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sipakat/index.php?r=kegiatanPersonil/dinamis
+HTTP_REFERER=http://localhost/sipakat/index.php?r=KegiatanPersonil/create
+---
+2015/10/04 11:07:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dinamis".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('dinamis')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('dinamis')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('kegiatanPersoni...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sipakat/index.php?r=kegiatanPersonil/dinamis
+HTTP_REFERER=http://localhost/sipakat/index.php?r=KegiatanPersonil/create
+---
+2015/10/04 11:56:50 [error] [php] Object of class KegiatanPersonil could not be converted to string (C:\wamp\www\yii\framework\web\helpers\CHtml.php:1918)
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php(26): dropDownList()
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#3 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#4 C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php(19): KegiatanPersonilController->renderPartial()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): KegiatanPersonilController->renderInternal()
+#7 C:\wamp\www\yii\framework\web\CController.php(869): KegiatanPersonilController->renderFile()
+#8 C:\wamp\www\yii\framework\web\CController.php(782): KegiatanPersonilController->renderPartial()
+#9 C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php(79): KegiatanPersonilController->render()
+#10 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionCreate()
+#11 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#13 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#20 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=KegiatanPersonil/create
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\_form.php (26)
+in C:\wamp\www\sipakat\protected\views\kegiatanPersonil\create.php (19)
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (79)
+2015/10/04 11:57:28 [error] [php] Undefined index: bidang (C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php:188)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=kegiatanPersonil/dinamis
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (188)
+in C:\wamp\www\sipakat\index.php (13)
+2015/10/04 11:58:36 [error] [php] Undefined index: bidang (C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php:188)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=kegiatanPersonil/dinamis
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (188)
+in C:\wamp\www\sipakat\index.php (13)
+2015/10/04 11:59:08 [error] [php] Undefined index: bidang (C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php:188)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=kegiatanpersonil/dinamis
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (188)
+in C:\wamp\www\sipakat\index.php (13)
+2015/10/04 12:00:33 [error] [php] Undefined index: bidang (C:\wamp\www\sipakat\protected\controllers\PersonilController.php:183)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): PersonilController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): PersonilController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): PersonilController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): PersonilController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=personil/dinamis
+in C:\wamp\www\sipakat\protected\controllers\PersonilController.php (183)
+in C:\wamp\www\sipakat\index.php (13)
+2015/10/04 12:02:46 [error] [php] Undefined index: bidang (C:\wamp\www\sipakat\protected\controllers\PersonilController.php:183)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): PersonilController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): PersonilController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): PersonilController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): PersonilController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=personil/dinamis
+in C:\wamp\www\sipakat\protected\controllers\PersonilController.php (183)
+in C:\wamp\www\sipakat\index.php (13)
+2015/10/04 12:02:52 [error] [php] Undefined index: bidang (C:\wamp\www\sipakat\protected\controllers\PersonilController.php:183)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): PersonilController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): PersonilController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): PersonilController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): PersonilController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=personil/dinamis
+in C:\wamp\www\sipakat\protected\controllers\PersonilController.php (183)
+in C:\wamp\www\sipakat\index.php (13)
+2015/10/04 12:02:58 [error] [php] Undefined index: bidang (C:\wamp\www\sipakat\protected\controllers\PersonilController.php:183)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): PersonilController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): PersonilController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): PersonilController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): PersonilController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=personil/dinamis
+in C:\wamp\www\sipakat\protected\controllers\PersonilController.php (183)
+in C:\wamp\www\sipakat\index.php (13)
+2015/10/04 12:14:39 [error] [php] htmlspecialchars() expects parameter 1 to be string, object given (C:\wamp\www\yii\framework\web\helpers\CHtml.php:98)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionDinamis()
+#1 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#3 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=kegiatanPersonil/dinamis
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (192)
+in C:\wamp\www\sipakat\index.php (13)
+2015/10/04 12:16:41 [error] [php] htmlspecialchars() expects parameter 1 to be string, object given (C:\wamp\www\yii\framework\web\helpers\CHtml.php:98)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): KegiatanPersonilController->actionDinamis()
+#1 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): KegiatanPersonilController->runAction()
+#3 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): KegiatanPersonilController->filterAccessControl()
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\CController.php(265): KegiatanPersonilController->runActionWithFilters()
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(282): KegiatanPersonilController->run()
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=kegiatanPersonil/dinamis
+in C:\wamp\www\sipakat\protected\controllers\KegiatanPersonilController.php (192)
+in C:\wamp\www\sipakat\index.php (13)
+2015/10/04 12:26:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Rangkuman/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Rangkuman/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sipakat/index.php?r=Rangkuman/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=DetailKegiatanPersonil/index
+---
+2015/10/04 12:29:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Rangkuman/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Rangkuman/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sipakat/index.php?r=Rangkuman/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Personil/index
+---
+2015/10/04 12:32:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Rangkuman/index".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Rangkuman/index')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/sipakat/index.php?r=Rangkuman/index
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Rangkuman/index
+---
+2015/10/04 12:34:29 [error] [exception.CException] exception 'CException' with message 'Alias "ext.Hzl.google.HzlVisualizationChart" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:316
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('ext.Hzl.google....', true)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'ext.Hzl.google....', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.Hzl.google....', Array)
+#3 C:\wamp\www\sipakat\protected\views\site\summary.php(24): CBaseController->widget('ext.Hzl.google....', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', NULL, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', NULL, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('summary', NULL, true)
+#8 C:\wamp\www\sipakat\protected\controllers\SiteController.php(53): CController->render('summary')
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSummary()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('summary')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Site/summary')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/sipakat/index.php?r=Site/summary
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Referensi/index
+---
+2015/10/04 13:07:53 [error] [exception.CException] exception 'CException' with message 'Alias "ext.highcharts.HighchartsWidget" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:316
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('ext.highcharts....', true)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'ext.highcharts....', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.highcharts....', Array)
+#3 C:\wamp\www\sipakat\protected\views\site\summary.php(29): CBaseController->widget('ext.highcharts....', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', NULL, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', NULL, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('summary', NULL, true)
+#8 C:\wamp\www\sipakat\protected\controllers\SiteController.php(53): CController->render('summary')
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSummary()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('summary')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Site/summary')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/sipakat/index.php?r=Site/summary
+HTTP_REFERER=http://localhost/sipakat/index.php?r=DetailKegiatan/index&id=1
+---
+2015/10/04 13:08:19 [error] [exception.CException] exception 'CException' with message 'Alias "ext.highcharts.HighchartsWidget" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:316
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('ext.highcharts....', true)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'ext.highcharts....', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.highcharts....', Array)
+#3 C:\wamp\www\sipakat\protected\views\site\summary.php(29): CBaseController->widget('ext.highcharts....', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', NULL, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', NULL, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('summary', NULL, true)
+#8 C:\wamp\www\sipakat\protected\controllers\SiteController.php(53): CController->render('summary')
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSummary()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('summary')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Site/summary')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/sipakat/index.php?r=Site/summary
+HTTP_REFERER=http://localhost/sipakat/index.php?r=DetailKegiatan/index&id=1
+---
+2015/10/04 13:08:21 [error] [exception.CException] exception 'CException' with message 'Alias "ext.highcharts.HighchartsWidget" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:316
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('ext.highcharts....', true)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'ext.highcharts....', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.highcharts....', Array)
+#3 C:\wamp\www\sipakat\protected\views\site\summary.php(29): CBaseController->widget('ext.highcharts....', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', NULL, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', NULL, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('summary', NULL, true)
+#8 C:\wamp\www\sipakat\protected\controllers\SiteController.php(53): CController->render('summary')
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSummary()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('summary')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Site/summary')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/sipakat/index.php?r=Site/summary
+HTTP_REFERER=http://localhost/sipakat/index.php?r=DetailKegiatan/index&id=1
+---
+2015/10/04 13:08:24 [error] [exception.CException] exception 'CException' with message 'Alias "ext.highcharts.HighchartsWidget" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:316
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('ext.highcharts....', true)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'ext.highcharts....', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.highcharts....', Array)
+#3 C:\wamp\www\sipakat\protected\views\site\summary.php(29): CBaseController->widget('ext.highcharts....', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', NULL, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', NULL, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('summary', NULL, true)
+#8 C:\wamp\www\sipakat\protected\controllers\SiteController.php(53): CController->render('summary')
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSummary()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('summary')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Site/summary')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/sipakat/index.php?r=Site/summary
+HTTP_REFERER=http://localhost/sipakat/index.php?r=DetailKegiatan/index&id=1
+---
+2015/10/04 13:44:02 [error] [exception.CException] exception 'CException' with message 'Alias "ext.highcharts.HighchartsWidget" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:316
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('ext.highcharts....', true)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'ext.highcharts....', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.highcharts....', Array)
+#3 C:\wamp\www\sipakat\protected\views\site\summary.php(36): CBaseController->widget('ext.highcharts....', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', NULL, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', NULL, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('summary', NULL, true)
+#8 C:\wamp\www\sipakat\protected\controllers\SiteController.php(53): CController->render('summary')
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSummary()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('summary')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Site/summary')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/sipakat/index.php?r=Site/summary
+HTTP_REFERER=http://localhost/sipakat/index.php?r=DetailKegiatan/index&id=1
+---
+2015/10/04 13:44:43 [error] [exception.CException] exception 'CException' with message 'Alias "ext.highcharts.HighchartsWidget" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:316
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('ext.highcharts....', true)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'ext.highcharts....', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.highcharts....', Array)
+#3 C:\wamp\www\sipakat\protected\views\site\summary.php(36): CBaseController->widget('ext.highcharts....', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', NULL, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', NULL, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('summary', NULL, true)
+#8 C:\wamp\www\sipakat\protected\controllers\SiteController.php(53): CController->render('summary')
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSummary()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('summary')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Site/summary')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/sipakat/index.php?r=Site/summary
+HTTP_REFERER=http://localhost/sipakat/index.php?r=DetailKegiatan/index&id=1
+---
+2015/10/04 13:44:45 [error] [exception.CException] exception 'CException' with message 'Alias "ext.highcharts.HighchartsWidget" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:316
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('ext.highcharts....', true)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'ext.highcharts....', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.highcharts....', Array)
+#3 C:\wamp\www\sipakat\protected\views\site\summary.php(36): CBaseController->widget('ext.highcharts....', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', NULL, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', NULL, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('summary', NULL, true)
+#8 C:\wamp\www\sipakat\protected\controllers\SiteController.php(53): CController->render('summary')
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSummary()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('summary')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Site/summary')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/sipakat/index.php?r=Site/summary
+HTTP_REFERER=http://localhost/sipakat/index.php?r=DetailKegiatan/index&id=1
+---
+2015/10/04 13:44:47 [error] [exception.CException] exception 'CException' with message 'Alias "ext.highcharts.HighchartsWidget" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\wamp\www\yii\framework\YiiBase.php:316
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('ext.highcharts....', true)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'ext.highcharts....', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.highcharts....', Array)
+#3 C:\wamp\www\sipakat\protected\views\site\summary.php(36): CBaseController->widget('ext.highcharts....', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', NULL, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', NULL, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('summary', NULL, true)
+#8 C:\wamp\www\sipakat\protected\controllers\SiteController.php(53): CController->render('summary')
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSummary()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('summary')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Site/summary')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/sipakat/index.php?r=Site/summary
+HTTP_REFERER=http://localhost/sipakat/index.php?r=DetailKegiatan/index&id=1
+---
+2015/10/04 14:15:14 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "crateUrl".' in C:\wamp\www\yii\framework\base\CComponent.php:265
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\views\site\summary.php(17): CComponent->__call('crateUrl', Array)
+#1 C:\wamp\www\sipakat\protected\views\site\summary.php(17): CWebApplication->crateUrl('site/getChart')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', NULL, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', NULL, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('summary', NULL, true)
+#6 C:\wamp\www\sipakat\protected\controllers\SiteController.php(53): CController->render('summary')
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSummary()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('summary')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Site/summary')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/sipakat/index.php?r=Site/summary
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Referensi/index
+---
+2015/10/04 14:15:46 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:53 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:53 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:53 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:53 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:54 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:54 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:54 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:54 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:54 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:54 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:55 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:55 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:55 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:55 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:56 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:56 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:57 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:57 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:57 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:57 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:57 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:57 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:58 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:15:58 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:16:24 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:17:22 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getChart')
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/getChart')
+#5 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/sipakat/index.php?r=site/getChart
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:30:39 [error] [php] include(CHtm.php): failed to open stream: No such file or directory (C:\wamp\www\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\views\site\summary.php(17): spl_autoload_call()
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#3 C:\wamp\www\yii\framework\web\CController.php(869): SiteController->renderFile()
+#4 C:\wamp\www\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#5 C:\wamp\www\sipakat\protected\controllers\SiteController.php(53): SiteController->render()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSummary()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#9 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Site/summary
+in C:\wamp\www\sipakat\protected\views\site\summary.php (17)
+in C:\wamp\www\sipakat\protected\controllers\SiteController.php (53)
+in C:\wamp\www\sipakat\index.php (13)
+2015/10/04 14:31:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getGraph".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('getGraph')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('getGraph')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Site/getGraph')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sipakat/index.php?r=Site/getGraph
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Site/summary
+---
+2015/10/04 14:31:29 [error] [php] Undefined variable: bidang (C:\wamp\www\sipakat\protected\controllers\SiteController.php:466)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Site/getChart
+in C:\wamp\www\sipakat\protected\controllers\SiteController.php (466)
+in C:\wamp\www\sipakat\index.php (13)
+2015/10/04 14:46:00 [error] [php] Object of class HighchartsWidget could not be converted to string (C:\wamp\www\sipakat\protected\controllers\SiteController.php:482)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Site/getChart
+in C:\wamp\www\sipakat\protected\controllers\SiteController.php (482)
+in C:\wamp\www\sipakat\index.php (13)
+2015/10/04 15:12:57 [error] [php] Undefined variable: myValue (C:\wamp\www\sipakat\protected\views\site\summary.php:32)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\wamp\www\sipakat\protected\controllers\SiteController.php(53): SiteController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSummary()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Site/summary
+in C:\wamp\www\sipakat\protected\views\site\summary.php (32)
+in C:\wamp\www\sipakat\protected\controllers\SiteController.php (53)
+in C:\wamp\www\sipakat\index.php (13)
+2015/10/04 15:16:34 [error] [php] Undefined variable: data (C:\wamp\www\sipakat\protected\views\site\_graph.php:14)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\sipakat\protected\views\site\summary.php(30): SiteController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): SiteController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#6 C:\wamp\www\sipakat\protected\controllers\SiteController.php(53): SiteController->render()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSummary()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#10 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Site/summary
+in C:\wamp\www\sipakat\protected\views\site\_graph.php (14)
+in C:\wamp\www\sipakat\protected\views\site\summary.php (30)
+in C:\wamp\www\sipakat\protected\controllers\SiteController.php (53)
+2015/10/04 15:17:48 [error] [exception.CException] exception 'CException' with message 'Property "SiteController.data" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\views\site\_graph.php(13): CComponent->__get('data')
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#3 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#4 C:\wamp\www\sipakat\protected\views\site\summary.php(30): CController->renderPartial('_graph', Array)
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', NULL, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', NULL, true)
+#8 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('summary', NULL, true)
+#9 C:\wamp\www\sipakat\protected\controllers\SiteController.php(53): CController->render('summary')
+#10 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSummary()
+#11 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('summary')
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Site/summary')
+#16 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/sipakat/index.php?r=Site/summary
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Referensi/index
+---
+2015/10/04 15:17:49 [error] [exception.CException] exception 'CException' with message 'Property "SiteController.data" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\views\site\_graph.php(13): CComponent->__get('data')
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#3 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#4 C:\wamp\www\sipakat\protected\views\site\summary.php(30): CController->renderPartial('_graph', Array)
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', NULL, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', NULL, true)
+#8 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('summary', NULL, true)
+#9 C:\wamp\www\sipakat\protected\controllers\SiteController.php(53): CController->render('summary')
+#10 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSummary()
+#11 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('summary')
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Site/summary')
+#16 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/sipakat/index.php?r=Site/summary
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Referensi/index
+---
+2015/10/04 15:19:17 [error] [exception.CException] exception 'CException' with message 'Property "SiteController.data" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\sipakat\protected\views\site\_graph.php(13): CComponent->__get('data')
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', Array, true)
+#3 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', Array, true)
+#4 C:\wamp\www\sipakat\protected\views\site\summary.php(30): CController->renderPartial('_graph', Array)
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\\wamp\\www\\sip...')
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp\\www\\sip...', NULL, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp\\www\\sip...', NULL, true)
+#8 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('summary', NULL, true)
+#9 C:\wamp\www\sipakat\protected\controllers\SiteController.php(53): CController->render('summary')
+#10 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSummary()
+#11 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('summary')
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Site/summary')
+#16 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\wamp\www\sipakat\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/sipakat/index.php?r=Site/summary
+HTTP_REFERER=http://localhost/sipakat/index.php?r=Referensi/index
+---
+2015/10/04 15:19:39 [error] [php] Undefined variable: data (C:\wamp\www\sipakat\protected\views\site\_graph.php:14)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\sipakat\protected\controllers\SiteController.php(472): SiteController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionGetChart()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#5 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#6 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Site/getChart
+in C:\wamp\www\sipakat\protected\views\site\_graph.php (14)
+in C:\wamp\www\sipakat\protected\controllers\SiteController.php (472)
+in C:\wamp\www\sipakat\index.php (13)

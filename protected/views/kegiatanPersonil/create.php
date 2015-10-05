@@ -13,6 +13,8 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create KegiatanPersonil</h1>
+<div class="box">
+<h1>Tambah Kegiatan Personil</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+</div>

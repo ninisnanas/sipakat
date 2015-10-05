@@ -47,6 +47,12 @@ class SiteController extends Controller
 		}
 	}
 
+	public function actionSummary()
+	{
+		// cek role
+		$this->render('summary');
+	}
+
 	/**
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
@@ -453,5 +459,19 @@ class SiteController extends Controller
   		header($content);	
   		echo $filecontent;
 	    exit;
+  	}
+
+  	public function actionGetChart() 
+  	{
+  		$bidang = $_POST['bidang'];
+  		$values = array(
+  			array('name' => 'Jane', 'data' => array(5)),
+            array('name' => 'John', 'data' => array(5))
+            );
+		$data = array();
+		$data['values'] = $values;	
+		var_dump($data);
+		die();		
+  		$this->renderPartial('_graph', $data, false, true);
   	}
 }

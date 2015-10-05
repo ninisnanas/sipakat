@@ -28,7 +28,7 @@ class PersonilController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view', 'dinamis'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -71,7 +71,7 @@ class PersonilController extends Controller
 		{
 			$model->attributes=$_POST['Personil'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('index','id'=>$model->id));
 		}
 
 		$this->render('create',array(
@@ -160,8 +160,7 @@ class PersonilController extends Controller
 		return $model;
 	}
 
-	/**
-	 * Performs the AJAX validation.
+	 /* Performs the AJAX validation.
 	 * @param Personil $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
@@ -170,6 +169,26 @@ class PersonilController extends Controller
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
+		}
+	}
+
+	public static function  getNamaByBidang($kode_bidang) {
+		$data = Personil::model()->findAll('id_bidang=:id_bidang',array(':id_bidang' => (int) $kode_bidang));
+	  return CHtml::listData($data, 'id', 'nama');
+	}
+
+	public function actionDinamis()
+	{
+		echo var_dump($_POST);
+		$data=Personil::model()->findAllByAttributes(array('bidang'=>(int) $_POST['bidang']));
+ 
+		$data=CHtml::listData($data,'id','name');
+		echo var_dump("yoma");
+		die();
+		foreach($data as $value=>$name)
+		{
+		    echo CHtml::tag('option',
+		               array('value'=>$value),CHtml::encode($name),true);
 		}
 	}
 }

@@ -20,6 +20,7 @@ return array(
 		'application.controllers.*',
 		'application.extensions.PasswordHash',
 		'application.extensions.galleria.*',
+		'application.extensions.highcharts.*',
 	),
 	'timeZone' => 'Asia/Jakarta',
 	'modules'=>array(

@@ -69,10 +69,10 @@
                         <?php echo CHtml::link('Daftar Kegiatan', array('Kegiatan/index'));?>
                     </li>
                     <li>
-                        <?php echo CHtml::link('Referensi', array('Referensi/index'));?>
+                        <?php echo CHtml::link('Rangkuman', array('Site/summary'));?>
                     </li>
                     <li>
-                        <?php echo CHtml::link('Rangkuman', array('Rangkuman/index'));?>
+                        <?php echo CHtml::link('Referensi', array('Referensi/index'));?>
                     </li>
                     <li>
                         <?php 

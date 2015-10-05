@@ -28,7 +28,7 @@ class KegiatanPersonilController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','detail'),
+				'actions'=>array('index','view','detail', 'dinamis'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -70,8 +70,10 @@ class KegiatanPersonilController extends Controller
 		if(isset($_POST['KegiatanPersonil']))
 		{
 			$model->attributes=$_POST['KegiatanPersonil'];
-			if($model->save())
+			if($model->save()) {
+				
 				$this->redirect(array('view','id'=>$model->id));
+			}
 		}
 
 		$this->render('create',array(
@@ -179,6 +181,17 @@ class KegiatanPersonilController extends Controller
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
+		}
+	}
+
+	public function actionDinamis()
+	{
+		$data=Personil::model()->findAllByAttributes(array('bidang'=> $_POST['bidang']));
+		$dataBaru = CHtml::listData($data, 'id', 'nama');
+		echo CHtml::tag('option', array('value' => ''), 'Pilih Personil', true);
+		foreach($dataBaru as $value=>$name)
+		{
+		    echo CHtml::tag('option', array('value' => $value), CHtml::encode($name), true);  
 		}
 	}
 }
