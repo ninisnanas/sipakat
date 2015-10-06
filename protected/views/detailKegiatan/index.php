@@ -133,9 +133,8 @@
         	for($b=1; $b<=4; $b++) {
         		$val = "w".$a.$b;
         		if($data[$val] != NULL) {
-                    $detail=DetailKegiatan::model()->getKodeKegiatan($data[$val]);
-                    $bgcolor = WarnaKegiatan::model()->findByPk($detail['kode']);
-                    echo "<td bgcolor=\"#".$bgcolor['kode']."\">".chr(64+$bgcolor['id']).$data[$val]."</td>";
+                    $bgcolor = WarnaKegiatan::model()->findByPk($data->kode);
+                    echo "<td bgcolor=\"#".$bgcolor['kode']."\">".chr(64+$bgcolor['id']).$data->id_kegiatan."</td>";
                 } else {
                     echo "<td></td>";
                 }

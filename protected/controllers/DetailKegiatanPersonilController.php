@@ -197,6 +197,9 @@ class DetailKegiatanPersonilController extends Controller
 
 		if(isset($_GET['yt0']))
 		{
+			$kegiatan_personil=KegiatanPersonil::model()->getKPbyIDnDK($model->id_personil, $model->tahun, $_GET['dk']);
+			$kp = KegiatanPersonil::model()->findByPk($kegiatan_personil[0]['id']);
+			$kp->delete();
 			for($a=1; $a<=12; $a++) 
 			{
 	        	for($b=1; $b<=4; $b++) 
@@ -263,6 +266,7 @@ class DetailKegiatanPersonilController extends Controller
 	public function actionDinamis()
 	{
 		$data=DetailKegiatanPersonil::model()->getNamaKegiatanByBidang($_POST['bidang']);
+		echo var_dump($data);
 		$data_new=array();
 		$ii=0;
 		foreach ($data as $value) {

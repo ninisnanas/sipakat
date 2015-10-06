@@ -120,7 +120,7 @@
         		if($data[$val] != NULL) {
         			$detail=DetailKegiatan::model()->getKodeKegiatan($data[$val]);
         			$bgcolor = WarnaKegiatan::model()->findByPk($detail['kode']);
-                    echo "<td bgcolor=\"#".$bgcolor['kode']."\">".chr(64+$bgcolor['id']).$data[$val]."</td>";
+                    echo "<td bgcolor=\"#".$bgcolor['kode']."\">".chr(64+$bgcolor['id']).$detail['id_kegiatan']."</td>";
         		} else {
         			echo "<td></td>";
         		}
@@ -140,9 +140,9 @@
 $(document).ready(function(){
     $('#<?php echo $tableid;?>').dataTable({
     "scrollX": true,
-    "paging":   false,
-    "ordering": false,
-    "info":     false
+    "paging":   true,
+    "ordering": true,
+    "info":     true
   } );
 });
 </script>

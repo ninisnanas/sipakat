@@ -77,6 +77,7 @@
 $(document).ready(function(){
     $('#<?php echo $tableid;?>').dataTable({
     "sPaginationType": "full_numbers",
+    "scrollX": true,
     "bAutoWidth": true,
   } );
 });

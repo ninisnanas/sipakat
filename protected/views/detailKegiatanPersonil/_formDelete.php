@@ -34,7 +34,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Hapus', array('class'=>'btn green')); ?>
+		<?php echo CHtml::submitButton('Hapus', array('class'=>'btn green delete', 'confirm'=>'Anda yakin untuk menghapus kegiatan personil?')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

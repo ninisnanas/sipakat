@@ -90,4 +90,21 @@ class KegiatanPersonil extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	private function doStandardQuery($queryString)
+	{
+		return Yii::app()->db->createCommand($queryString)->queryAll();
+	}
+
+	public function getKPbyIDnDK($id_personil, $tahun, $id_detail_kegiatan)
+	{
+		return $this->doStandardQuery(
+			"SELECT
+			*
+			FROM
+			kegiatan_personil
+			WHERE
+			id_personil=".$id_personil." and tahun=".$tahun." and id_detail_kegiatan=".$id_detail_kegiatan
+		);
+	}
 }

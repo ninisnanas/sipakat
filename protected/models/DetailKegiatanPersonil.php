@@ -288,7 +288,8 @@ class DetailKegiatanPersonil extends CActiveRecord
 			detail_kegiatan_personil.w123,
 			detail_kegiatan_personil.w124
 			FROM
-			personil left outer join detail_kegiatan_personil on personil.id=detail_kegiatan_personil.id_personil"
+			personil left outer join detail_kegiatan_personil on personil.id=detail_kegiatan_personil.id_personil
+			ORDER BY id_personil ASC"
 		);
 	}
 
@@ -305,7 +306,8 @@ class DetailKegiatanPersonil extends CActiveRecord
 			kegiatan.nama as nk,
 			detail_kegiatan.nama as nama
 			FROM
-			kegiatan join detail_kegiatan on kegiatan.id=detail_kegiatan.id_kegiatan"
+			kegiatan join detail_kegiatan on kegiatan.id=detail_kegiatan.id_kegiatan
+			WHERE id_bidang=".$id
 		);
 	}
 }
