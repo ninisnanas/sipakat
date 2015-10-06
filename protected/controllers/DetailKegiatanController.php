@@ -60,9 +60,10 @@ class DetailKegiatanController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($id)
 	{
 		$model=new DetailKegiatan;
+		$model->id_kegiatan=$id;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -70,8 +71,31 @@ class DetailKegiatanController extends Controller
 		if(isset($_POST['DetailKegiatan']))
 		{
 			$model->attributes=$_POST['DetailKegiatan'];
+			$kegiatan=Kegiatan::model()->findByPk($model->id_kegiatan);
+			$other_kg=DetailKegiatan::model()->findAllByAttributes(array('id_kegiatan'=>$id));
+			$waktu_avg=0;
+			$anggaran_avg=0;
+			$temp_waktu=0;
+			$temp_anggaran=0;
+			if(!empty($other_kg)) {
+				$ii = 0;
+				foreach ($other_kg as $data) {
+					$temp_waktu += $data->persen_waktu;
+					$temp_anggaran += $data->persen_anggaran;
+					$ii++;
+				}
+				$waktu_avg = $temp_waktu/$ii;
+				$anggaran_avg = $temp_anggaran/$ii;
+				$kegiatan->persen_waktu=$waktu_avg;
+				$kegiatan->persen_anggaran=$anggaran_avg;
+			} else {
+				$kegiatan->persen_waktu = $model->persen_waktu;
+				$kegiatan->persen_anggaran = $model->persen_anggaran;
+				$kegiatan->save();
+			}
+
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('index','id'=>$model->id_kegiatan));
 		}
 
 		$this->render('create',array(
@@ -94,8 +118,21 @@ class DetailKegiatanController extends Controller
 		if(isset($_POST['DetailKegiatan']))
 		{
 			$model->attributes=$_POST['DetailKegiatan'];
+			$kegiatan=Kegiatan::model()->findByPk($model->id_kegiatan);
+			$other_kg=DetailKegiatan::model()->findAllByAttributes(array('id_kegiatan'=>$id));
+			$waktu_avg=0;
+			$anggaran_avg=0;
+			if(!empty($other_kg)) {
+				foreach ($other_kg as $data) {
+				}
+			} else {
+				$kegiatan->persen_waktu = $model->persen_waktu;
+				$kegiatan->persen_anggaran = $model->persen_anggaran;
+				$kegiatan->save();
+			}
+
 			if($model->save())
-				$this->redirect(array('index','id'=>$model->id));
+				$this->redirect(array('index','id'=>$kegiatan->id));
 		}
 
 		$this->render('update',array(
@@ -108,6 +145,7 @@ class DetailKegiatanController extends Controller
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
 	 * @param integer $id the ID of the model to be deleted
 	 */
+	
 	public function actionDelete($id)
 	{
 		$this->loadModel($id)->delete();
@@ -115,7 +153,7 @@ class DetailKegiatanController extends Controller
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax'])) {
 			Yii::app()->user->setFlash('successDelete', "Berhasil menghapus detail kegiatan!");
-			$this->render('index',array('dataProvider'=>DetailKegiatan::model()->findAllByAttributes(array('id_kegiatan'=>$id))));
+			$this->render('index');
 		}
 	}
 
@@ -127,6 +165,7 @@ class DetailKegiatanController extends Controller
 		$dataProvider=DetailKegiatan::model()->findAllByAttributes(array('id_kegiatan'=>$id));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'id'=>$id
 		));
 	}
 

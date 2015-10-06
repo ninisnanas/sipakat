@@ -27,6 +27,10 @@
     <thead>
       <th>No.</th>
       <th>Nama Kegiatan</th>
+      <th>Anggaran</th>
+      <th>% Anggaran</th>
+      <th>Waktu</th>
+      <th>% Waktu</th>
       <?php 
         $role=Yii::app()->user->getState('role');
         if ($role==1) {
@@ -45,6 +49,10 @@
         echo "<tr id=\"\">";
         echo   "<td>".$ii++."</td>";
         echo   "<td>".$data->nama."</td>";
+        echo   "<td>".$data->anggaran."</td>";
+        echo   "<td>".$data->persen_anggaran."%</td>";
+        echo   "<td>".$data->waktu."</td>";
+        echo   "<td>".$data->persen_waktu."%</td>";
         if ($role==1) {
           echo "<td class=\"text-left\">".CHtml::link('Lihat',array('DetailKegiatan/index','id'=>$data->id))." |"
           .CHtml::link('Ubah',array('Kegiatan/update','id'=>$data->id))." |"

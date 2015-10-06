@@ -467,6 +467,6 @@ class SiteController extends Controller
 
   		$dataProvider=DetailKegiatan::model()->findAllByPk($bidang);
 		
-  		$this->render('summary', array('dataProvider'=>$dataProvider));
+  		$this->render('summary', array('dataProvider'=>$dataProvider, 'isNew'));
   	}
 }

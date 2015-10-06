@@ -8,6 +8,7 @@
   <div class="box">
   <div class="col-lg-12 text-center">
       <h2 class="section-heading">Data Personil</h2>
+      <?php //echo $this->renderPartial('_formSelect', array('model'=>$model, 'bidang'=>$tahun_selected)); ?>
       <h3 class="section-subheading text-muted">Bidang XYZ</h3>
       <?php
         echo CHtml::link('Tambah Personil',array('Personil/create'));
@@ -26,10 +27,10 @@
     </colgroup>
     <thead>
       <th>No.</th>
-      <th>Nama</th>
-      <th>NIP</th>
+      <th>Nama</th>      
       <th>Jabatan</th>
-      <th>Bidang</th>
+      <th>NIP</th>
+      <th>Pangkat/Golongan</th>
       <th>Background<br>Pendidikan</th>
       <th>Training<br>yang Diikuti</th>
       <?php 
@@ -50,10 +51,9 @@
         echo "<tr id=\"\">";
         echo   "<td>".$ii++."</td>";
         echo   "<td>".$data->nama."</td>";
-        echo   "<td class=\"text-left\">".$data->nip."</td>";
         echo   "<td class=\"text-left\">".$data->jabatan."</td>";
-        $bidang=Bidang::model()->getNamaBidang($data->bidang);
-        echo   "<td class=\"text-left\">".$bidang->nama."</td>";
+        echo   "<td class=\"text-left\">".$data->nip."</td>";
+        echo   "<td class=\"text-left\">".$data->pangkat."</td>";
         echo   "<td class=\"text-left\">".$data->background."</td>";
         echo   "<td class=\"text-left\">".$data->training."</td>";
         if ($role==1) {

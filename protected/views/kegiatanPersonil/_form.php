@@ -15,7 +15,7 @@
 
 	<?php echo $form->errorSummary($model); $bidang=0; ?>
 
-	<div class="form-row row">
+	<div class="row">
 		<?php echo $form->labelEx($model,'Bidang'); ?>
 		<?php echo CHtml::dropDownList($bidang, 'bidang', Bidang::model()->getBidangList(),
 			array('empty' => 'Pilih Bidang',

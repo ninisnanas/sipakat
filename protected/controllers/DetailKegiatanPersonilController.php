@@ -28,11 +28,11 @@ class DetailKegiatanPersonilController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view', 'dinamis'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update', 'addKegiatan', 'deleteKegiatan'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -122,9 +122,98 @@ class DetailKegiatanPersonilController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=DetailKegiatanPersonil::model()->findAll();
+		$dataProvider=DetailKegiatanPersonil::model()->getDetailKegiatanPersonil();
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+		));
+	}
+
+	public function actionAddKegiatan($id, $id_personil)
+	{
+		if($id != null) {
+			$model=$this->loadModel($id);
+		} else {
+			$model=new KegiatanPersonil;
+			$model->id_personil = $id_personil;
+		}
+
+		if(isset($_GET['yt0']))
+		{
+			echo var_dump($model->id_personil);
+			echo var_dump($_GET['id_detail_kegiatan']);
+			$kegiatan = new KegiatanPersonil;
+			$kegiatan->id_personil = $model->id_personil;
+			$kegiatan->id_detail_kegiatan = $_GET['id_detail_kegiatan'];
+			$dk=DetailKegiatan::model()->getIdKegiatan($_GET['id_detail_kegiatan']);
+			$k=Kegiatan::model()->getTahunKegiatan($dk[0]['id_kegiatan']);
+			
+			$kegiatan->tahun=$k[0]['tahun'];
+			
+			if($kegiatan->save()) {
+				// create new detail_kegiatan_personil
+				echo var_dump($id_personil);
+				$detail = DetailKegiatan::model()->findByPk($_GET['id_detail_kegiatan']);
+				if($id!=null) {
+					for($a=1; $a<=12; $a++) {
+			        	for($b=1; $b<=4; $b++) {
+			        		$val = "w".$a.$b;
+			        		if($detail->$val != NULL) {
+			        			$model->$val = $kegiatan->id_detail_kegiatan;
+			        		}
+			        	}
+			        }
+			        $model->save();
+				} else {
+					$dkp = new DetailKegiatanPersonil;
+					$dkp->id_personil = $kegiatan->id_personil;
+					$dkp->tahun = $kegiatan->tahun;
+
+					for($a=1; $a<=12; $a++) {
+			        	for($b=1; $b<=4; $b++) {
+			        		$val = "w".$a.$b;
+			        		if($detail->$val != NULL) {
+			        			$dkp->$val = $kegiatan->id_detail_kegiatan;
+			        		}
+			        	}
+			        }
+			        $dkp->save();
+					}
+		        $this->redirect(array('index','id'=>$model->id));
+			}
+		}
+
+		$this->render('tambahKegiatan',array(
+			'model'=>$model,
+		));
+	}
+
+	public function actionDeleteKegiatan($id)
+	{
+		$model=$this->loadModel($id);
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+		//$kegiatan_personil=KegiatanPersonil::controller->loadModel($id);
+
+		if(isset($_GET['yt0']))
+		{
+			for($a=1; $a<=12; $a++) 
+			{
+	        	for($b=1; $b<=4; $b++) 
+	        	{
+	        		$val = "w".$a.$b;
+	        		if($model->$val == $_GET['dk']) 
+	        		{
+	        			$model->$val = '';
+	        		}
+	        	}
+	        }
+	        $model->save();
+		    $this->redirect(array('index','id'=>$model->id));
+		}
+
+		$this->render('hapusKegiatan',array(
+			'model'=>$model,
 		));
 	}
 
@@ -168,6 +257,24 @@ class DetailKegiatanPersonilController extends Controller
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
+		}
+	}
+
+	public function actionDinamis()
+	{
+		$data=DetailKegiatanPersonil::model()->getNamaKegiatanByBidang($_POST['bidang']);
+		$data_new=array();
+		$ii=0;
+		foreach ($data as $value) {
+			$data_new[$ii] = array('id'=>$value['id'],
+									'nama'=>$value['nk']." - ".$value['nama']);
+			$ii++;
+		}
+		$dataBaru = CHtml::listData($data_new, 'id', 'nama');
+		echo CHtml::tag('option', array('value' => ''), 'Pilih Detail Kegiatan', true);
+		foreach($dataBaru as $value=>$name)
+		{
+		    echo CHtml::tag('option', array('value' => $value), CHtml::encode($name), true);  
 		}
 	}
 }

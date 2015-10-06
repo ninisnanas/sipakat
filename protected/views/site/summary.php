@@ -27,6 +27,7 @@
   <div id = "graph" class="col-lg-12 text-center">
     <?php 
       if($isNew != '1') {
+        echo "string";
         $this->renderPartial('_graph', array('dataProvider'=>$dataProvider)); 
       } else {
         $this->renderPartial('_graph', array('dataProvider'=>'')); 

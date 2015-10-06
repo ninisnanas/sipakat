@@ -253,4 +253,48 @@ class DetailKegiatan extends CActiveRecord
 	    $kodeKegiatan = self::model()->findByPk($id);  
 	    return $kodeKegiatan;  
 	}
+
+	private function doStandardQuery($queryString)
+	{
+		return Yii::app()->db->createCommand($queryString)->queryAll();
+	}
+
+	public function getKegiatanById2($id)
+	{
+		return $this->doStandardQuery(
+			"SELECT
+			detail_kegiatan.id,
+			kegiatan.nama as nk,
+			detail_kegiatan.nama as nama
+			FROM
+			kegiatan_personil join detail_kegiatan join kegiatan on kegiatan_personil.id_detail_kegiatan=detail_kegiatan.id and detail_kegiatan.id_kegiatan=kegiatan.id
+			WHERE
+			id_personil=".$id
+		);
+	}
+
+	public function getKegiatanById($id)
+	{
+		$data=$this->getKegiatanById2($id);
+		$data_new=array();
+		$ii=0;
+		foreach ($data as $value) {
+			$data_new[$ii] = array('id'=>$value['id'],
+									'nama'=>$value['nk']." - ".$value['nama']);
+			$ii++;
+		}
+		return $dataBaru = CHtml::listData($data_new, 'id', 'nama');
+	}
+
+	public function getIDKegiatan($id)
+	{
+		return $this->doStandardQuery(
+			"SELECT
+			id_kegiatan
+			FROM
+			detail_kegiatan
+			WHERE
+			id=".$id
+		);
+	}
 }

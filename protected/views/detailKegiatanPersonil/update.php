@@ -15,7 +15,8 @@ $this->menu=array(
 	array('label'=>'Manage DetailKegiatanPersonil', 'url'=>array('admin')),
 );
 ?>
-
+<div class = "box">
 <h1>Update DetailKegiatanPersonil <?php echo $model->id; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+</div>

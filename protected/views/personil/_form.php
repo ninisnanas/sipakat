@@ -34,14 +34,14 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'pangkat'); ?>
+		<?php echo $form->labelEx($model,'Pangkat /Golongan'); ?>
 		<?php echo $form->textField($model,'pangkat',array('size'=>60,'maxlength'=>250)); ?>
 		<?php echo $form->error($model,'pangkat'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'bidang'); ?>
-		<?php echo $form->dropDownList($model, 'bidang', Bidang::model()->getBidangList(), array('empty' => 'Pilih Bidang')); ?>
+		<?php echo $form->labelEx($model,'puskaji'); ?>
+		<?php echo $form->dropDownList($model, 'bidang', Bidang::model()->getBidangList(), array('empty' => 'Pilih Puskaji')); ?>
 		<?php echo $form->error($model,'bidang'); ?>
 	</div>
 

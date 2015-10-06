@@ -10,7 +10,7 @@
       <h2 class="section-heading">Detil Kegiatan</h2>
       <h3 class="section-subheading text-muted">Bidang XYZ</h3>
       <?php
-        echo CHtml::link('Tambah Detail Kegiatan',array('DetailKegiatan/create'));
+        echo CHtml::link('Tambah Detail Kegiatan',array('DetailKegiatan/create', 'id'=>$id));
       ?>
   </div>
   <table id="<?php echo $tableid;?>" class="display compact cell-border nowrap">
@@ -132,19 +132,13 @@
         for($a=1; $a<=12; $a++) {
         	for($b=1; $b<=4; $b++) {
         		$val = "w".$a.$b;
-        		if($data->$val == 1) {
-        			if($data->kode == 'A') {
-        				echo "<td bgcolor=\"#FF0000\">A".$data->id_kegiatan."</td>";
-        			} else if ($data->kode == 'B') {
-        				echo "<td bgcolor=\"#00FF00\">B".$data->id_kegiatan."</td>";
-        			} else if ($data->kode == 'C') {
-        				echo "<td bgcolor=\"#FFFF00\">C".$data->id_kegiatan."</td>";
-        			} else {
-        				echo "<td bgcolor=\"#0000FF\">D".$data->id_kegiatan."</td>";
-        			}
-        		} else {
-        			echo "<td></td>";
-        		}
+        		if($data[$val] != NULL) {
+                    $detail=DetailKegiatan::model()->getKodeKegiatan($data[$val]);
+                    $bgcolor = WarnaKegiatan::model()->findByPk($detail['kode']);
+                    echo "<td bgcolor=\"#".$bgcolor['kode']."\">".chr(64+$bgcolor['id']).$data[$val]."</td>";
+                } else {
+                    echo "<td></td>";
+                }
         	}
         }
         echo "</tr>";

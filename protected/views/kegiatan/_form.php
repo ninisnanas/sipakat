@@ -22,9 +22,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id_bidang'); ?>
+		<?php echo $form->labelEx($model,'Puskaji'); ?>
 		<?php echo $form->dropDownList($model, 'id_bidang', Bidang::model()->getBidangList(),
-			array('empty' => 'Pilih Bidang')); ?>
+			array('empty' => 'Pilih Puskaji')); ?>
 		<?php echo $form->error($model,'id_bidang'); ?>
 	</div>
 
@@ -33,31 +33,7 @@
 		<?php echo $form->textField($model,'tahun',array('size'=>4,'maxlength'=>4)); ?>
 		<?php echo $form->error($model,'tahun'); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'anggaran'); ?>
-		<?php echo $form->textField($model,'anggaran'); ?>
-		<?php echo $form->error($model,'anggaran'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'persen_anggaran'); ?>
-		<?php echo $form->textField($model,'persen_anggaran'); ?>
-		<?php echo $form->error($model,'persen_anggaran'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'waktu'); ?>
-		<?php echo $form->textField($model,'waktu',array('size'=>25,'maxlength'=>25)); ?>
-		<?php echo $form->error($model,'waktu'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'persen_waktu'); ?>
-		<?php echo $form->textField($model,'persen_waktu'); ?>
-		<?php echo $form->error($model,'persen_waktu'); ?>
-	</div>
-
+	
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

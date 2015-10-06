@@ -231,4 +231,81 @@ class DetailKegiatanPersonil extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	public function getDetailKegiatanPersonil()
+	{
+		return $this->doStandardQuery(
+			"SELECT
+			detail_kegiatan_personil.id,
+			personil.id as id_personil,
+			personil.nama,
+			detail_kegiatan_personil.w11,
+			detail_kegiatan_personil.w12,
+			detail_kegiatan_personil.w13,
+			detail_kegiatan_personil.w14,
+			detail_kegiatan_personil.w21,
+			detail_kegiatan_personil.w22,
+			detail_kegiatan_personil.w23,
+			detail_kegiatan_personil.w24,
+			detail_kegiatan_personil.w31,
+			detail_kegiatan_personil.w32,
+			detail_kegiatan_personil.w33,
+			detail_kegiatan_personil.w34,
+			detail_kegiatan_personil.w41,
+			detail_kegiatan_personil.w42,
+			detail_kegiatan_personil.w43,
+			detail_kegiatan_personil.w44,
+			detail_kegiatan_personil.w51,
+			detail_kegiatan_personil.w52,
+			detail_kegiatan_personil.w53,
+			detail_kegiatan_personil.w54,
+			detail_kegiatan_personil.w61,
+			detail_kegiatan_personil.w62,
+			detail_kegiatan_personil.w63,
+			detail_kegiatan_personil.w64,
+			detail_kegiatan_personil.w71,
+			detail_kegiatan_personil.w72,
+			detail_kegiatan_personil.w73,
+			detail_kegiatan_personil.w74,
+			detail_kegiatan_personil.w81,
+			detail_kegiatan_personil.w82,
+			detail_kegiatan_personil.w83,
+			detail_kegiatan_personil.w84,
+			detail_kegiatan_personil.w91,
+			detail_kegiatan_personil.w92,
+			detail_kegiatan_personil.w93,
+			detail_kegiatan_personil.w94,
+			detail_kegiatan_personil.w101,
+			detail_kegiatan_personil.w102,
+			detail_kegiatan_personil.w103,
+			detail_kegiatan_personil.w104,
+			detail_kegiatan_personil.w111,
+			detail_kegiatan_personil.w112,
+			detail_kegiatan_personil.w113,
+			detail_kegiatan_personil.w114,
+			detail_kegiatan_personil.w121,
+			detail_kegiatan_personil.w122,
+			detail_kegiatan_personil.w123,
+			detail_kegiatan_personil.w124
+			FROM
+			personil left outer join detail_kegiatan_personil on personil.id=detail_kegiatan_personil.id_personil"
+		);
+	}
+
+	private function doStandardQuery($queryString)
+	{
+		return Yii::app()->db->createCommand($queryString)->queryAll();
+	}
+
+	public function getNamaKegiatanByBidang($id)
+	{
+		return $this->doStandardQuery(
+			"SELECT
+			detail_kegiatan.id,
+			kegiatan.nama as nk,
+			detail_kegiatan.nama as nama
+			FROM
+			kegiatan join detail_kegiatan on kegiatan.id=detail_kegiatan.id_kegiatan"
+		);
+	}
 }

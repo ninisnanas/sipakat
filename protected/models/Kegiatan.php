@@ -41,8 +41,8 @@ class Kegiatan extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nama, id_bidang, tahun, anggaran, waktu', 'required'),
-			array('id_bidang, anggaran, persen_anggaran, persen_waktu', 'numerical', 'integerOnly'=>true),
+			array('nama, id_bidang, tahun', 'required'),
+			array('id_bidang, anggaran, waktu, persen_anggaran, persen_waktu', 'numerical', 'integerOnly'=>true),
 			array('nama', 'length', 'max'=>100),
 			array('tahun', 'length', 'max'=>4),
 			array('waktu', 'length', 'max'=>25),
@@ -103,5 +103,56 @@ class Kegiatan extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+	}
+
+	public function getAllYears()
+	{
+		$criteria=new CDbCriteria();
+		$criteria->select = 'tahun';
+		$criteria->distinct = true;
+		$criteria->order = 'tahun ASC';
+		$tahun = Kegiatan::model()->findAll($criteria);
+		return $tahun;
+	}
+
+	public function getKegiatanByBidang($id)
+	{
+		$criteria=new CDbCriteria();
+		$criteria->select = 'id';
+		$criteria->condition = 'id_bidang=:id_bidang';
+		$criteria->params = array(':id_bidang'=>$id);
+		$criteria->order = 'id ASC';
+		$id_kegiatan = Kegiatan::model()->findAll($criteria);
+		return $id_kegiatan;
+	}
+
+	public function getNamaKegiatanByBidang($id)
+	{
+		$criteria=new CDbCriteria();
+		$criteria->select = 'id, nama';
+		$criteria->condition = 'id_bidang=:id_bidang';
+		$criteria->params = array(':id_bidang'=>$id);
+		$id_kegiatan = Kegiatan::model()->findAll($criteria);
+		return $id_kegiatan;
+	}
+
+	public function getNamaKegiatan($id)
+	{
+		$criteria=new CDbCriteria();
+		$criteria->select = 'nama';
+		$criteria->condition = 'id=:id';
+		$criteria->params = array(':id'=>$id);
+		$id_kegiatan = Kegiatan::model()->findAll($criteria);
+		return $id_kegiatan;
+	}
+
+	public function getTahunKegiatan($id)
+	{
+		$criteria=new CDbCriteria();
+		$criteria->select = 'tahun';
+		$criteria->condition = 'id=:id';
+		$criteria->params = array(':id'=>$id);
+		$tahun = Kegiatan::model()->findAll($criteria);
+		return $tahun;
 	}
 }

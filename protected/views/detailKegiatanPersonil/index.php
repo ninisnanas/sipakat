@@ -9,9 +9,6 @@
   <div class="col-lg-12 text-center">
       <h2 class="section-heading">Detil Kegiatan Personil</h2>
       <h3 class="section-subheading text-muted">Bidang XYZ</h3>
-      <?php
-        echo CHtml::link('Tambah Detail Kegiatan',array('KegiatanPersonil/create'));
-      ?>
   </div>
   <table id="<?php echo $tableid;?>" class="display compact cell-border nowrap">
     <colgroup>
@@ -112,29 +109,18 @@
         foreach($dataProvider as $data){
         echo "<tr id=\"\">";
         echo   "<td>".$ii++."</td>";
-        $personil=Personil::model()->getNamaPersonil($data->id_personil);
-        echo   "<td>".$personil->nama."</td>";
+        echo   "<td>".$data['nama']."</td>";
         if ($role==1) {
-          echo "<td class=\"text-left\">".CHtml::link('Ubah',array('DetailKegiatanPersonil/update','id'=>$data->id))." |"
-          .CHtml::link('Hapus',array('DetailKegiatan/delete','id'=>$data->id),array(
-          'submit'=>array('DetailKegiatan/delete', 'id'=>$data->id),
-          'class' => 'delete','confirm'=>'Anda yakin untuk menghapus detil kegiatan?'
-          ))."</td>";
+          echo "<td class=\"text-left\">".CHtml::link('Tambah Kegiatan',array('DetailKegiatanPersonil/addKegiatan','id'=>$data['id'], 'id_personil'=>$data['id_personil']))." |"
+          .CHtml::link('Hapus Kegiatan',array('DetailKegiatanPersonil/deleteKegiatan','id'=>$data['id']))."</td>";
         }
         for($a=1; $a<=12; $a++) {
         	for($b=1; $b<=4; $b++) {
         		$val = "w".$a.$b;
-        		if($data->$val != NULL) {
-        			$detail=DetailKegiatan::model()->getKodeKegiatan($data->$val);
-        			if($detail->kode == 'A') {
-        				echo "<td bgcolor=\"#FF0000\">A".$data->$val."</td>";
-        			} else if ($detail->kode == 'B') {
-        				echo "<td bgcolor=\"#00FF00\">B".$data->$val."</td>";
-        			} else if ($detail->kode == 'C') {
-        				echo "<td bgcolor=\"#FFFF00\">C".$data->$val."</td>";
-        			} else {
-        				echo "<td bgcolor=\"#0000FF\">D".$data->$val."</td>";
-        			}
+        		if($data[$val] != NULL) {
+        			$detail=DetailKegiatan::model()->getKodeKegiatan($data[$val]);
+        			$bgcolor = WarnaKegiatan::model()->findByPk($detail['kode']);
+                    echo "<td bgcolor=\"#".$bgcolor['kode']."\">".chr(64+$bgcolor['id']).$data[$val]."</td>";
         		} else {
         			echo "<td></td>";
         		}

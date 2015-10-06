@@ -16,15 +16,12 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id_personil'); ?>
-		<?php echo $form->textField($model,'id_personil'); ?>
+		<?php echo $form->labelEx($model,'Nama Personil'); ?>
+		<?php 
+		$namapersonil = Personil::model()->findByPk($model->id_personil);
+		echo CHtml::textField('namapersonil',$namapersonil['nama'], array('disabled'=>'disabled','class'=>'no-margin')); 
+		?>
 		<?php echo $form->error($model,'id_personil'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'tahun'); ?>
-		<?php echo $form->textField($model,'tahun',array('size'=>4,'maxlength'=>4)); ?>
-		<?php echo $form->error($model,'tahun'); ?>
 	</div>
 
 	<div class="row">
