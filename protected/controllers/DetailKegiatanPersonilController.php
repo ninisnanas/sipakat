@@ -122,8 +122,34 @@ class DetailKegiatanPersonilController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=DetailKegiatanPersonil::model()->getDetailKegiatanPersonil();
+		$dataProvider = null;
+		$puskaji = 0;
+		$bidang = 0;
+		$tahun_selected = 0;
+		$tahun = DetailKegiatanPersonil::model()->getAllYears();
+
+		if(isset($_GET['yt0']))
+		{
+			//$dataProvider = array('aaa' => 'aaaaa');
+			$tahun_selected = $_GET['tahun_selected'];
+			if(isset($_GET['puskaji'])) {
+				$puskaji = $_GET['puskaji'];
+				$bidang = $_GET['kode_bidang'];
+			} else {
+				$puskaji = Yii::app()->user->getState('puskaji');
+				$bidang = Yii::app()->user->getState('bidang');
+			}
+			if ($tahun_selected != '')
+			{
+				$dataProvider=DetailKegiatanPersonil::model()->getDetailKegiatanPersonilByBidang($bidang);
+			}
+		}
+
 		$this->render('index',array(
+			'puskaji' => $puskaji,
+			'bidang' => $bidang,
+			'tahun_selected' => $tahun_selected,
+			'tahun' => $tahun,
 			'dataProvider'=>$dataProvider,
 		));
 	}
@@ -266,7 +292,6 @@ class DetailKegiatanPersonilController extends Controller
 	public function actionDinamis()
 	{
 		$data=DetailKegiatanPersonil::model()->getNamaKegiatanByBidang($_POST['bidang']);
-		echo var_dump($data);
 		$data_new=array();
 		$ii=0;
 		foreach ($data as $value) {

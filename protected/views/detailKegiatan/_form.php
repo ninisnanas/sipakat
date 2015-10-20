@@ -11,7 +11,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Field dengan <span class="required">*</span> harus diisi.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -22,8 +22,11 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'kode'); ?>
-		<?php echo $form->textField($model,'kode',array('size'=>2,'maxlength'=>2)); ?>
+		<?php echo $form->labelEx($model,'Warna'); ?>
+		<?php $listwarna = WarnaKegiatan::model()->getListWarna();
+				$items = $listwarna['items'];
+				$options = $listwarna['options']; ?>
+		<?php echo $form->dropDownList($model, 'kode', $items, $options); ?>
 		<?php echo $form->error($model,'kode'); ?>
 	</div>
 
@@ -340,7 +343,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Selesai' : 'Simpan', array('style'=>'width:100px; margin-left:360px; margin-top:10px;')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

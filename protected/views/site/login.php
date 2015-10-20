@@ -17,7 +17,7 @@ $this->breadcrumbs=array(
 	'validateOnSubmit'=>true,
 	),
 )); ?>
-	<h1>Login</h1>
+	<h1 style="margin-left:90px;">Login</h1>
 
 	<div class="form-row row">
 		<?php echo $form->textField($model,'username',array('placeholder'=>'username')); ?>
@@ -29,7 +29,7 @@ $this->breadcrumbs=array(
 		<?php echo $form->error($model,'password'); ?>
 	</div>
 
-	<div class="form-row">
+	<div class="form-center">
 		<?php echo CHtml::submitButton('Login',array('class'=>'btn green')); ?>
 	</div>
 

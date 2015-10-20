@@ -53,32 +53,40 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <?php echo CHtml::link('Beranda', array('Site/index'));?>
-                    </li>
-                    <li>
-                        <?php echo CHtml::link('Tentang', array('Site/tentang'));?>
-                    </li>
-                    <li>
-                        <?php echo CHtml::link('Personil', array('Personil/index'));?>
-                    </li>
-                    <li>
-                        <?php echo CHtml::link('Kegiatan Personil', array('DetailKegiatanPersonil/index'));?>
-                    </li>
-                    <li>
-                        <?php echo CHtml::link('Daftar Kegiatan', array('Kegiatan/index'));?>
-                    </li>
-                    <li>
-                        <?php echo CHtml::link('Rangkuman', array('Rangkuman/index'));?>
-                    </li>
-                    <li>
-                        <?php echo CHtml::link('Referensi', array('Referensi/index'));?>
-                    </li>
-                    <li>
-                        <?php 
-                        $id=Yii::app()->user->getId();
-                        echo CHtml::link('Edit Password', array('Akun/update', 'id'=>$id));?>
-                    </li>
+                  <?php 
+                    if (Yii::app()->user->getState('role') != Akun::TAMU) {
+                      echo "<li>";
+                      echo CHtml::link('Beranda', array('Site/index'));
+                      echo "</li>
+                      <li>";
+                      echo CHtml::link('Tentang', array('Site/tentang'));
+                      echo "</li>
+                      <li>";
+                      echo CHtml::link('Personil', array('Personil/index'));
+                      echo "</li>
+                      <li>";
+                      echo CHtml::link('Kegiatan Personil', array('DetailKegiatanPersonil/index'));
+                      echo "</li>
+                      <li>";
+                      echo CHtml::link('Daftar Kegiatan', array('Kegiatan/index'));
+                      echo "</li>
+                      <li>";
+                      echo CHtml::link('Rangkuman', array('Rangkuman/index'));
+                      echo"</li>";
+                      } ?>
+                      <li>
+                      <?php echo CHtml::link('Layanan', array('Referensi/index'));?>
+                      </li>
+                      <li>
+                      <?php if (Yii::app()->user->getState('role') != Akun::TAMU) {
+                            $id=Yii::app()->user->getId();
+                            echo CHtml::link('Ubah Password', array('Akun/updatePassword', 'id'=>$id)); }?>
+                      </li>
+                      <?php if (Yii::app()->user->getState('role') == Akun::ADMIN) {
+                        echo "<li>";
+                        echo CHtml::link('Manajemen Akun', array('Akun/index'));
+                        echo "</li>";
+                      } ?>
                     <li>
                         <?php echo CHtml::link('Logout', array('Site/logout'));?>
                     </li>

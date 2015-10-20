@@ -2777,7 +2777,7 @@
 		var language = settings.oLanguage;
 		var previousSearch = settings.oPreviousSearch;
 		var features = settings.aanFeatures;
-		var input = '<input type="search" class="'+classes.sFilterInput+'"/>';
+		var input = '<input type="search" class="'+classes.sFilterInput+'" style="width:150px"/>';
 	
 		var str = language.sSearch;
 		str = str.match(/_INPUT_/) ?
@@ -11128,7 +11128,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sFirst": "First",
+				"sFirst": "Awal",
 	
 	
 				/**
@@ -11151,7 +11151,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sLast": "Last",
+				"sLast": "Akhir",
 	
 	
 				/**
@@ -11174,7 +11174,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sNext": "Next",
+				"sNext": "Selanjutnya",
 	
 	
 				/**
@@ -11197,7 +11197,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sPrevious": "Previous"
+				"sPrevious": "Sebelumnya"
 			},
 	
 			/**
@@ -11220,7 +11220,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sEmptyTable": "No data available in table",
+			"sEmptyTable": "Tidak ada data tersedia",
 	
 	
 			/**
@@ -11252,7 +11252,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+			"sInfo": "Menampilkan _START_ - _END_ dari _TOTAL_ entri",
 	
 	
 			/**
@@ -11273,7 +11273,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoEmpty": "Showing 0 to 0 of 0 entries",
+			"sInfoEmpty": "Menampilkan 0 - 0 dari 0 entri",
 	
 	
 			/**
@@ -11295,7 +11295,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoFiltered": "(filtered from _MAX_ total entries)",
+			"sInfoFiltered": "(difilter dari _MAX_ entri total)",
 	
 	
 			/**
@@ -11413,7 +11413,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sLengthMenu": "Show _MENU_ entries",
+			"sLengthMenu": "_MENU_",
 	
 	
 			/**
@@ -11493,7 +11493,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sSearch": "Search:",
+			"sSearch": "Cari:",
 	
 	
 			/**
@@ -11551,7 +11551,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sZeroRecords": "No matching records found"
+			"sZeroRecords": "Tidak ada entri yang sesuai dengan kata kunci"
 		},
 	
 	

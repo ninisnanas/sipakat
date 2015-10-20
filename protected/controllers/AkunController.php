@@ -32,7 +32,7 @@ class AkunController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update', 'updatepassword'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -70,8 +70,13 @@ class AkunController extends Controller
 		if(isset($_POST['Akun']))
 		{
 			$model->attributes=$_POST['Akun'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			$model->password = crypt($model->password, self::blowfishSalt());
+			if($model->save()) {
+				Yii::app()->user->setFlash('success', "Akun berhasil dibuat!");
+				$this->redirect(array('index','id'=>$model->id));
+				$model->password = '';
+				$model->password_repeat = '';
+			}
 		}
 
 		$this->render('create',array(
@@ -86,12 +91,36 @@ class AkunController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
+		$model=Akun::model()->findByPk($id);
+		
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Akun']))
+		{
+			$model->attributes=$_POST['Akun'];
+			$model->password = crypt($model->password, self::blowfishSalt());
+			
+			if($model->save()) {
+					Yii::app()->user->setFlash('successPass', "Akun berhasil diubah!");
+					$this->redirect(array('index'));
+			}
+		}
+
+		$this->render('update',array(
+			'model'=>$model,
+			'pass' =>false
+		));
+	}
+
+	public function actionUpdatePassword($id)
+	{
 		$model=Akun::model()->findByAttributes(array("username" => $id));
 		$compare=Akun::model()->findByAttributes(array("username" => $id));
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+		
 		$model->password='';
 		if ($model->new_password != null) {
 			$model->new_password='';
@@ -104,33 +133,32 @@ class AkunController extends Controller
 		{
 			$model->attributes=$_POST['Akun'];
 
-			//$model->password = (crypt($model->password, $compare->password));
+			$model->password = (crypt($model->password, $compare->password));
 			if ($compare->password==$model->password) {
-				if($model->new_password==$model->password_repeat) {
-					$model->password=$model->new_password;
-					//$model->password = crypt($model->new_password, self::blowfishSalt());
+				//if($model->new_password==$model->password_repeat) {
+					$model->password = crypt($model->new_password, self::blowfishSalt());
 					$valid=true;
-				} else {
+				/*} else {
 					$valid=false;
-				}
+				}*/
 			} else {
 				$valid=false;
 			}
 
-
 			if($model->save()) {
 				if ($valid==true) {
 					Yii::app()->user->setFlash('successPass', "Password berhasil diubah!");
-					$this->redirect(array('view','id'=>$compare->id));
+					$this->redirect(array('view','id'=>$model->id));
 				} else {
 					Yii::app()->user->setFlash('notice', "Gagal mengubah password!");
-					$this->redirect(array('update', 'id'=>$compare->username));
+					$this->redirect(array('updatePassword', 'id'=>$id));
 				}
 			}
 		}
 
 		$this->render('update',array(
 			'model'=>$model,
+			'pass' =>true
 		));
 	}
 
@@ -153,7 +181,7 @@ class AkunController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Akun');
+		$dataProvider=Akun::model()->findAll();
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -200,5 +228,29 @@ class AkunController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	/**
+	 * Generate a random salt in the crypt(3) standard Blowfish format.
+	 *
+	 * @param int $cost Cost parameter from 4 to 31.
+	 *
+	 * @throws Exception on invalid cost parameter.
+	 * @return string A Blowfish hash salt for use in PHP's crypt()
+	 */
+	function blowfishSalt($cost = 13)
+	{
+	    if (!is_numeric($cost) || $cost < 4 || $cost > 31) {
+	        throw new Exception("cost parameter must be between 4 and 31");
+	    }
+	    $rand = array();
+	    for ($i = 0; $i < 8; $i += 1) {
+	        $rand[] = pack('S', mt_rand(0, 0xffff));
+	    }
+	    $rand[] = substr(microtime(), 2, 6);
+	    $rand = sha1(implode('', $rand), true);
+	    $salt = '$2a$' . sprintf('%02d', $cost) . '$';
+	    $salt .= strtr(substr(base64_encode($rand), 0, 22), array('+' => '.'));
+	    return $salt;
 	}
 }

@@ -8,63 +8,68 @@
   <div class="box">
   <div class="col-lg-12 text-center">
       <h2 class="section-heading">Daftar Kegiatan</h2>
-      <h3 class="section-subheading text-muted">Bidang XYZ</h3>
       <?php
-        echo CHtml::link('Tambah Kegiatan',array('Kegiatan/create'));
+        if(Yii::app()->user->getState('role') == Akun::ADMIN)
+          echo CHtml::link('Tambah',array('Kegiatan/create'));
+          echo "<br></br>"
       ?>
   </div>
-  <table id="<?php echo $tableid;?>" class="table testgrid">
-    <colgroup>
-    <col class="odd"></col>
-    <col class="even"></col>
-    <col class="odd"></col>
-    <col class="even"></col>
-    <col class="odd"></col>
-    <col class="even"></col>
-    <col class="odd"></col>
-    <col class="even"></col>
-    </colgroup>
-    <thead>
-      <th>No.</th>
-      <th>Nama Kegiatan</th>
-      <th>Anggaran</th>
-      <th>% Anggaran</th>
-      <th>Waktu</th>
-      <th>% Waktu</th>
-      <?php 
-        $role=Yii::app()->user->getState('role');
-        if ($role==1) {
-          echo "<th>Aksi</th>";
+  <?php echo $this->renderPartial('_formdropdown', array('puskaji' => $puskaji, 'bidang' => $bidang, 'tahun_selected' => $tahun_selected, 'tahun' => $tahun));
+
+  if($dataProvider != null) {
+    echo "<table id=\""; echo $tableid; echo "\" class=\"display compact cell-border nowrap\">
+      <colgroup>
+      <col class=\"odd\"></col>
+      <col class=\"even\"></col>
+      <col class=\"odd\"></col>
+      <col class=\"even\"></col>
+      <col class=\"odd\"></col>
+      <col class=\"even\"></col>
+      <col class=\"odd\"></col>
+      <col class=\"even\"></col>
+      <col class=\"odd\"></col>
+      </colgroup>
+      <thead>
+        <th>No.</th>
+        <th>Nama Kegiatan</th>
+        <th>Anggaran</th>
+        <th>% Anggaran</th>
+        <th>Waktu</th>
+        <th>% Kinerja</th>
+        <th>Nomor Surat Perintah</th>
+        <th>Aksi</th>;
+      </thead>
+      <tfoot>
+        <tr>
+        </tr>
+      </tfoot>
+      <tbody>";
+
+          $ii = 1;
+          foreach($dataProvider as $data){
+          echo "<tr id=\"\">";
+          echo   "<td>".$ii++."</td>";
+          echo   "<td>".$data->nama."</td>";
+          echo   "<td>".$data->anggaran."</td>";
+          echo   "<td>".$data->persen_anggaran."%</td>";
+          echo   "<td>".$data->waktu."</td>";
+          echo   "<td>".$data->persen_waktu."%</td>";
+          echo   "<td>".$data->nomor_sp."</td>";
+          echo "<td class=\"text-left\">".CHtml::link('Lihat',array('DetailKegiatan/index','id'=>$data->id, 'nama_kegiatan'=>$data->nama));
+          if (Yii::app()->user->getState('role') == Akun::ADMIN) {
+            echo " |".CHtml::link('Ubah',array('Kegiatan/update','id'=>$data->id))." |"
+            .CHtml::link('Hapus',array('Kegiatan/delete','id'=>$data->id),array(
+            'submit'=>array('Kegiatan/delete', 'id'=>$data->id),
+            'class' => 'delete','confirm'=>'Anda yakin untuk menghapus kegiatan?'
+            ));
+          }
+          echo "</td></tr>";
         }
-      ?>
-    </thead>
-    <tfoot>
-      <tr>
-      </tr>
-    </tfoot>
-    <tbody>
-      <?php 
-        $ii = 1;
-        foreach($dataProvider as $data){
-        echo "<tr id=\"\">";
-        echo   "<td>".$ii++."</td>";
-        echo   "<td>".$data->nama."</td>";
-        echo   "<td>".$data->anggaran."</td>";
-        echo   "<td>".$data->persen_anggaran."%</td>";
-        echo   "<td>".$data->waktu."</td>";
-        echo   "<td>".$data->persen_waktu."%</td>";
-        if ($role==1) {
-          echo "<td class=\"text-left\">".CHtml::link('Lihat',array('DetailKegiatan/index','id'=>$data->id))." |"
-          .CHtml::link('Ubah',array('Kegiatan/update','id'=>$data->id))." |"
-          .CHtml::link('Hapus',array('Kegiatan/delete','id'=>$data->id),array(
-          'submit'=>array('Kegiatan/delete', 'id'=>$data->id),
-          'class' => 'delete','confirm'=>'Anda yakin untuk menghapus kegiatan?'
-          ))."</td>";
-        }
-        echo "</tr>";
-      } ?>
-    </tbody>
-  </table>
+      echo "</tbody>
+    </table>";
+  } else {
+  echo "Silakan pilih Puskaji/Bidang terlebih dahulu.";
+  } ?>
 </div>
 </div>
 
@@ -75,6 +80,7 @@
 $(document).ready(function(){
     $('#<?php echo $tableid;?>').dataTable({
     "sPaginationType": "full_numbers",
+    "scrollX": true,
     "bAutoWidth": true,
   } );
 });

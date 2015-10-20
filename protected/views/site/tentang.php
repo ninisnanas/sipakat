@@ -35,20 +35,20 @@
                 </div>
                 <div class="col-sm-4 text-center">
                     <img class="img-responsive" src="img/1.png" alt="">
-                    <h3><a href="mailto:sandromedo@gmail.com">Sandromedo C.N.</a>
-                        <small>Administrator 1</small>
+                    <h3>Sandromedo C.N.
+                        <small><a href="mailto:sandromedo.christa@lemsaneg.go.id">sandromedo.christa@lemsaneg.go.id</a></small>
                     </h3>
                 </div>
                 <div class="col-sm-4 text-center">
                     <img class="img-responsive" src="img/2.png" alt="">
-                    <h3>A'mas Jama'ah
-                        <small>Administrator 2</small>
+                    <h3>Rifqi Aziz
+                        <small><a href="mailto:rifqi.aziz@lemsaneg.go.id">rifqi.aziz@lemsaneg.go.id</a></small>
                     </h3>
                 </div>
                 <div class="col-sm-4 text-center">
                     <img class="img-responsive" src="img/3.png" alt="">
-                    <h3>Nanang Cahyana
-                        <small>Administrator 3</small>
+                    <h3>Wahyu Indah R.
+                        <small><a href="mailto:wahyu.indah@lemsaneg.go.id">wahyu.indah@lemsaneg.go.id</a></small>
                     </h3>
                 </div>
                 <div class="clearfix"></div>

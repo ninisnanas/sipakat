@@ -8,10 +8,10 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'personil-form',
-	'enableAjaxValidation'=>false,
+	'enableAjaxValidation'=>true,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Field dengan <span class="required">*</span> harus diisi.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -41,8 +41,26 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'puskaji'); ?>
-		<?php echo $form->dropDownList($model, 'bidang', Bidang::model()->getBidangList(), array('empty' => 'Pilih Puskaji')); ?>
-		<?php echo $form->error($model,'bidang'); ?>
+		<?php echo $form->dropDownList($model, 'puskaji', Puskaji::model()->getPuskajiList(),
+			array('empty' => 'Pilih Puskaji',
+				'ajax' => array(
+					'type' => 'POST',
+					'url' => CController::createUrl('personil/dinamisForm'),
+					'data' => array('puskaji' => 'js:this.value'),
+					'update' => '#'.CHtml::activeId($model, 'bidang'),
+					))); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'bidang'); ?>
+		<?php
+			if($model->puskaji!='') {
+				echo $form->dropDownList($model, 'bidang', Bidang::getListBidangByPuskaji($model->puskaji), array('empty' => 'Pilih Bidang'));
+			} else {
+				echo $form->dropDownList($model, 'bidang', array(), array('empty' => 'Pilih Bidang'));
+			}
+		?>
+		<?php echo $form->error($model,'kode_kabkot'); ?>
 	</div>
 
 	<div class="row">
@@ -66,7 +84,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Selesai' : 'Simpan', array('style'=>'width:100px; margin-left:360px; margin-top:10px;')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

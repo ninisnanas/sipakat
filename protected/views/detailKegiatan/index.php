@@ -7,10 +7,10 @@
 <div class="row">
   <div class="box">
   <div class="col-lg-12 text-center">
-      <h2 class="section-heading">Detil Kegiatan</h2>
-      <h3 class="section-subheading text-muted">Bidang XYZ</h3>
+      <h2 class="section-heading">Detil Kegiatan </br><?php echo $nama_kegiatan; ?></h2>
       <?php
-        echo CHtml::link('Tambah Detail Kegiatan',array('DetailKegiatan/create', 'id'=>$id));
+      if(Yii::app()->user->getState('role') == Akun::ADMIN)
+        echo CHtml::link('Tambah',array('DetailKegiatan/create', 'id'=>$id));
       ?>
   </div>
   <table id="<?php echo $tableid;?>" class="display compact cell-border nowrap">
@@ -31,15 +31,13 @@
         <th class="dt-head-center" rowspan="3">Anggaran</th>
         <th class="dt-head-center" rowspan="3">% Anggaran</th>
         <th class="dt-head-center" rowspan="3">Waktu</th>
-        <th class="dt-head-center" rowspan="3">% Administrasi</th>
+        <th class="dt-head-center" rowspan="3">% Kinerja</th>
+        <th class="dt-head-center" colspan="48">Periode</th>
 		<?php 
-		$role=Yii::app()->user->getState('role');
-		if ($role==1) {
+		if (Yii::app()->user->getState('role') == Akun::ADMIN) {
 		echo "<th class=\"dt-head-center\" rowspan=\"3\">Aksi</th>";
 		}
 		?>
-
-        <th class="dt-head-center" colspan="144">Periode</th>
       </tr>
       <tr>
         <th class="dt-head-center" colspan="4">Januari</th>
@@ -122,13 +120,6 @@
         echo   "<td class=\"text-left\">".$data->persen_anggaran."%</td>";
         echo   "<td class=\"text-left\">".$data->waktu."</td>";
         echo   "<td class=\"text-left\">".$data->persen_waktu."%</td>";
-        if ($role==1) {
-          echo "<td class=\"text-left\">".CHtml::link('Ubah',array('DetailKegiatan/update','id'=>$data->id))." |"
-          .CHtml::link('Hapus',array('DetailKegiatan/delete','id'=>$data->id),array(
-          'submit'=>array('DetailKegiatan/delete', 'id'=>$data->id),
-          'class' => 'delete','confirm'=>'Anda yakin untuk menghapus detil kegiatan?'
-          ))."</td>";
-        }
         for($a=1; $a<=12; $a++) {
         	for($b=1; $b<=4; $b++) {
         		$val = "w".$a.$b;
@@ -139,6 +130,13 @@
                     echo "<td></td>";
                 }
         	}
+        }
+        if (Yii::app()->user->getState('role') == Akun::ADMIN) {
+          echo "<td class=\"text-left\">".CHtml::link('Ubah',array('DetailKegiatan/update','id'=>$data->id))." |"
+          .CHtml::link('Hapus',array('DetailKegiatan/delete','id'=>$data->id),array(
+          'submit'=>array('DetailKegiatan/delete', 'id'=>$data->id),
+          'class' => 'delete','confirm'=>'Anda yakin untuk menghapus detil kegiatan?'
+          ))."</td>";
         }
         echo "</tr>";
       } ?>

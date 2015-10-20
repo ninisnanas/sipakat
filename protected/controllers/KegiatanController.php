@@ -70,6 +70,10 @@ class KegiatanController extends Controller
 		if(isset($_POST['Kegiatan']))
 		{
 			$model->attributes=$_POST['Kegiatan'];
+			$model->anggaran=0;
+			$model->persen_anggaran=0;
+			$model->waktu=0;
+			$model->persen_waktu=0;
 			if($model->save())
 				$this->redirect(array('index'));
 		}
@@ -111,11 +115,20 @@ class KegiatanController extends Controller
 	public function actionDelete($id)
 	{
 		$this->loadModel($id)->delete();
+		$dataProvider = null;
+		$puskaji = 0;
+		$bidang = 0;
+		$tahun_selected = 0;
+		$tahun = Kegiatan::model()->getAllYears();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax'])) {
 			Yii::app()->user->setFlash('successDelete', "Berhasil menghapus kegiatan!");
-			$this->render('index',array('dataProvider'=>Kegiatan::model()->findAll()));
+			$this->render('index',array('puskaji' => $puskaji,
+			'bidang' => $bidang,
+			'tahun_selected' => $tahun_selected,
+			'tahun' => $tahun,
+			'dataProvider'=>$dataProvider));
 		}
 	}
 
@@ -124,8 +137,33 @@ class KegiatanController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider = Kegiatan::model()->findAll();
+		$dataProvider = null;
+		$puskaji = 0;
+		$bidang = 0;
+		$tahun_selected = 0;
+		$tahun = Kegiatan::model()->getAllYears();
+
+		if(isset($_GET['yt0']))
+		{
+			//$dataProvider = array('aaa' => 'aaaaa');
+			$tahun_selected = $_GET['tahun_selected'];
+			if(isset($_GET['puskaji'])) {
+				$puskaji = $_GET['puskaji'];
+				$bidang = $_GET['kode_bidang'];
+			} else {
+				$puskaji = Yii::app()->user->getState('puskaji');
+				$bidang = Yii::app()->user->getState('bidang');
+			}
+			if ($tahun_selected != '')
+			{
+				$dataProvider = Kegiatan::model()->findAllByAttributes(array('id_bidang'=>(int) $bidang, 'tahun'=>(int) $tahun_selected));
+			}
+		}
 		$this->render('index',array(
+			'puskaji' => $puskaji,
+			'bidang' => $bidang,
+			'tahun_selected' => $tahun_selected,
+			'tahun' => $tahun,
 			'dataProvider'=>$dataProvider,
 		));
 	}

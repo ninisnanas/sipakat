@@ -2,16 +2,20 @@
   <div class="box">
     <div class="col-lg-12 text-center">
         <h2 class="section-heading">Rangkuman</h2>
-    </div>
-  <?php echo $this->renderPartial('_form', array('model'=>$model,'tahun'=>$tahun, 'bidang'=>$bidang, 'kategori'=>$kategori, 'tahun_selected'=>$tahun_selected));
+    
+  <?php echo $this->renderPartial('_form', array('model'=>$model, 'puskaji' =>$puskaji, 'tahun'=>$tahun, 'bidang'=>$bidang, 'kategori'=>$kategori, 'tahun_selected'=>$tahun_selected));
 
   if($dataProvider !== null)
     {
       $ii = 0;
       $series = array();
       $series1 = array();
+      $series2 = array();
       foreach ($dataProvider as $data) {
-        if ($kategori == 2) {
+        if ($kategori == 3) {
+          $namapersonil = Personil::model()->getNamaPersonil($data['id']);
+          $nama = $namapersonil->nama;
+        } else if ($kategori == 2) {
           $namakegiatan = Kegiatan::model()->getNamaKegiatan($data->id);
           foreach ($namakegiatan as $nama) {
             $nama = $nama->nama."<br />".$data->nama;
@@ -19,26 +23,17 @@
         } else {
           $nama = $data->nama;
         }
-        $series[$ii] = array('name'=>$nama, 'data'=>array((int) $data->persen_anggaran));
-        $series1[$ii] = array('name'=>$nama, 'data'=>array((int) $data->persen_waktu));
+        if($kategori != 3) {
+          $series[$ii] = array('name'=>$nama, 'data'=>array((int) $data->persen_anggaran));
+          $series1[$ii] = array('name'=>$nama, 'data'=>array((int) $data->persen_waktu));
+        } else {
+          $series2[$ii] = array('name'=>$nama, 'data'=>array((int) $data['jumlah']));
+        }
         $ii++;
       }
 
-      /*$this->Widget('ext.highcharts.HighchartsWidget', array(
-         'options'=>array(
-            'chart' => array('type' => 'column'),
-            'title' => array('text' => 'Rangkuman'),
-            'xAxis' => array(
-               'categories' => array('$Waktu', '%Anggaran')
-            ),
-            'yAxis' => array(
-               'title' => array('text' => '%')
-            ),
-            'series' => $series
-         )
-      ));*/
-
-      $this->Widget('ext.highcharts.HighchartsWidget', array(
+      if($kategori != 3) {
+        $this->Widget('ext.highcharts.HighchartsWidget', array(
          'options'=>array(
             'chart' => array('type' => 'column'),
             'title' => array('text' => 'Rangkuman % Anggaran'),
@@ -55,7 +50,7 @@
       $this->Widget('ext.highcharts.HighchartsWidget', array(
          'options'=>array(
             'chart' => array('type' => 'column'),
-            'title' => array('text' => 'Rangkuman % Waktu'),
+            'title' => array('text' => 'Rangkuman % Kinerja'),
             'xAxis' => array(
                'categories' => array('Nama Kegiatan')
             ),
@@ -65,9 +60,25 @@
             'series' => $series1
          )
       ));
+      } else {
+        $this->Widget('ext.highcharts.HighchartsWidget', array(
+           'options'=>array(
+              'chart' => array('type' => 'column'),
+              'title' => array('text' => 'Kesibukan Personil'),
+              'xAxis' => array(
+                 'categories' => array('Nama Personil')
+              ),
+              'yAxis' => array(
+                 'title' => array('text' => 'Jumlah Kegiatan')
+              ),
+              'series' => $series2
+           )
+        ));
+      }
     }
     else echo "Pilih kriteria rangkuman dan tahun terlebih dahulu";
     ?>
+  </div>
   </div>
 </div>
 

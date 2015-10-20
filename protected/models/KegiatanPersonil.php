@@ -107,4 +107,58 @@ class KegiatanPersonil extends CActiveRecord
 			id_personil=".$id_personil." and tahun=".$tahun." and id_detail_kegiatan=".$id_detail_kegiatan
 		);
 	}
+
+	public function countAll($tahun)
+	{
+		return $this->doStandardQuery(
+			"SELECT
+			id_personil as id,
+			count(id_detail_kegiatan) as jumlah
+			FROM
+			kegiatan_personil
+			WHERE
+			tahun=".$tahun."
+			GROUP BY id_personil"
+		);
+	}
+
+	public function countByBidang($id_bidang, $tahun)
+	{
+
+		return $this->doStandardQuery(
+			"SELECT
+			id_personil as id,
+			count(id_detail_kegiatan) as jumlah
+			FROM
+			(SELECT 
+				kegiatan_personil.id,
+				kegiatan_personil.id_personil,
+				kegiatan_personil.id_detail_kegiatan
+				FROM 
+				kegiatan_personil, detail_kegiatan, kegiatan
+				WHERE
+				kegiatan_personil.id_detail_kegiatan = detail_kegiatan.id AND detail_kegiatan.id_kegiatan = kegiatan.id AND kegiatan.id_bidang=".$id_bidang." AND kegiatan.tahun=".$tahun.") as A
+			GROUP BY id_personil"
+		);
+	}
+
+	public function countByPuskaji($id_puskaji, $tahun)
+	{
+		
+		return $this->doStandardQuery(
+			"SELECT
+			id_personil as id,
+			count(id_detail_kegiatan) as jumlah
+			FROM
+			(SELECT 
+				kegiatan_personil.id,
+				kegiatan_personil.id_personil,
+				kegiatan_personil.id_detail_kegiatan
+				FROM 
+				kegiatan_personil, detail_kegiatan, kegiatan
+				WHERE
+				kegiatan_personil.id_detail_kegiatan = detail_kegiatan.id AND detail_kegiatan.id_kegiatan = kegiatan.id AND kegiatan.puskaji=".$id_puskaji." AND kegiatan.tahun=".$tahun.") as A
+			GROUP BY id_personil"
+		);
+	}
 }

@@ -9,10 +9,10 @@
   <div class="col-lg-12 text-center">
       <h2 class="section-heading">Daftar Referensi</h2>
       <?php
-        echo CHtml::link('Tambah Referensi',array('Referensi/create'));
+        echo CHtml::link('Tambah',array('Referensi/create'));
       ?>
   </div>
-   <div class="col-xs-6 col-xs-offset-3">
+   <div class="col-xs-10 col-xs-offset-1">
   <table id="<?php echo $tableid;?>" class="display compact cell-border nowrap">
     <colgroup>
     <col class="odd"></col>
@@ -26,6 +26,8 @@
     </colgroup>
     <thead>
       <th>No.</th>
+      <th>Puskaji</th>
+      <th>Bidang</th>
       <th>Nama File</th>
       <th>Aksi</th>
     </thead>
@@ -39,10 +41,15 @@
         foreach($dataProvider as $data){
         echo "<tr id=\"\">";
         echo   "<td>".$ii++."</td>";
+        $puskaji = Puskaji::model()->findByPk($data->puskaji);
+        echo   "<td>".$puskaji->nama."</td>";
+        $bidang = Bidang::model()->findByPk($data->bidang);
+        echo   "<td>".$bidang->nama."</td>";
         echo   "<td>".$data->nama."</td>";
+        echo "<td class=\"text-left\">".CHtml::link('Unduh',array('Site/download','id'=>$data->id));
         $role=Yii::app()->user->getState('role');
         if ($role==1) {
-          echo "<td class=\"text-left\">".CHtml::link('Unduh',array('Site/download','id'=>$data->id))." |"
+          echo " |"
           .CHtml::link('Hapus',array('Referensi/delete','id'=>$data->id),array(
           'submit'=>array('Referensi/delete', 'id'=>$data->id),
           'class' => 'delete','confirm'=>'Anda yakin untuk menghapus referensi?'

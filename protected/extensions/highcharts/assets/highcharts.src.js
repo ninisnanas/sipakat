@@ -1563,7 +1563,7 @@ defaultOptions = {
 	},
 
 	credits: {
-		enabled: true,
+		enabled: false,
 		text: 'Highcharts.com',
 		href: 'http://www.highcharts.com',
 		position: {

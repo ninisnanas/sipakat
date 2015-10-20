@@ -53,6 +53,7 @@ class RangkumanController extends Controller
 		$tahun = Kegiatan::model()->getAllYears();
 		$model = Kegiatan::model()->findAll();
 		$dataProvider = null;
+		$puskaji = 0;
 		$bidang = 0;
 		$kategori = 0;
 		$tahun_selected = 0;		
@@ -60,6 +61,7 @@ class RangkumanController extends Controller
 		if(isset($_GET['yt0']))
 		{
 			//$dataProvider = array('aaa' => 'aaaaa');
+			$puskaji = $_GET['puskaji'];
 			$bidang = $_GET['bidang'];
 			$kategori = $_GET['kategori'];
 			$tahun_selected = $_GET['tahun_selected'];
@@ -69,6 +71,8 @@ class RangkumanController extends Controller
 				{
 					if ($bidang != '') {
 						$dataProvider = Kegiatan::model()->findAllByAttributes(array('id_bidang'=>(int) $bidang));
+					} else if ($puskaji != '') {
+						$dataProvider = Kegiatan::model()->findAllByAttributes(array('puskaji'=>(int) $puskaji));
 					} else {
 						$dataProvider = Kegiatan::model()->findAll();
 					}
@@ -77,17 +81,29 @@ class RangkumanController extends Controller
 					if ($bidang != '') {
 						$id_kegiatan = Kegiatan::model()->getKegiatanByBidang($bidang);
 						$dataProvider = DetailKegiatan::model()->findAllByAttributes(array('id_kegiatan'=>(int) $id_kegiatan));
+					} else if ($puskaji != '') {
+						$id_kegiatan = Kegiatan::model()->getKegiatanByPuskaji($puskaji);
+						$dataProvider = DetailKegiatan::model()->findAllByAttributes(array('id_kegiatan'=>(int) $id_kegiatan));
 					} else {
 						$dataProvider = DetailKegiatan::model()->findAll();
 					}
-				} else {
-					$dataProvider = "lala";
+				} else if ($kategori == '3')
+				{
+					if ($bidang != '') {
+						$id_personil = Personil::model()->getPersonilByBidang($bidang);
+						$dataProvider = KegiatanPersonil::model()->countByBidang($bidang, $tahun_selected);
+					} else if ($puskaji != '') {
+						$dataProvider = KegiatanPersonil::model()->countByPuskaji($puskaji, $tahun_selected);
+					} else {
+						$dataProvider = KegiatanPersonil::model()->countAll($tahun_selected);
+					}
 				}
 			}
 		}
 		
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'puskaji'=>$puskaji,
 			'bidang'=>$bidang,
 			'kategori'=>$kategori,
 			'model'=>$model,

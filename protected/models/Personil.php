@@ -126,4 +126,21 @@ class Personil extends CActiveRecord
 			WHERE bidang=".$id
 		);
 	}
+
+	public static function getPersonilByBidang($id)
+	{
+		$criteria=new CDbCriteria();
+		$criteria->select = 'id';
+		$criteria->condition = 'bidang=:bidang';
+		$criteria->params = array(':bidang'=>$id);
+		$criteria->order = 'id ASC';
+		$id_personil = Personil::model()->findAll($criteria);
+		return $id_personil;
+	}
+
+	public function getNamaPersonilByBidang1($id)
+	{
+		$data = self::model()->findAll('bidang=:bidang',array(':bidang' => (int) $id));
+		return CHtml::listData($data, 'id', 'nama');
+	}
 }

@@ -11,7 +11,26 @@ $this->breadcrumbs=array(
 ?>
 
 <div class="box">
-<h1>Update Akun <?php echo $model->id; ?></h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php if(Yii::app()->user->hasFlash('notice')):?>
+    <div class="msg-info green">
+        <?php echo Yii::app()->user->getFlash('notice'); ?>
+    </div>
+<?php elseif(Yii::app()->user->hasFlash('successPass')):?>
+    <div class="msg-info green">
+        <?php echo Yii::app()->user->getFlash('successPass'); ?>
+    </div> 
+<?php endif; ?>
+
+<?php
+if($pass) {
+	echo "<h1>Ubah Password ".$model->username."</h1>";
+	echo "<div class=\"login-form form\">";
+	echo $this->renderPartial('_formpass', array('model'=>$model)); 
+	echo "</div>";
+} else {
+	echo "<h1>Update Akun ".$model->username."</h1>";
+	echo $this->renderPartial('_form', array('model'=>$model));
+}
+?>
 </div>

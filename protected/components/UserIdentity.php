@@ -22,14 +22,22 @@ class UserIdentity extends CUserIdentity
 		{
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
 		}
-		//else if($user->password!==crypt($this->password, $user->password))
-		else if($user->password!==$this->password)
+		else if($user->password!==crypt($this->password, $user->password))
+		//else if($user->password!==$this->password)
 		{	
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
 		} else {
 			$this->errorCode=self::ERROR_NONE;
 			$this->setState('role', $user->kode_role);
-			//$this->setState('provinsi',$user->kode_provinsi);
+			if ($user->kode_role != '1' && $user->kode_role != '2') {
+				if ($user->kode_role != '6') {
+					$this->setState('id_personil',$user->id_personil);
+					$puskaji = Bidang::findPuskajiByBidang($user->id_personil);
+					$this->setState('puskaji', $puskaji->id);
+					$bidang = Bidang::findBidangByPersonil($user->id_personil);
+					$this->setState('bidang', $bidang[0]['id']);
+				}
+			}
 			//$this->setState('kabupaten',$user->kode_kabkot);
 			//$this->setState('password',$user->password);
 		}

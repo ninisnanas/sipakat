@@ -6,6 +6,8 @@
  * The followings are the available columns in table 'referensi':
  * @property integer $id
  * @property string $nama
+ * @property integer $puskaji
+ * @property integer $bidang
  * @property string $file
  * @property string $tahun
  * @property string $timestamp
@@ -38,13 +40,14 @@ class Referensi extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nama, file, tahun, timestamp', 'required'),
+			array('nama, puskaji, bidang, file, tahun, timestamp', 'required'),
+			array('puskaji, bidang', 'numerical', 'integerOnly'=>true),
 			array('nama', 'length', 'max'=>100),
 			array('file', 'length', 'max'=>250),
 			array('tahun', 'length', 'max'=>4),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, nama, file, tahun, timestamp', 'safe', 'on'=>'search'),
+			array('id, nama, puskaji, bidang, file, tahun, timestamp', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -67,6 +70,8 @@ class Referensi extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'nama' => 'Nama',
+			'puskaji' => 'Puskaji',
+			'bidang' => 'Bidang',
 			'file' => 'File',
 			'tahun' => 'Tahun',
 			'timestamp' => 'Timestamp',
@@ -86,6 +91,8 @@ class Referensi extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('nama',$this->nama,true);
+		$criteria->compare('puskaji',$this->puskaji);
+		$criteria->compare('bidang',$this->bidang);
 		$criteria->compare('file',$this->file,true);
 		$criteria->compare('tahun',$this->tahun,true);
 		$criteria->compare('timestamp',$this->timestamp,true);

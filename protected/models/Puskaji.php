@@ -1,19 +1,18 @@
 <?php
 
 /**
- * This is the model class for table "bidang".
+ * This is the model class for table "puskaji".
  *
- * The followings are the available columns in table 'bidang':
+ * The followings are the available columns in table 'puskaji':
  * @property integer $id
- * @property integer $id_puskaji
  * @property string $nama
  */
-class Bidang extends CActiveRecord
+class Puskaji extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Bidang the static model class
+	 * @return Puskaji the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -25,7 +24,7 @@ class Bidang extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'bidang';
+		return 'puskaji';
 	}
 
 	/**
@@ -36,12 +35,11 @@ class Bidang extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_puskaji, nama', 'required'),
-			array('id_puskaji', 'numerical', 'integerOnly'=>true),
-			array('nama', 'length', 'max'=>100),
+			array('nama', 'required'),
+			array('nama', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, id_puskaji, nama', 'safe', 'on'=>'search'),
+			array('id, nama', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,7 +61,6 @@ class Bidang extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'id_puskaji' => 'Id Puskaji',
 			'nama' => 'Nama',
 		);
 	}
@@ -80,7 +77,6 @@ class Bidang extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('id_puskaji',$this->id_puskaji);
 		$criteria->compare('nama',$this->nama,true);
 
 		return new CActiveDataProvider($this, array(
@@ -88,33 +84,10 @@ class Bidang extends CActiveRecord
 		));
 	}
 
-	public function getBidangList() {  
-	    $bidang = self::model()->findAll();  
+	public function getPuskajiList() {  
+	    $puskaji = self::model()->findAll();  
 	  
-	    $bidangArray = CHtml::listData($bidang, 'id', 'nama');  
-	    return $bidangArray;  
-	}
-
-	public static function  getListBidangByPuskaji($puskaji) {
-		$data = self::model()->findAll('id_puskaji=:id_puskaji',array(':id_puskaji' => (int) $puskaji));
-		return CHtml::listData($data, 'id', 'nama');
-	}
-
-	public static function findPuskajiByBidang($id_personil) {
-		$id_bidang = Personil::model()->findAllByPk($id_personil);
-		$data = self::model()->findAllByPk($id_bidang[0]['bidang']);
-		$nama_puskaji = Puskaji::model()->findByPk($data[0]['id_puskaji']);
-		return $nama_puskaji;
-	}
-
-	public static function findBidangByPersonil($id_personil) {
-		$bidang = Personil::model()->findAllByPk($id_personil);
-		$data = self::model()->findAllByPk($bidang[0]['bidang']);
-		return $data;
-	}
-
-	public function getNamaBidang($id) {  
-	    $namaBidang = self::model()->findByPk($id);  
-	    return $namaBidang;  
+	    $puskajiArray = CHtml::listData($puskaji, 'id', 'nama');  
+	    return $puskajiArray;  
 	}
 }

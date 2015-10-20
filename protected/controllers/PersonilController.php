@@ -28,7 +28,7 @@ class PersonilController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view', 'dinamis'),
+				'actions'=>array('index','view', 'dinamis', 'dinamisForm', 'dinamisFormAkun'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -65,7 +65,7 @@ class PersonilController extends Controller
 		$model=new Personil;
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['Personil']))
 		{
@@ -89,7 +89,7 @@ class PersonilController extends Controller
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['Personil']))
 		{
@@ -124,8 +124,24 @@ class PersonilController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider = Personil::model()->findAll();
+		$dataProvider = null;
+		$puskaji = 0;
+		$bidang = 0;
+		if(isset($_GET['yt0']))
+		{
+			//$dataProvider = array('aaa' => 'aaaaa');
+			if(isset($_GET['puskaji'])) {
+				$puskaji = $_GET['puskaji'];
+				$bidang = $_GET['kode_bidang'];
+			} else {
+				$puskaji = Yii::app()->user->getState('puskaji');
+				$bidang = Yii::app()->user->getState('bidang');
+			}
+			$dataProvider = Personil::model()->findAllByAttributes(array('bidang'=>(int) $bidang));
+		}
 		$this->render('index',array(
+			'puskaji' => $puskaji,
+			'bidang' => $bidang,
 			'dataProvider'=>$dataProvider,
 		));
 	}
@@ -179,16 +195,42 @@ class PersonilController extends Controller
 
 	public function actionDinamis()
 	{
-		echo var_dump($_POST);
-		$data=Personil::model()->findAllByAttributes(array('bidang'=>(int) $_POST['bidang']));
- 
-		$data=CHtml::listData($data,'id','name');
-		echo var_dump("yoma");
-		die();
+		$data=Bidang::model()->findAllByAttributes(array('id_puskaji'=>(int) $_POST['puskaji']));
+		$data=CHtml::listData($data,'id','nama');
+
+		echo CHtml::tag('option', array('value' => ''), 'Pilih Bidang', true);
 		foreach($data as $value=>$name)
 		{
 		    echo CHtml::tag('option',
 		               array('value'=>$value),CHtml::encode($name),true);
 		}
+	}
+
+	public function actionDinamisForm()
+	{
+		if(isset($_POST['puskaji']))
+	    {
+	    	$data = Bidang::model()->getListBidangByPuskaji($_POST['puskaji']);	
+	    } else {
+	    	$data = Bidang::model()->getBidangList();
+	    }
+	    echo CHtml::tag('option', array('value' => ''), 'Pilih Bidang', true);
+	    foreach ($data as $value => $name) {  
+	        echo CHtml::tag('option', array('value' => $value), CHtml::encode($name), true);  
+	    }  
+	}
+
+	public function actionDinamisFormAkun()
+	{
+		if(isset($_POST['bidang']))
+	    {
+	    	$data = Personil::model()->getNamaPersonilByBidang1($_POST['bidang']);	
+	    } else {
+	    	$data = Personil::model()->findAll();
+	    }
+	    echo CHtml::tag('option', array('value' => ''), 'Pilih Personil', true);
+	    foreach ($data as $value => $name) {  
+	        echo CHtml::tag('option', array('value' => $value), CHtml::encode($name), true);  
+	    }  
 	}
 }

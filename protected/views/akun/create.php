@@ -7,12 +7,10 @@ $this->breadcrumbs=array(
 	'Create',
 );
 
-$this->menu=array(
-	array('label'=>'List Akun', 'url'=>array('index')),
-	array('label'=>'Manage Akun', 'url'=>array('admin')),
-);
 ?>
 
-<h1>Create Akun</h1>
+<div class="box">
+<h1>Buat Akun</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+</div>

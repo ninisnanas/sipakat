@@ -84,4 +84,18 @@ class WarnaKegiatan extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	public static function getListWarna()
+	{
+		$listwarna = WarnaKegiatan::model()->findAll();
+		$items = array();
+		$options["options"] = array();
+		$ii = 1;
+		foreach ($listwarna as $data) {
+			$items[$ii] = $data->kode;
+			$options["options"][$ii] = array("style" => "color:#".$items[$ii]."");
+			$ii++;
+		}
+		return array("items" => $items, "options"=>$options);
+	}
 }

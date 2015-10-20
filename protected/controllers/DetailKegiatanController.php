@@ -75,27 +75,37 @@ class DetailKegiatanController extends Controller
 			$other_kg=DetailKegiatan::model()->findAllByAttributes(array('id_kegiatan'=>$id));
 			$waktu_avg=0;
 			$anggaran_avg=0;
-			$temp_waktu=0;
-			$temp_anggaran=0;
+			$jumlah=0;
 			if(!empty($other_kg)) {
-				$ii = 0;
+				$waktu_avg = $model->persen_waktu;
+				$anggaran_avg = $model->persen_anggaran;
+				$jumlah = $model->anggaran;
 				foreach ($other_kg as $data) {
-					$temp_waktu += $data->persen_waktu;
-					$temp_anggaran += $data->persen_anggaran;
-					$ii++;
+					$waktu_avg = ($waktu_avg + $data->persen_waktu) / 2;
+					$anggaran_avg = ($anggaran_avg + $data->persen_anggaran) / 2;
+					$jumlah = $jumlah + $data->anggaran;
+					$kegiatan->persen_waktu = $waktu_avg;
+					$kegiatan->persen_anggaran = $anggaran_avg;
+					$kegiatan->anggaran = $jumlah;
+					$nama_kegiatan = $kegiatan->nama;
+					$id_kegiatan = $kegiatan->id;
+					$kegiatan->save();
 				}
-				$waktu_avg = $temp_waktu/$ii;
-				$anggaran_avg = $temp_anggaran/$ii;
-				$kegiatan->persen_waktu=$waktu_avg;
-				$kegiatan->persen_anggaran=$anggaran_avg;
 			} else {
 				$kegiatan->persen_waktu = $model->persen_waktu;
 				$kegiatan->persen_anggaran = $model->persen_anggaran;
+				$kegiatan->anggaran = $model->anggaran;
+				$nama_kegiatan = $kegiatan->nama;
+				$id_kegiatan = $kegiatan->id;
 				$kegiatan->save();
 			}
 
-			if($model->save())
-				$this->redirect(array('index','id'=>$model->id_kegiatan));
+			if($model->save()) {
+				$this->redirect(array('index', 
+					'id'=>$id_kegiatan,
+					'nama_kegiatan'=>$nama_kegiatan
+				));
+			}
 		}
 
 		$this->render('create',array(
@@ -122,17 +132,37 @@ class DetailKegiatanController extends Controller
 			$other_kg=DetailKegiatan::model()->findAllByAttributes(array('id_kegiatan'=>$id));
 			$waktu_avg=0;
 			$anggaran_avg=0;
+			$jumlah=0;
 			if(!empty($other_kg)) {
+				$waktu_avg = $model->persen_waktu;
+				$anggaran_avg = $model->persen_anggaran;
+				$jumlah = $model->anggaran;
 				foreach ($other_kg as $data) {
+					$waktu_avg = ($waktu_avg + $data->persen_waktu) / 2;
+					$anggaran_avg = ($anggaran_avg + $data->persen_anggaran) / 2;
+					$jumlah = $jumlah + $data->anggaran;
+					$kegiatan->persen_waktu = $waktu_avg;
+					$kegiatan->persen_anggaran = $anggaran_avg;
+					$kegiatan->anggaran = $jumlah;
+					$nama_kegiatan = $kegiatan->nama;
+					$id_kegiatan = $kegiatan->id;
+					$kegiatan->save();
 				}
 			} else {
 				$kegiatan->persen_waktu = $model->persen_waktu;
 				$kegiatan->persen_anggaran = $model->persen_anggaran;
+				$kegiatan->anggaran = $model->anggaran;
+				$nama_kegiatan = $kegiatan->nama;
+				$id_kegiatan = $kegiatan->id;
 				$kegiatan->save();
 			}
 
-			if($model->save())
-				$this->redirect(array('index','id'=>$kegiatan->id));
+			if($model->save()) {
+				$this->redirect(array('index',
+					'id'=>$id_kegiatan,
+					'nama_kegiatan'=>$nama_kegiatan
+				));
+			}
 		}
 
 		$this->render('update',array(
@@ -148,23 +178,51 @@ class DetailKegiatanController extends Controller
 	
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+		$model=$this->loadModel($id);
+		$kegiatan=Kegiatan::model()->findByPk($model->id_kegiatan);
+		$model->delete();
+		$other_kg=DetailKegiatan::model()->findAllByAttributes(array('id_kegiatan'=>$kegiatan->id));
+		$waktu_avg=0;
+		$anggaran_avg=0;
+		$jumlah=0;
+		if(!empty($other_kg)) {
+			$ii = 0;
+			foreach ($other_kg as $data) {
+				$waktu_avg = ($waktu_avg + $data->persen_waktu);
+				$anggaran_avg = ($anggaran_avg + $data->persen_anggaran);
+				$jumlah = $jumlah + $data->anggaran;
+				$ii++;
+			}
+			$waktu_avg = $waktu_avg/$ii;
+			$anggaran_avg = $anggaran_avg/$ii;
+		}
+		
+		$kegiatan->persen_waktu = $waktu_avg;
+		$kegiatan->persen_anggaran = $anggaran_avg;
+		$kegiatan->anggaran = $jumlah;
+		$nama_kegiatan = $kegiatan->nama;
+		$id_kegiatan = $kegiatan->id;
+		$kegiatan->save();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax'])) {
 			Yii::app()->user->setFlash('successDelete', "Berhasil menghapus detail kegiatan!");
-			$this->render('index');
+			$this->redirect(array('index',
+					'id'=>$id_kegiatan,
+					'nama_kegiatan'=>$nama_kegiatan
+				));
 		}
 	}
 
 	/**
 	 * Lists all models.
 	 */
-	public function actionIndex($id)
+	public function actionIndex($id, $nama_kegiatan)
 	{
 		$dataProvider=DetailKegiatan::model()->findAllByAttributes(array('id_kegiatan'=>$id));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'nama_kegiatan'=>$nama_kegiatan,
 			'id'=>$id
 		));
 	}

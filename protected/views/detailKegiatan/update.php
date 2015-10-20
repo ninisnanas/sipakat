@@ -11,7 +11,7 @@ $this->breadcrumbs=array(
 ?>
 
 <div class="box">
-<h1>Update DetailKegiatan <?php echo $model->id; ?></h1>
+<h1>Update Detail Kegiatan <?php echo $model->id; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
 </div>

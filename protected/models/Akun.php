@@ -13,6 +13,13 @@
  */
 class Akun extends CActiveRecord
 {
+	const ADMIN = 1;
+	const DEPUTI = 2;
+	const PUSKAJI = 3;
+	const BIDANG = 4;
+	const STAF = 5;
+	const TAMU = 6;
+
 	public $new_password;
 	public $password_repeat;
 	/**
@@ -44,7 +51,7 @@ class Akun extends CActiveRecord
 			array('id_personil, username, password, kode_role, email', 'required'),
 			array('id_personil, kode_role', 'numerical', 'integerOnly'=>true),
 			array('username', 'length', 'max'=>25),
-			array('password, email', 'length', 'max'=>50),
+			array('password, new_password, password_repeat, email', 'length', 'max'=>64),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, id_personil, username, password, kode_role, email', 'safe', 'on'=>'search'),
@@ -72,6 +79,8 @@ class Akun extends CActiveRecord
 			'id_personil' => 'Id Personil',
 			'username' => 'Username',
 			'password' => 'Password',
+			'new_password' => 'Password Baru',
+			'password_repeat' => 'Konfirmasi Password Baru',
 			'kode_role' => 'Kode Role',
 			'email' => 'Email',
 		);
@@ -99,4 +108,30 @@ class Akun extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	public static function getRole($role) {  
+        if ($role == self::ADMIN)  
+            return 'Administrator';  
+        elseif ($role == self::DEPUTI)  
+            return 'Deputi';  
+        elseif ($role == self::PUSKAJI)  
+            return 'Puskaji'; 
+        elseif ($role == self::BIDANG)  
+            return 'Bidang';  
+        elseif ($role == self::STAF)  
+          return 'Staf';  
+        elseif ($role == self::TAMU)  
+          return 'Tamu';  
+        return false;  
+    }  
+      
+    public static function getRoleList() {  
+        return array(  
+            self::ADMIN => self::getRole(self::ADMIN),  
+            self::DEPUTI=> self::getRole(self::DEPUTI),  
+            self::PUSKAJI => self::getRole(self::PUSKAJI),
+            self::BIDANG => self::getRole(self::BIDANG),
+            self::STAF => self::getRole(self::STAF),
+            self::TAMU => self::getRole(self::TAMU));  
+    }
 }

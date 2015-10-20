@@ -41,8 +41,8 @@ class Kegiatan extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nama, id_bidang, tahun', 'required'),
-			array('id_bidang, anggaran, waktu, persen_anggaran, persen_waktu', 'numerical', 'integerOnly'=>true),
+			array('nama, id_bidang, tahun, anggaran, persen_anggaran, waktu, persen_waktu', 'required'),
+			array('id_bidang, anggaran, persen_anggaran, persen_waktu', 'numerical', 'integerOnly'=>true),
 			array('nama', 'length', 'max'=>100),
 			array('tahun', 'length', 'max'=>4),
 			array('waktu', 'length', 'max'=>25),
@@ -76,7 +76,7 @@ class Kegiatan extends CActiveRecord
 			'anggaran' => 'Anggaran',
 			'persen_anggaran' => 'Persen Anggaran',
 			'waktu' => 'Waktu',
-			'persen_waktu' => 'Persen Waktu',
+			'persen_waktu' => 'Persen Kinerja',
 		);
 	}
 
@@ -121,6 +121,17 @@ class Kegiatan extends CActiveRecord
 		$criteria->select = 'id';
 		$criteria->condition = 'id_bidang=:id_bidang';
 		$criteria->params = array(':id_bidang'=>$id);
+		$criteria->order = 'id ASC';
+		$id_kegiatan = Kegiatan::model()->findAll($criteria);
+		return $id_kegiatan;
+	}
+
+	public function getKegiatanByPuskaji($id)
+	{
+		$criteria=new CDbCriteria();
+		$criteria->select = 'id';
+		$criteria->condition = 'puskaji=:puskaji';
+		$criteria->params = array(':puskaji'=>$id);
 		$criteria->order = 'id ASC';
 		$id_kegiatan = Kegiatan::model()->findAll($criteria);
 		return $id_kegiatan;

@@ -8,44 +8,47 @@
   <div class="box">
   <div class="col-lg-12 text-center">
       <h2 class="section-heading">Detil Kegiatan Personil</h2>
-      <h3 class="section-subheading text-muted">Bidang XYZ</h3>
   </div>
-  <table id="<?php echo $tableid;?>" class="display compact cell-border nowrap">
+
+  <?php echo $this->renderPartial('_formdropdown', array('puskaji' => $puskaji, 'bidang' => $bidang, 'tahun_selected' => $tahun_selected, 'tahun' => $tahun));
+
+  if($dataProvider != null) {
+  echo "<table id=\""; echo $tableid; echo "\" class=\"display compact cell-border nowrap\">
     <colgroup>
-    <col class="odd"></col>
-    <col class="even"></col>
-    <col class="odd"></col>
-    <col class="even"></col>
-    <col class="odd"></col>
-    <col class="even"></col>
-    <col class="odd"></col>
-    <col class="even"></col>
+    <col class=\"odd\"></col>
+    <col class=\"even\"></col>
+    <col class=\"odd\"></col>
+    <col class=\"even\"></col>
+    <col class=\"odd\"></col>
+    <col class=\"even\"></col>
+    <col class=\"odd\"></col>
+    <col class=\"even\"></col>
     </colgroup>
     <thead>
       <tr>
-        <th class="dt-head-center" rowspan="3">No.</th>
-        <th class="dt-head-center" rowspan="3">Nama Personil</th>
-        <?php 
-		$role=Yii::app()->user->getState('role');
-		if ($role==1) {
-		echo "<th class=\"dt-head-center\" rowspan=\"3\">Aksi</th>";
+        <th class=\"dt-head-center\" rowspan=\"3\">No.</th>
+        <th class=\"dt-head-center\" rowspan=\"3\">Nama Personil</th>
+        <th class=\"dt-head-center\" colspan=\"48\">Periode</th>";
+        
+		if (Yii::app()->user->getState('role') == Akun::ADMIN) {
+		  echo "<th class=\"dt-head-center\" rowspan=\"3\">Aksi</th>";
 		}
-		?>
-        <th class="dt-head-center" colspan="144">Periode</th>
+		
+        echo "
       </tr>
       <tr>
-        <th class="dt-head-center" colspan="4">Januari</th>
-        <th class="dt-head-center" colspan="4">Februari</th>
-        <th class="dt-head-center" colspan="4">Maret</th>
-        <th class="dt-head-center" colspan="4">April</th>
-        <th class="dt-head-center" colspan="4">Mei</th>
-        <th class="dt-head-center" colspan="4">Juni</th>
-        <th class="dt-head-center" colspan="4">Juli</th>
-        <th class="dt-head-center" colspan="4">Agustus</th>
-        <th class="dt-head-center" colspan="4">September</th>
-        <th class="dt-head-center" colspan="4">Oktober</th>
-        <th class="dt-head-center" colspan="4">November</th>
-        <th class="dt-head-center" colspan="4">Desember</th>
+        <th class=\"dt-head-center\" colspan=\"4\">Januari</th>
+        <th class=\"dt-head-center\" colspan=\"4\">Februari</th>
+        <th class=\"dt-head-center\" colspan=\"4\">Maret</th>
+        <th class=\"dt-head-center\" colspan=\"4\">April</th>
+        <th class=\"dt-head-center\" colspan=\"4\">Mei</th>
+        <th class=\"dt-head-center\" colspan=\"4\">Juni</th>
+        <th class=\"dt-head-center\" colspan=\"4\">Juli</th>
+        <th class=\"dt-head-center\" colspan=\"4\">Agustus</th>
+        <th class=\"dt-head-center\" colspan=\"4\">September</th>
+        <th class=\"dt-head-center\" colspan=\"4\">Oktober</th>
+        <th class=\"dt-head-center\" colspan=\"4\">November</th>
+        <th class=\"dt-head-center\" colspan=\"4\">Desember</th>
       </tr>
 
       <tr>
@@ -103,17 +106,13 @@
       <tr>
       </tr>
     </tfoot>
-    <tbody>
-      <?php 
+    <tbody>";
+      
         $ii = 1;
         foreach($dataProvider as $data){
         echo "<tr id=\"\">";
         echo   "<td>".$ii++."</td>";
         echo   "<td>".$data['nama']."</td>";
-        if ($role==1) {
-          echo "<td class=\"text-left\">".CHtml::link('Tambah Kegiatan',array('DetailKegiatanPersonil/addKegiatan','id'=>$data['id'], 'id_personil'=>$data['id_personil']))." |"
-          .CHtml::link('Hapus Kegiatan',array('DetailKegiatanPersonil/deleteKegiatan','id'=>$data['id']))."</td>";
-        }
         for($a=1; $a<=12; $a++) {
         	for($b=1; $b<=4; $b++) {
         		$val = "w".$a.$b;
@@ -126,10 +125,16 @@
         		}
         	}
         }
+        if (Yii::app()->user->getState('role') == Akun::ADMIN) {
+          echo "<td class=\"text-left\">".CHtml::link('Tambah',array('DetailKegiatanPersonil/addKegiatan','id'=>$data['id'], 'id_personil'=>$data['id_personil']))." |"
+          .CHtml::link('Hapus',array('DetailKegiatanPersonil/deleteKegiatan','id'=>$data['id']))."</td>";
+        }
         echo "</tr>";
-      } ?>
+      }
+    echo "
     </tbody>
-  </table>
+  </table>";
+    } ?>
 </div>
 </div>
 
