@@ -79,11 +79,9 @@ class RangkumanController extends Controller
 				} else if ($kategori == '2')
 				{
 					if ($bidang != '') {
-						$id_kegiatan = Kegiatan::model()->getKegiatanByBidang($bidang);
-						$dataProvider = DetailKegiatan::model()->findAllByAttributes(array('id_kegiatan'=>(int) $id_kegiatan));
+						$dataProvider = Kegiatan::model()->getDetailKegiatanByBidang($bidang);
 					} else if ($puskaji != '') {
-						$id_kegiatan = Kegiatan::model()->getKegiatanByPuskaji($puskaji);
-						$dataProvider = DetailKegiatan::model()->findAllByAttributes(array('id_kegiatan'=>(int) $id_kegiatan));
+						$dataProvider = Kegiatan::model()->getDetailKegiatanByPuskaji($puskaji);
 					} else {
 						$dataProvider = DetailKegiatan::model()->findAll();
 					}

@@ -21,6 +21,7 @@ return array(
 		'application.extensions.PasswordHash',
 		'application.extensions.galleria.*',
 		'application.extensions.highcharts.*',
+		'application.extensions.OrbitSlider.*',
 	),
 	'timeZone' => 'Asia/Jakarta',
 	'modules'=>array(

@@ -135,9 +135,9 @@ class KegiatanPersonil extends CActiveRecord
 				kegiatan_personil.id_personil,
 				kegiatan_personil.id_detail_kegiatan
 				FROM 
-				kegiatan_personil, detail_kegiatan, kegiatan
+				kegiatan_personil, detail_kegiatan, kegiatan, personil
 				WHERE
-				kegiatan_personil.id_detail_kegiatan = detail_kegiatan.id AND detail_kegiatan.id_kegiatan = kegiatan.id AND kegiatan.id_bidang=".$id_bidang." AND kegiatan.tahun=".$tahun.") as A
+				kegiatan_personil.id_detail_kegiatan = detail_kegiatan.id AND detail_kegiatan.id_kegiatan = kegiatan.id AND personil.id = kegiatan_personil.id_personil AND personil.bidang=".$id_bidang." AND kegiatan.tahun=".$tahun.") as A
 			GROUP BY id_personil"
 		);
 	}
@@ -155,9 +155,9 @@ class KegiatanPersonil extends CActiveRecord
 				kegiatan_personil.id_personil,
 				kegiatan_personil.id_detail_kegiatan
 				FROM 
-				kegiatan_personil, detail_kegiatan, kegiatan
+				kegiatan_personil, detail_kegiatan, kegiatan, personil
 				WHERE
-				kegiatan_personil.id_detail_kegiatan = detail_kegiatan.id AND detail_kegiatan.id_kegiatan = kegiatan.id AND kegiatan.puskaji=".$id_puskaji." AND kegiatan.tahun=".$tahun.") as A
+				kegiatan_personil.id_detail_kegiatan = detail_kegiatan.id AND detail_kegiatan.id_kegiatan = kegiatan.id AND personil.id = kegiatan_personil.id_personil AND personil.puskaji=".$id_puskaji." AND kegiatan.tahun=".$tahun.") as A
 			GROUP BY id_personil"
 		);
 	}

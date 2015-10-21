@@ -16,16 +16,13 @@
           $namapersonil = Personil::model()->getNamaPersonil($data['id']);
           $nama = $namapersonil->nama;
         } else if ($kategori == 2) {
-          $namakegiatan = Kegiatan::model()->getNamaKegiatan($data->id);
-          foreach ($namakegiatan as $nama) {
-            $nama = $nama->nama."<br />".$data->nama;
-          }
+          $nama = $data['nama_kegiatan']."<br />".$data['nama'];
         } else {
           $nama = $data->nama;
         }
         if($kategori != 3) {
-          $series[$ii] = array('name'=>$nama, 'data'=>array((int) $data->persen_anggaran));
-          $series1[$ii] = array('name'=>$nama, 'data'=>array((int) $data->persen_waktu));
+          $series[$ii] = array('name'=>$nama, 'data'=>array((int) $data['persen_anggaran']));
+          $series1[$ii] = array('name'=>$nama, 'data'=>array((int) $data['persen_waktu']));
         } else {
           $series2[$ii] = array('name'=>$nama, 'data'=>array((int) $data['jumlah']));
         }

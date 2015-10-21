@@ -9,6 +9,7 @@
   <div class="col-lg-12 text-center">
       <h2 class="section-heading">Daftar Referensi</h2>
       <?php
+      if (Yii::app()->user->getState('role') != Akun::TAMU)
         echo CHtml::link('Tambah',array('Referensi/create'));
       ?>
   </div>

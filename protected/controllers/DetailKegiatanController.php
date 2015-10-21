@@ -19,6 +19,10 @@ class DetailKegiatanController extends Controller
 		);
 	}
 
+	public function deleteDetail($id) {
+		$this->loadModel($id)->delete();
+	}
+
 	/**
 	 * Specifies the access control rules.
 	 * This method is used by the 'accessControl' filter.
@@ -80,25 +84,22 @@ class DetailKegiatanController extends Controller
 				$waktu_avg = $model->persen_waktu;
 				$anggaran_avg = $model->persen_anggaran;
 				$jumlah = $model->anggaran;
+				$ii = 1;
 				foreach ($other_kg as $data) {
-					$waktu_avg = ($waktu_avg + $data->persen_waktu) / 2;
-					$anggaran_avg = ($anggaran_avg + $data->persen_anggaran) / 2;
+					$waktu_avg = ($waktu_avg + $data->persen_waktu);
+					$anggaran_avg = ($anggaran_avg + $data->persen_anggaran);
 					$jumlah = $jumlah + $data->anggaran;
-					$kegiatan->persen_waktu = $waktu_avg;
-					$kegiatan->persen_anggaran = $anggaran_avg;
-					$kegiatan->anggaran = $jumlah;
-					$nama_kegiatan = $kegiatan->nama;
-					$id_kegiatan = $kegiatan->id;
-					$kegiatan->save();
+					$ii++;
 				}
-			} else {
-				$kegiatan->persen_waktu = $model->persen_waktu;
-				$kegiatan->persen_anggaran = $model->persen_anggaran;
-				$kegiatan->anggaran = $model->anggaran;
-				$nama_kegiatan = $kegiatan->nama;
-				$id_kegiatan = $kegiatan->id;
-				$kegiatan->save();
+				$waktu_avg = $waktu_avg/$ii;
+				$anggaran_avg = $anggaran_avg/$ii;
 			}
+			$kegiatan->persen_waktu = $waktu_avg;
+			$kegiatan->persen_anggaran = $anggaran_avg;
+			$kegiatan->anggaran = $jumlah;
+			$nama_kegiatan = $kegiatan->nama;
+			$id_kegiatan = $kegiatan->id;
+			$kegiatan->save();
 
 			if($model->save()) {
 				$this->redirect(array('index', 
@@ -129,7 +130,7 @@ class DetailKegiatanController extends Controller
 		{
 			$model->attributes=$_POST['DetailKegiatan'];
 			$kegiatan=Kegiatan::model()->findByPk($model->id_kegiatan);
-			$other_kg=DetailKegiatan::model()->findAllByAttributes(array('id_kegiatan'=>$id));
+			$other_kg=DetailKegiatan::model()->findAllByAttributes(array('id_kegiatan'=>$kegiatan->id));
 			$waktu_avg=0;
 			$anggaran_avg=0;
 			$jumlah=0;
@@ -137,26 +138,25 @@ class DetailKegiatanController extends Controller
 				$waktu_avg = $model->persen_waktu;
 				$anggaran_avg = $model->persen_anggaran;
 				$jumlah = $model->anggaran;
+				$ii = 1;
 				foreach ($other_kg as $data) {
-					$waktu_avg = ($waktu_avg + $data->persen_waktu) / 2;
-					$anggaran_avg = ($anggaran_avg + $data->persen_anggaran) / 2;
-					$jumlah = $jumlah + $data->anggaran;
-					$kegiatan->persen_waktu = $waktu_avg;
-					$kegiatan->persen_anggaran = $anggaran_avg;
-					$kegiatan->anggaran = $jumlah;
-					$nama_kegiatan = $kegiatan->nama;
-					$id_kegiatan = $kegiatan->id;
-					$kegiatan->save();
+					if($data->id != $id) {
+						$waktu_avg = ($waktu_avg + $data->persen_waktu);
+						$anggaran_avg = ($anggaran_avg + $data->persen_anggaran);
+						$jumlah = $jumlah + $data->anggaran;
+						$ii++;
+					}
 				}
-			} else {
-				$kegiatan->persen_waktu = $model->persen_waktu;
-				$kegiatan->persen_anggaran = $model->persen_anggaran;
-				$kegiatan->anggaran = $model->anggaran;
-				$nama_kegiatan = $kegiatan->nama;
-				$id_kegiatan = $kegiatan->id;
-				$kegiatan->save();
+				$waktu_avg = $waktu_avg/$ii;
+				$anggaran_avg = $anggaran_avg/$ii;
 			}
-
+			$kegiatan->persen_waktu = $waktu_avg;
+			$kegiatan->persen_anggaran = $anggaran_avg;
+			$kegiatan->anggaran = $jumlah;
+			$nama_kegiatan = $kegiatan->nama;
+			$id_kegiatan = $kegiatan->id;
+			$kegiatan->save();
+			
 			if($model->save()) {
 				$this->redirect(array('index',
 					'id'=>$id_kegiatan,

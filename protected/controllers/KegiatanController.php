@@ -72,7 +72,6 @@ class KegiatanController extends Controller
 			$model->attributes=$_POST['Kegiatan'];
 			$model->anggaran=0;
 			$model->persen_anggaran=0;
-			$model->waktu=0;
 			$model->persen_waktu=0;
 			if($model->save())
 				$this->redirect(array('index'));
@@ -114,7 +113,7 @@ class KegiatanController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+		$model = $this->loadModel($id);
 		$dataProvider = null;
 		$puskaji = 0;
 		$bidang = 0;
@@ -123,6 +122,12 @@ class KegiatanController extends Controller
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax'])) {
+			$detail_kegiatan = DetailKegiatan::model()->getDetailKegiatanByKegiatan($model->id);
+			foreach ($detail_kegiatan as $detail) {
+				$dk = DetailKegiatan::model()->findByPk($detail['id']);
+				$dk->delete();
+			}
+			$model->delete();
 			Yii::app()->user->setFlash('successDelete', "Berhasil menghapus kegiatan!");
 			$this->render('index',array('puskaji' => $puskaji,
 			'bidang' => $bidang,

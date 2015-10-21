@@ -6,14 +6,38 @@ $this->pageTitle=Yii::app()->name;
 
 <div class="box">
     <div class="col-lg-12 text-center">
-        	<?php $this->beginWidget('Galleria');?>
-			    <img src="img/slide-1.jpg" />
-			    <img src="img/slide-2.jpg" />
-			    <img src="img/slide-3.jpg" />
-			<?php $this->endWidget();?>
+    	<div style="width:76%; margin:auto;">
+    	<?php $path =Yii::app()->baseUrl.'/img/'; 
+    		$this->widget('ext.OrbitSlider.OrbitSlider',
+
+			array(
+			'content'=>array(
+			array(
+			'image'=>true, 'file'=>$path.'slide-1.jpg', 'url'=>'http://www.google.com/', 'style'=>'background-color:white;', 'caption'=>'',
+			), array(
+
+			'image'=>true, 'file'=>$path.'slide-2.jpg', 'url'=>'#', 'style'=>'background-color:white;', 'caption'=>'Optional Caption',
+			), array(
+
+			'image'=>true, 'file'=>$path.'slide-3.jpg', 'style'=>'background-color:white;',
+			), array(
+
+			'image'=>true, 'file'=>$path.'slide-4.jpg', 'url'=>'#', 'style'=>'background-color:white;', 'caption'=>'What a pretty picture',
+			),
+
+			), 'slider_options'=>array(
+
+			'animation'=>'horizontal-slide', 'bullets'=>true, 'directionalNav'=>true, 'advanceSpeed'=>'8000',
+			), 'width'=>'843', 'height'=>'403',
+
+			)
+			); ?>
+		</div>
+		<div>
         <h2 class="brand-before">
-            <small>Selamat Datang di</small>
+            <small><br />Selamat Datang di</small>
         </h2>
+    </div>
         <h1 class="brand-name">Sistem Informasi Pengkajian Kriptografi Terpadu</h1>
         <hr class="tagline-divider">
         <!-- <h2>

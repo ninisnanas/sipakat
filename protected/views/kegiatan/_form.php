@@ -34,7 +34,7 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'bidang'); ?>
+		<?php echo $form->labelEx($model,'id_bidang'); ?>
 		<?php
 			if($model->puskaji!='') {
 				echo $form->dropDownList($model, 'id_bidang', Bidang::getListBidangByPuskaji($model->puskaji), array('empty' => 'Pilih Bidang'));
@@ -42,13 +42,19 @@
 				echo $form->dropDownList($model, 'id_bidang', array(), array('empty' => 'Pilih Bidang'));
 			}
 		?>
-		<?php echo $form->error($model,'bidang'); ?>
+		<?php echo $form->error($model,'id_bidang'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'tahun'); ?>
 		<?php echo $form->textField($model,'tahun',array('size'=>4,'maxlength'=>4)); ?>
 		<?php echo $form->error($model,'tahun'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'waktu'); ?>
+		<?php echo $form->textField($model,'waktu',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->error($model,'waktu'); ?>
 	</div>
 
 	<div class="row">
