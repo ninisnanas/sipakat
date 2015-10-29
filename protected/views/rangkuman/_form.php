@@ -21,7 +21,7 @@
 							'type' => 'POST',
 							'url' => CController::createUrl('personil/dinamis'),
 							'data' => array('puskaji' => 'js:this.value'),			
-							'update' => '#kode_bidang',
+							'update' => '#bidang',
 							))); 
 		} else {
 			$puskaji = Yii::app()->user->getState('puskaji');
@@ -34,12 +34,12 @@
 			// get berdasarkan bidangnya si staf!!!
 			$bidang = Yii::app()->user->getState('bidang');
 			$nama_bidang = Bidang::model()->findAllByPk($bidang);
-			echo CHtml::textField('kode_bidang', $nama_bidang[0]['nama'] ,array('disabled'=>'disabled'));
+			echo CHtml::textField('bidang', $nama_bidang[0]['nama'] ,array('disabled'=>'disabled'));
 		} else {
 			if($puskaji!='') {
-				echo CHtml::dropDownList('kode_bidang', $bidang, Bidang::getListBidangByPuskaji($puskaji), array('empty' => 'Pilih Bidang'));
+				echo CHtml::dropDownList('bidang', $bidang, Bidang::getListBidangByPuskaji($puskaji), array('empty' => 'Pilih Bidang'));
 			} else {
-				echo CHtml::dropDownList('kode_bidang', $bidang, array(), array('empty' => 'Pilih Bidang'));
+				echo CHtml::dropDownList('bidang', $bidang, array(), array('empty' => 'Pilih Bidang'));
 			}
 		}
 		

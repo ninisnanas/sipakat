@@ -6897,3 +6897,35 @@ Stack trace:
 REQUEST_URI=/sipakat/index.php?r=DetailKegiatan/index&id=3&nama_kegiatan=Pengkajian+Algoritma+Stream+Cipher+Versi+1
 HTTP_REFERER=http://localhost/sipakat/index.php?r=Kegiatan%2Findex&tahun_selected=2015&yt0=Tampilkan
 ---
+2015/10/29 13:53:43 [error] [php] Undefined index: bidang (C:\wamp\www\sipakat\protected\controllers\RangkumanController.php:65)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): RangkumanController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): RangkumanController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): RangkumanController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): RangkumanController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Rangkuman%2Findex&puskaji=1&kode_bidang=2&kategori=1&tahun_selected=2015&yt0=Tampilkan
+in C:\wamp\www\sipakat\protected\controllers\RangkumanController.php (65)
+in C:\wamp\www\sipakat\index.php (13)
+2015/10/29 13:57:05 [error] [php] Undefined index: bidang (C:\wamp\www\sipakat\protected\controllers\RangkumanController.php:65)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): RangkumanController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): RangkumanController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): RangkumanController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): RangkumanController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\sipakat\index.php(13): CWebApplication->run()
+REQUEST_URI=/sipakat/index.php?r=Rangkuman%2Findex&puskaji=2&kode_bidang=3&kategori=1&tahun_selected=2015&yt0=Tampilkan
+in C:\wamp\www\sipakat\protected\controllers\RangkumanController.php (65)
+in C:\wamp\www\sipakat\index.php (13)
