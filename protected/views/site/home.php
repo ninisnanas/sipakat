@@ -13,16 +13,16 @@ $this->pageTitle=Yii::app()->name;
 			array(
 			'content'=>array(
 			array(
-			'image'=>true, 'file'=>$path.'slide-1.jpg', 'url'=>'http://www.google.com/', 'style'=>'background-color:white;', 'caption'=>'',
+			'image'=>true, 'file'=>$path.'slide-1.jpg', 'style'=>'background-color:white;', 'caption'=>'',
 			), array(
 
-			'image'=>true, 'file'=>$path.'slide-2.jpg', 'url'=>'#', 'style'=>'background-color:white;', 'caption'=>'Optional Caption',
+			'image'=>true, 'file'=>$path.'slide-2.jpg', 'style'=>'background-color:white;', 'caption'=>'',
 			), array(
 
-			'image'=>true, 'file'=>$path.'slide-3.jpg', 'style'=>'background-color:white;',
+			'image'=>true, 'file'=>$path.'slide-3.jpg', 'style'=>'background-color:white;', 'caption'=>'',
 			), array(
 
-			'image'=>true, 'file'=>$path.'slide-4.jpg', 'url'=>'#', 'style'=>'background-color:white;', 'caption'=>'What a pretty picture',
+			'image'=>true, 'file'=>$path.'slide-4.jpg', 'url'=>'https://kms.lkti.or.id', 'style'=>'background-color:white;', 'caption'=>'Menuju Website KMS',
 			),
 
 			), 'slider_options'=>array(
@@ -89,10 +89,10 @@ $this->pageTitle=Yii::app()->name;
 			</ul>-->						
 			<h4>Versi Pengembangan</h4>
 			<ul>
-				<li>1.0.0 (13 Agustus 2015)</li>							
-				<li>1.0.2 (1 September 2015)</li>							
-				<li>1.0.3 (3 Oktober 2015)</li>							
-				<li>1.0.4 (21 Oktober 2015)</li>
+				<li>1.0.0</li>							
+				<li>1.0.1</li>							
+				<li>1.0.2</li>							
+				<li>1.0.3</li>
 			</ul>
 		</div>
 	<div class="clearfix"></div>

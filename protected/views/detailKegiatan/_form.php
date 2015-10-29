@@ -53,6 +53,12 @@
 		<?php echo $form->textField($model,'persen_waktu'); ?>
 		<?php echo $form->error($model,'persen_waktu'); ?>
 	</div>
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'nomor_sp'); ?>
+		<?php echo $form->textField($model,'nomor_sp',array('size'=>100,'maxlength'=>100)); ?>
+		<?php echo $form->error($model,'nomor_sp'); ?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Jan M1'); ?>

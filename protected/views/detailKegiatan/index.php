@@ -32,6 +32,7 @@
         <th class="dt-head-center" rowspan="3">% Anggaran</th>
         <th class="dt-head-center" rowspan="3">Waktu</th>
         <th class="dt-head-center" rowspan="3">% Kinerja</th>
+		<th class="dt-head-center" rowspan="3">Nomor Surat Perintah</th>
         <th class="dt-head-center" colspan="48">Periode</th>
 		<?php 
 		if (Yii::app()->user->getState('role') == Akun::ADMIN) {
@@ -120,6 +121,7 @@
         echo   "<td class=\"text-left\">".$data->persen_anggaran."%</td>";
         echo   "<td class=\"text-left\">".$data->waktu."</td>";
         echo   "<td class=\"text-left\">".$data->persen_waktu."%</td>";
+		echo   "<td class=\"text-left\">".$data->nomor_sp."</td>";
         for($a=1; $a<=12; $a++) {
         	for($b=1; $b<=4; $b++) {
         		$val = "w".$a.$b;

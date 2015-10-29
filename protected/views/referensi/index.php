@@ -7,7 +7,7 @@
 <div class="row">
   <div class="box">
   <div class="col-lg-12 text-center">
-      <h2 class="section-heading">Daftar Referensi</h2>
+      <h2 class="section-heading">Daftar Layanan</h2>
       <?php
       if (Yii::app()->user->getState('role') != Akun::TAMU)
         echo CHtml::link('Tambah',array('Referensi/create'));
@@ -53,7 +53,7 @@
           echo " |"
           .CHtml::link('Hapus',array('Referensi/delete','id'=>$data->id),array(
           'submit'=>array('Referensi/delete', 'id'=>$data->id),
-          'class' => 'delete','confirm'=>'Anda yakin untuk menghapus referensi?'
+          'class' => 'delete','confirm'=>'Anda yakin untuk menghapus layanan?'
           ))."</td>";
         }
         echo "</tr>";

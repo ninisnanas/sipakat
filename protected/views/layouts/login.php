@@ -54,7 +54,9 @@
         <!-- /.container -->
     </nav>
   </header>
-
+  </br>
+  </br>
+  
   <div class="container">
   	<div class="row">
   	  <div class="box">
@@ -66,10 +68,12 @@
     </div> <!-- WRAPPER END -->
   </div> <!-- CONTAINER END -->
   
+  </br>
+  </br>
   <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12 text-center">				
                     <p>Copyright &copy; Bidang Algoritma 2015</p>
                 </div>
             </div>

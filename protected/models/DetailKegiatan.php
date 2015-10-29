@@ -89,15 +89,16 @@ class DetailKegiatan extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_kegiatan, nama, kode, anggaran, persen_anggaran, waktu, persen_waktu', 'required'),
+			array('id_kegiatan, nama, kode, anggaran, persen_anggaran, waktu, persen_waktu, nomor_sp', 'required'),
 			array('id_kegiatan, w11, w12, w13, w14, w21, w22, w23, w24, w31, w32, w33, w34, w41, w42, w43, w44, w51, w52, w53, w54, w61, w62, w63, w64, w71, w72, w73, w74, w81, w82, w83, w84, w91, w92, w93, w94, w101, w102, w103, w104, w111, w112, w113, w114, w121, w122, w123, w124', 'numerical', 'integerOnly'=>true),
 			array('persen_waktu, persen_anggaran', 'numerical'),
 			array('nama, waktu', 'length', 'max'=>50),
 			array('kode', 'length', 'max'=>2),
+			array('nomor_sp', 'length', 'max'=>100),
 			array('anggaran', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, id_kegiatan, nama, kode, anggaran, persen_anggaran, waktu, persen_waktu, w11, w12, w13, w14, w21, w22, w23, w24, w31, w32, w33, w34, w41, w42, w43, w44, w51, w52, w53, w54, w61, w62, w63, w64, w71, w72, w73, w74, w81, w82, w83, w84, w91, w92, w93, w94, w101, w102, w103, w104, w111, w112, w113, w114, w121, w122, w123, w124', 'safe', 'on'=>'search'),
+			array('id, id_kegiatan, nama, kode, anggaran, persen_anggaran, waktu, persen_waktu, nomor_sp, w11, w12, w13, w14, w21, w22, w23, w24, w31, w32, w33, w34, w41, w42, w43, w44, w51, w52, w53, w54, w61, w62, w63, w64, w71, w72, w73, w74, w81, w82, w83, w84, w91, w92, w93, w94, w101, w102, w103, w104, w111, w112, w113, w114, w121, w122, w123, w124', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -126,6 +127,7 @@ class DetailKegiatan extends CActiveRecord
 			'persen_anggaran' => 'Persen Anggaran',
 			'waktu' => 'Waktu',
 			'persen_waktu' => 'Persen Kinerja',
+			'nomor_sp' => 'Nomor Surat Perintah',
 			'w11' => 'W11',
 			'w12' => 'W12',
 			'w13' => 'W13',
@@ -196,6 +198,7 @@ class DetailKegiatan extends CActiveRecord
 		$criteria->compare('persen_anggaran',$this->persen_anggaran);
 		$criteria->compare('waktu',$this->waktu,true);
 		$criteria->compare('persen_waktu',$this->persen_waktu);
+		$criteria->compare('nomor_sp',$this->nomor_sp,true);
 		$criteria->compare('w11',$this->w11);
 		$criteria->compare('w12',$this->w12);
 		$criteria->compare('w13',$this->w13);
