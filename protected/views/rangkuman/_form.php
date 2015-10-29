@@ -13,21 +13,35 @@
 
 <div class="form-row large-2 column left">
 	<?php
-		echo CHtml::dropDownList('puskaji', $puskaji, Puskaji::model()->getPuskajiList(),
-						array('empty' => 'Pilih Puskaji',
-							'ajax' => array(
-								'type' => 'POST',
-								'url' => CController::createUrl('personil/dinamis'),
-								'data' => array('puskaji' => 'js:this.value'),			
-								'update' => '#bidang',
-								))); 
-
-		if($puskaji!='') {
-			echo CHtml::dropDownList('bidang', $bidang, Bidang::getListBidangByPuskaji($puskaji), array('empty' => 'Pilih Bidang'));
+		$role = Yii::app()->user->getState('role');
+		if($role == Akun::ADMIN || $role == Akun::DEPUTI){
+			echo CHtml::dropDownList('puskaji', $puskaji, Puskaji::model()->getPuskajiList(),
+					array('empty' => 'Pilih Puskaji',
+						'ajax' => array(
+							'type' => 'POST',
+							'url' => CController::createUrl('personil/dinamis'),
+							'data' => array('puskaji' => 'js:this.value'),			
+							'update' => '#kode_bidang',
+							))); 
 		} else {
-			echo CHtml::dropDownList('bidang', $bidang, array(), array('empty' => 'Pilih Bidang'));
+			$puskaji = Yii::app()->user->getState('puskaji');
+			$nama_puskaji = Puskaji::model()->findAllByPk($puskaji);
+			echo CHtml::textField('puskaji', $nama_puskaji[0]['nama'] ,array('disabled'=>'disabled'));
 		}
-		//echo CHtml::dropDownList('bidang', $bidang, Bidang::model()->getBidangList(), array('empty' => 'Seluruh Puskaji'));
+		
+		if(Yii::app()->user->getState('role') == Akun::STAF)
+		{
+			// get berdasarkan bidangnya si staf!!!
+			$bidang = Yii::app()->user->getState('bidang');
+			$nama_bidang = Bidang::model()->findAllByPk($bidang);
+			echo CHtml::textField('kode_bidang', $nama_bidang[0]['nama'] ,array('disabled'=>'disabled'));
+		} else {
+			if($puskaji!='') {
+				echo CHtml::dropDownList('kode_bidang', $bidang, Bidang::getListBidangByPuskaji($puskaji), array('empty' => 'Pilih Bidang'));
+			} else {
+				echo CHtml::dropDownList('kode_bidang', $bidang, array(), array('empty' => 'Pilih Bidang'));
+			}
+		}
 		
 		// cek role
 		// if(Yii::app()->user->getState('role') == Akun::PUSAT){
